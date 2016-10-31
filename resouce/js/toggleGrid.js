@@ -1,0 +1,107 @@
+/*! toggleGrid.js © yamoo9.net, 2016 */
+(function(global){
+	'use strict';
+	var body = document.body;
+	var containers = document.querySelectorAll('.wrapper');
+	document.onkeydown = function(event) {
+		if( event === true || event.keyCode === 68 && event.shiftKey) {
+			body.classList.toggle('show-leading');
+			Array.prototype.forEach.call(containers, function(container) {
+				container.classList.toggle('show-grid');
+			});
+		}
+	};
+
+
+})(this);
+
+/*
+키보드 코드 참조 (Keyboard codes reference)
+Key	Keyboard code
+Backspace	8
+Tab	        9
+Enter	    13
+Shift	    16
+Ctrl	    17
+Alt	        18
+Pause	    19
+Capslock	20
+Esc	        27
+Page up	    33
+Page down	34
+End	        35
+Home	    36
+Left arrow	37
+Up arrow	38
+Right arrow	39
+Down arrow	40
+Insert	    45
+Delete	    46
+0	        48
+1	        49
+2	        50
+3	        51
+4	        52
+5	        53
+6	        54
+7	        55
+8	        56
+9	        57
+a	        65
+b	        66
+c	        67
+d	        68
+e	        69
+f	        70
+g	        71
+h	        72
+i	        73
+j	        74
+k	        75
+l	        76
+m	        77
+n	        78
+o	        79
+p	        80
+q	        81
+r	        82
+s	        83
+t	        84
+u	        85
+v	        86
+w	        87
+x	        88
+y	        89
+z	        90
+0 (numpad)	96
+1 (numpad)	97
+2 (numpad)	98
+3 (numpad)	99
+4 (numpad)	100
+5 (numpad)	101
+6 (numpad)	102
+7 (numpad)	103
+8 (numpad)	104
+9 (numpad)	105
+*	        106
++	        107
+-	        109
+.	        110
+/	        111
+F1	        112
+F2	        113
+F3	        114
+F4	        115
+F5	        116
+F6	        117
+F7	        118
+F8	        119
+F9	        120
+F10	        121
+F11	        122
+F12	        123
+=	        187
+Coma	    188
+Slash /	    191
+Backslash \	220
+*/
