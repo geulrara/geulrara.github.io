@@ -134,6 +134,7 @@ body.show-leading::before {
 	float: left;
 }
 .page-gnb li a {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 	color: #fff;
 	letter-spacing: 0.08em;
 	text-decoration: none;
