@@ -1670,17 +1670,19 @@ input:-moz-placeholder { color: #4a4a4a; }
 
 .sub-menu ul:after, figure.img-wrap:after { content: ''; display: block; clear: both; }
 
-h1 { font-size: 6rem; font-size: 60px; line-height: 3.8rem; line-height: 38px; }
+h1, h2, h3, h4, h5, h6 { line-height: 1; }
 
-h2 { font-size: 3.2rem; font-size: 32px; line-height: 3.8rem; line-height: 38px; }
+h1 { font-size: 60px; font-size: 6rem; }
 
-h3 { font-size: 2.8rem; font-size: 28px; line-height: 3.8rem; line-height: 38px; }
+h2 { font-size: 32px; font-size: 3.2rem; }
 
-h4 { font-size: 2rem; font-size: 20px; line-height: 3.8rem; line-height: 38px; }
+h3 { font-size: 28px; font-size: 2.8rem; }
 
-h5 { font-size: 1.8rem; font-size: 18px; line-height: 3.8rem; line-height: 38px; }
+h4 { font-size: 20px; font-size: 2rem; }
 
-h6 { font-size: 1.6rem; font-size: 16px; line-height: 3.8rem; line-height: 38px; }
+h5 { font-size: 18px; font-size: 1.8rem; }
+
+h6 { font-size: 16px; font-size: 1.6rem; }
 
 html { font-family: "Noto Sans", sans-serif; font-size: 10px; }
 
@@ -1691,16 +1693,20 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 /* 07-4.내책읽기, 07-5.내책읽기, 07-6.내책읽기 (07_read-my-book.html) */
 .cover-area { width: 100%; height: 100vh; background: url("/assets/images/bg/cover-bg-01.png") center no-repeat; background-size: cover; }
 
-.cover-area .text-box { width: 640px; height: 100vh; background: rgba(0, 0, 0, 0.3); padding: 88px 80px; color: #fff; }
+.cover-area .text-box { height: 100vh; padding: 95px 80px; color: #fff; }
 
 .cover-area .text-box .title { font-family: "SangSangTitleB", sans-serif; }
 
-.cover-area .text-box .author { font-size: 2.2rem; padding-top: 32px; padding-bottom: 60px; }
+.cover-area .text-box .author { font-size: 2.2rem; padding-top: 32px; padding-bottom: 54px; }
+
+.cover-area .text-box .contents { width: 524px; line-height: 50px; }
+
+.cover-area .text-box .contents span { background: rgba(0, 0, 0, 0.2); }
 
 /* 20-1.서브_상세화면_내책읽기 (20-1_sub-view-reed-my-book-list.html)  */
 .sub-menu { width: 406px; height: 100vh; background: #fff; border-right: 1px solid rgba(0, 0, 0, 0.3); overflow-y: auto; overflow-x: hidden; }
 
-.sub-menu h2 { font-family: "SangSangTitleB", sans-serif; padding: 27px 30px 30px 30px; }
+.sub-menu h2 { font-family: "SangSangTitleB", sans-serif; padding: 30px; }
 
 .sub-menu ul li { position: relative; padding: 8px 30px 8px 46px; font-size: 2.2rem; }
 
