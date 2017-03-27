@@ -1668,7 +1668,7 @@ input:-moz-placeholder { color: #4a4a4a; }
 
 .kw-sns { background-image: url("/assets/images/sprite/sprite-sns.png"); }
 
-.sub-menu ul:after, figure.img-wrap:after { content: ''; display: block; clear: both; }
+.sub-menu ul:after, .search-menu .search-area:after, .search-menu .keyword-btn-set:after, .search-menu .keyword:after, .search-menu .keyword li:after, figure.img-wrap:after { content: ''; display: block; clear: both; }
 
 h1, h2, h3, h4, h5, h6 { line-height: 1; }
 
@@ -1690,7 +1690,13 @@ html body { min-width: 800px; min-height: 100vh; font-size: 24px; font-size: 2.4
 
 html body * { box-sizing: border-box; word-wrap: break-word; }
 
-.pop-wrap { width: 640px; height: 610px; background: #fff; }
+.fl { float: left; }
+
+.fr { float: right; }
+
+[class^="btn-"] { cursor: pointer; }
+
+.pop-wrap { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 640px; height: 610px; background: #fff; }
 
 .pop-wrap .title { border-bottom: 1px dashed #ccc; height: 50px; }
 
@@ -1708,15 +1714,56 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 .cover-area .text-box .contents span { background: rgba(0, 0, 0, 0.2); }
 
 /* 20-1.서브_상세화면_내책읽기 (20-1_sub-view-reed-my-book-list.html)  */
-.sub-menu { width: 406px; height: 100vh; background: #fff; border-right: 1px solid rgba(0, 0, 0, 0.3); overflow-y: auto; overflow-x: hidden; }
+.sub-menu { width: 406px; height: 100vh; background: #fff; border-right: 1px solid rgba(0, 0, 0, 0.1); overflow-y: auto; overflow-x: hidden; }
 
 .sub-menu h2 { font-family: "SangSangTitleB", sans-serif; padding: 30px; }
 
-.sub-menu ul li { position: relative; padding: 8px 30px 8px 46px; font-size: 2.2rem; }
+.sub-menu ul li { position: relative; padding: 8px 30px 8px 46px; font-size: 2.2rem; line-height: 1; }
 
 .sub-menu ul li:before { position: absolute; top: 8px; left: 30px; display: inline-block; content: "."; line-height: 16px; }
 
 .sub-menu ul li a { line-height: 32px; }
+
+/* 24-1.메인_공통_최근검색어, 24-2.메인_공통_최근검색어, 24-3.메인_공통_최근검색어 24_main-recent_searches.html */
+.search-menu { width: 512px; height: 100vh; background: #fff; border-left: 1px solid rgba(0, 0, 0, 0.1); overflow-y: auto; overflow-x: hidden; }
+
+.search-menu .search-area { position: relative; padding: 30px 26px; background: #ebeff2; }
+
+.search-menu .search-area .search-wrap { position: relative; display: inline-block; height: 50px; line-height: 50px; border: 1px solid #d1d4d7; margin-right: 110px; background: #fff; border-radius: 25px; }
+
+.search-menu .search-area .search-wrap input { width: 100%; padding: 0 50px 0 20px; }
+
+.search-menu .search-area .search-wrap label { visibility: hidden; }
+
+.search-menu .search-area .search-wrap .btn-search-clear { position: absolute; top: 12px; right: 16px; width: 24px; height: 24px; text-align: center; border-radius: 12px; background: #d8d8d8; }
+
+.search-menu .search-area .search-wrap .btn-search-clear:before { display: inline-block; content: ""; width: 100%; height: 100%; background: url("/assets/images/svg/icon-search-clear.svg") center no-repeat; background-size: 11px 11px; }
+
+.search-menu .search-area .btn-search { position: absolute; right: 30px; font-size: 2.4rem; color: #fff; min-width: 98px; padding: 0 20px; height: 50px; line-height: 50px; border-radius: 25px; border: 1px solid #ec352f; background: #f56056; }
+
+.search-menu .message { padding: 80px 30px 110px 30px; text-align: center; }
+
+.search-menu .keyword-btn-set, .search-menu .keyword { padding: 28px 30px 0 30px; }
+
+.search-menu .keyword-btn-set .btn-new-search, .search-menu .keyword .btn-new-search { font-size: 1.8rem; color: #0f9fff; }
+
+.search-menu .keyword-btn-set .delete-area, .search-menu .keyword .delete-area { margin-top: -5px; }
+
+.search-menu .keyword-btn-set .delete-area span, .search-menu .keyword .delete-area span { font-size: 1.8rem; color: #888; height: 26px; line-height: 26px; vertical-align: 5px; }
+
+.search-menu .keyword-btn-set .delete-area .btn-delete, .search-menu .keyword .delete-area .btn-delete { width: 26px; height: 26px; text-align: center; border-radius: 6px; background: #a9a9ab; border: 1px solid #9a999b; vertical-align: text-top; margin-left: 15px; }
+
+.search-menu .keyword-btn-set .delete-area .btn-delete:before, .search-menu .keyword .delete-area .btn-delete:before { display: inline-block; content: ""; width: 100%; height: 100%; background: url("/assets/images/svg/icon-search-delete.svg") center no-repeat; background-size: 13px 14px; }
+
+.search-menu .keyword { padding-top: 10px; }
+
+.search-menu .keyword li { padding: 10px 0; }
+
+.search-menu .keyword li .delete-area { margin-top: 3px; }
+
+.search-menu .keyword li .delete-area span { vertical-align: 5px; }
+
+.search-menu .keyword li .delete-area .btn-delete { background: #d8d8d8; border: 1px solid #c5c4c4; }
 
 figure.img-wrap .img { position: relative; float: left; width: 150px; height: 100px; }
 
