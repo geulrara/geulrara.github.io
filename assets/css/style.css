@@ -1702,7 +1702,7 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .pop-wrap .title { padding: 18px 26px 0; border-bottom: 2px dashed #dbdbdb; height: 66px; }
 
-.pop-wrap .title span { font-size: 2.2rem; color: #888; }
+.pop-wrap .title span { font-size: 2.2rem; color: #888; margin-left: 10px; }
 
 .pop-wrap .title span em { color: #ee4742; }
 
@@ -1804,7 +1804,7 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .pop-wrap .wrap .col-text-box ul li .lable-arts { font-size: 2.2rem; color: #fff; min-width: 68px; height: 29px; line-height: 29px; border-radius: 6px; background: #e95412; }
 
-.pop-wrap .wrap .col-text-box ul li .lable-social { font-size: 2.2rem; color: #fff; min-width: 68px; height: 29px; line-height: 29px; border-radius: 6px; background: #9e2a93; }
+.pop-wrap .wrap .col-text-box ul li .lable-social { font-size: 2.2rem; color: #fff; min-width: 68px; height: 29px; line-height: 29px; border-radius: 6px; background: #9e2a93; line-height: 1.55; }
 
 .pop-wrap .wrap .col-text-box ul li .lable-korean { font-size: 2.2rem; color: #fff; min-width: 68px; height: 29px; line-height: 29px; border-radius: 6px; background: #9da704; }
 
