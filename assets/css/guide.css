@@ -1666,9 +1666,9 @@ input:-ms-input-placeholder { color: #4a4a4a; }
 
 input:-moz-placeholder { color: #4a4a4a; }
 
-.kw-sns { background-image: url("/assets/images/sprite/sprite-sns.png"); }
+.kw-icon { background-image: url("/assets/images/sprite/sprite-icon.png"); }
 
-.sub-menu ul:after, .search-menu .search-area:after, .search-menu .keyword-btn-set:after, .search-menu .keyword:after, .search-menu .keyword li:after, figure.img-wrap:after { content: ''; display: block; clear: both; }
+.pop-wrap .wrap:after, .sub-menu ul:after, .search-menu .search-area:after, .search-menu .keyword-btn-set:after, .search-menu .keyword:after, .search-menu .keyword li:after, .pop-wrap .wrap .col-text-box ul:after { content: ''; display: block; clear: both; }
 
 h1, h2, h3, h4, h5, h6 { line-height: 1; }
 
@@ -1698,13 +1698,17 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 [class^="btn-"] { cursor: pointer; }
 
-.pop-wrap { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 906px; height: 568px; background: #fff; }
+.pop-wrap { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: -webkit-calc( 100% - 300px); width: -moz-calc( 100% - 300px); width: calc( 100% - 300px); min-width: 906px; background: #fff; overflow-y: auto; }
 
 .pop-wrap .title { padding: 18px 26px 0; border-bottom: 2px dashed #dbdbdb; height: 66px; }
 
 .pop-wrap .title span { font-size: 2.2rem; color: #888; }
 
 .pop-wrap .title span em { color: #ee4742; }
+
+.pop-wrap .wrap { padding-top: 30px; }
+
+.pop-wrap .wrap:nth-of-type(1) { padding-top: 50px; }
 
 /* 07-4.내책읽기, 07-5.내책읽기, 07-6.내책읽기 (07_read-my-book.html) */
 .cover-area { width: 100%; height: 100vh; background: url("/assets/images/bg/cover-bg-01.png") center no-repeat; background-size: cover; }
@@ -1745,7 +1749,7 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .search-menu .search-area .search-wrap .btn-search-clear:before { display: inline-block; content: ""; width: 100%; height: 100%; background: url("/assets/images/svg/icon-search-clear.svg") center no-repeat; background-size: 11px 11px; }
 
-.search-menu .search-area .btn-search { position: absolute; right: 30px; font-size: 2.4rem; color: #fff; min-width: 98px; padding: 0 20px; height: 50px; line-height: 50px; border-radius: 25px; border: 1px solid #ec352f; background: #f56056; }
+.search-menu .search-area .btn-search { position: absolute; right: 30px; font-size: 2.4rem; color: #fff; min-width: 98px; height: 50px; line-height: 50px; border-radius: 25px; background: #f56056; border: 1px solid #ec352f; }
 
 .search-menu .message { padding: 80px 30px; text-align: center; }
 
@@ -1771,27 +1775,54 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .search-menu .keyword li .delete-area .btn-delete { background: #d8d8d8; border: 1px solid #c5c4c4; }
 
-figure.img-wrap .img { position: relative; float: left; width: 150px; height: 100px; }
+/* 17-1.웹팝업_교과연계, 17-2.웹팝업_교과연계, 17-3.웹팝업_교과연계 (17_popup-curriculum.html) */
+.pop-wrap .wrap [class^="col-"] { float: left; }
 
-figure.img-wrap .img:after { display: block; content: ""; background-size: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.pop-wrap .wrap .col-icon-box { margin-left: 36px; margin-right: 36px; }
 
-figure.img-wrap .img img { width: 100%; height: 100%; }
+.pop-wrap .wrap .col-icon-box .elementary-student { background-image: url("/assets/images/sprite/sprite-icon.png"); background-position: 0px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 86px; height: 85px; }
 
-figure.img-wrap figcaption .text-area h6 { margin-bottom: 6px; }
+.pop-wrap .wrap .col-icon-box .middle-schooler { background-image: url("/assets/images/sprite/sprite-icon.png"); background-position: -86px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 86px; height: 85px; }
+
+.pop-wrap .wrap .col-icon-box figcaption { font-family: "SangSangTitleB", sans-serif; font-size: 2.8rem; text-align: center; }
+
+.pop-wrap { height: 568px; }
+
+.pop-wrap .wrap:nth-of-type(1) .col-text-box { border-bottom: 1px solid #dbdbdb; min-height: 200px; }
+
+.pop-wrap .wrap .col-text-box { width: -webkit-calc( 100% - 158px); width: -moz-calc( 100% - 158px); width: calc( 100% - 158px); min-height: 150px; }
+
+.pop-wrap .wrap .col-text-box ul { display: block; margin-bottom: 20px; }
+
+.pop-wrap .wrap .col-text-box ul li { float: left; display: inline-block; font-size: 2.2rem; }
+
+.pop-wrap .wrap .col-text-box ul li [class^="lable-"] { display: inline-block; text-align: center; vertical-align: text-bottom; font-family: "SangSangTitleM", sans-serif; }
+
+.pop-wrap .wrap .col-text-box ul li.lable { font-family: "SangSangTitleB", sans-serif; margin-left: 20px; margin-right: 30px; }
+
+.pop-wrap .wrap .col-text-box ul li .lable-science { font-size: 2.2rem; color: #fff; min-width: 68px; height: 29px; line-height: 29px; border-radius: 6px; background: #f39800; }
+
+.pop-wrap .wrap .col-text-box ul li .lable-arts { font-size: 2.2rem; color: #fff; min-width: 68px; height: 29px; line-height: 29px; border-radius: 6px; background: #e95412; }
+
+.pop-wrap .wrap .col-text-box ul li .lable-social { font-size: 2.2rem; color: #fff; min-width: 68px; height: 29px; line-height: 29px; border-radius: 6px; background: #9e2a93; }
+
+.pop-wrap .wrap .col-text-box ul li .lable-korean { font-size: 2.2rem; color: #fff; min-width: 68px; height: 29px; line-height: 29px; border-radius: 6px; background: #9da704; }
+
+.pop-wrap .wrap .col-text-box ul li .lable-math { font-size: 2.2rem; color: #fff; min-width: 68px; height: 29px; line-height: 29px; border-radius: 6px; background: #17a6c4; }
 
 body { background: #ededed !important; font-size: 1.6rem !important; height: 100vh; }
 
 .guide { margin-bottom: 0; }
 
-.guide h1, .guide h2, .guide h3, .guide h4, .guide h5, .guide h6 { margin-bottom: 38px; margin-bottom: 3.8rem; }
+.guide h1, .guide h2, .guide h3, .guide h4, .guide h5, .guide h6 { margin-bottom: 2rem; }
 
 .wrap { max-width: 100%; margin-left: auto; margin-right: auto; padding: 2.4rem; }
 
 .wrap:after { content: " "; display: block; clear: both; }
 
-.wrap article .title { font-family: "SangSangTitleB", sans-serif; font-size: 6rem; color: #1566c1; }
+.wrap article .title { font-family: "SangSangTitleB", sans-serif; color: #1566c1; }
 
-.wrap article .title:before { content: "\f013"; font-family: FontAwesome; font-size: 4rem; color: #1566c1; padding-right: 1rem; }
+.wrap article .title:before { content: "\f013"; font-family: FontAwesome; font-size: 2.4rem; color: #1566c1; padding-right: 1rem; }
 
 .wrap .all-link { width: 100%; float: left; margin-top: 2.4rem; }
 
