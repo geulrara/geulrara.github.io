@@ -34,7 +34,7 @@
     var copy   = '.js-copy';
     $title.click(function () {
       $(this).next(copy).slideToggle();
-      $(this).parent().siblings().children().next().slideUp();
+      $(this).parent().addClass('open').siblings().children().next().slideUp().parent().removeClass('open');
       return false;
     });
 

@@ -1813,15 +1813,21 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 /* 30.공지사항 (30_notice-list.html) */
 .notice .title { height: 65px; line-height: 65px; color: #fff; text-align: center; background: #f34a3c; }
 
+.notice .title .btn-notice-close { float: right; width: 65px; height: 65px; }
+
+.notice .title .btn-notice-close:after { display: block; content: ""; width: 26px; height: 26px; margin: 0 20px; background: url(/assets/images/svg/btn-notice-close.svg) center center no-repeat; background-size: 100%; }
+
+.notice .title .btn-notice-close span { position: absolute; top: -9999px; visibility: hidden; }
+
 .accordion { width: 100%; }
+
+.accordion .accordion-item.open .accordion-title:after { background: url(/assets/images/svg/btn-accordion-open.svg) top right no-repeat; }
+
+.accordion .accordion-item .accordion-title:after { float: right; display: inline-block; content: ""; width: 25px; height: 13px; margin-top: -32px; background: url(/assets/images/svg/btn-accordion-close.svg) top right no-repeat; background-size: 100%; }
 
 .accordion-title { font-size: 2.4rem; padding: 25px 35px; border-bottom: 1px solid #dbdbdb; cursor: pointer; }
 
 .accordion-title span { display: block; font-size: 1.8rem; color: #f34a3c; margin-top: 12px; }
-
-.accordion-title:after { float: right; display: inline-block; content: ""; width: 25px; height: 13px; margin-top: -32px; background: url(../../assets/images/svg/btn-accordion-close.svg) top right no-repeat; background-size: 100%; }
-
-.accordion-title.open:after { float: right; display: inline-block; content: ""; width: 25px; height: 13px; margin-top: -32px; background: url(../../assets/images/svg/btn-accordion-open.svg) top right no-repeat; background-size: 100%; }
 
 .accordion-copy { display: none; font-size: 2.2rem; color: #888; line-height: 40px; padding: 25px 35px; background: #f8f8f8; border-bottom: 1px solid #dbdbdb; }
 
