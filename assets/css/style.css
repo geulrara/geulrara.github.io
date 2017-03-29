@@ -1810,4 +1810,23 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .pop-wrap .wrap .col-text-box ul li .lable-math { font-size: 2.2rem; color: #fff; min-width: 68px; height: 29px; line-height: 29px; border-radius: 6px; background: #17a6c4; }
 
+/* 30.공지사항 (30_notice-list.html) */
+.notice .title { height: 65px; line-height: 65px; color: #fff; text-align: center; background: #f34a3c; }
+
+.accordion { width: 100%; }
+
+.accordion-title { font-size: 2.4rem; padding: 25px 35px; border-bottom: 1px solid #dbdbdb; cursor: pointer; }
+
+.accordion-title span { display: block; font-size: 1.8rem; color: #f34a3c; margin-top: 12px; }
+
+.accordion-title:after { float: right; display: inline-block; content: ""; width: 25px; height: 13px; margin-top: -32px; background: url(../../assets/images/svg/btn-accordion-close.svg) top right no-repeat; background-size: 100%; }
+
+.accordion-title.open:after { float: right; display: inline-block; content: ""; width: 25px; height: 13px; margin-top: -32px; background: url(../../assets/images/svg/btn-accordion-open.svg) top right no-repeat; background-size: 100%; }
+
+.accordion-copy { display: none; font-size: 2.2rem; color: #888; line-height: 40px; padding: 25px 35px; background: #f8f8f8; border-bottom: 1px solid #dbdbdb; }
+
+.accordion-copy img { width: 100%; height: auto; margin-top: 20px; margin-bottom: 20px; }
+
+.accordion-copy-open { display: block; }
+
 /*# sourceMappingURL=map/style.css.map */
