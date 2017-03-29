@@ -1821,6 +1821,8 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .accordion { width: 100%; }
 
+.accordion .accordion-item.js-open .accordion-title { cursor: default; }
+
 .accordion .accordion-item.js-open .accordion-title:after { background: url(/assets/images/svg/btn-accordion-open.svg) top right no-repeat; }
 
 .accordion .accordion-item .accordion-title:after { float: right; display: inline-block; content: ""; width: 25px; height: 13px; margin-top: -32px; background: url(/assets/images/svg/btn-accordion-close.svg) top right no-repeat; background-size: 100%; }

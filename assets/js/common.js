@@ -34,7 +34,7 @@
           copy   = '.js-copy';
 
     $title.click(function () {
-      $(this).next(copy).slideToggle();
+      $(this).next(copy).slideDown();
       $(this).parent().addClass('js-open').siblings().children().next().slideUp().parent().removeClass('js-open');
       return false;
     });
