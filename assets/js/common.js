@@ -33,8 +33,8 @@
     var $title = $('.js-title');
     var copy   = '.js-copy';
     $title.click(function () {
-      $(this).next(copy).slideToggle();
-      $(this).parent().addClass('open').siblings().children().next().slideUp().parent().removeClass('open');
+        $(this).next(copy).slideToggle();
+        $(this).parent().addClass('open').siblings().children().next().slideUp().parent().removeClass('open');
       return false;
     });
 
