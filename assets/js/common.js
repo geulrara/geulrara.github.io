@@ -30,11 +30,12 @@
 
     // Accordion 사용
     // [참고] http://codepen.io/dope/pen/yyxVga
-    var $title = $('.js-title');
-    var copy   = '.js-copy';
+    var $title = $('.js-title'),
+          copy   = '.js-copy';
+
     $title.click(function () {
-        $(this).next(copy).slideToggle();
-        $(this).parent().addClass('open').siblings().children().next().slideUp().parent().removeClass('open');
+      $(this).next(copy).slideToggle();
+      $(this).parent().addClass('js-open').siblings().children().next().slideUp().parent().removeClass('js-open');
       return false;
     });
 
