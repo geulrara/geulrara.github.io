@@ -1583,6 +1583,8 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .mr20 { margin-right: 20px; }
 
+.bd-20 { outline: 1px solid rgba(0, 0, 0, 0.2); }
+
 .dim-area { position: fixed; top: 0; bottom: 0; left: 0; right: 0; background: rgba(0, 0, 0, 0.1); }
 
 [class^="btn-"] { cursor: pointer; }
@@ -1757,9 +1759,9 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .img-area .touch-slider .carousel { min-width: 376px; }
 
-.img-area .touch-slider .carousel .carousel-cell .thumbnail { background: #000; border: 1px solid rgba(0, 0, 0, 0.2); }
+.img-area .touch-slider .carousel .carousel-cell .thumbnail { background: #000; }
 
-.img-area .touch-slider .carousel .carousel-cell .thumbnail img { width: auto; height: 100%; }
+.img-area .touch-slider .carousel .carousel-cell .thumbnail img { width: 100%; height: 100%; }
 
 .img-area .touch-slider .carousel .carousel-cell p { font-size: 1.8rem; padding-top: 14px; clear: both; }
 
