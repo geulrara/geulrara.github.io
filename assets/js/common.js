@@ -39,4 +39,16 @@
       return false;
     });
 
+    // Main Touch Slider
+    // [참고] http://flickity.metafizzy.co/api.html
+    $('.carousel').flickity({
+      // options
+      cellAlign: 'left',
+      contain: true,
+      // 스와이프 기능
+      wrapAround: true,
+      // 자동 슬라이드 기능 (기본시간 : 3000)
+      autoPlay: true,
+    });
+
 })(window, document, window.jQuery);
