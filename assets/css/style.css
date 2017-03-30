@@ -1745,11 +1745,23 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .sub-view .container p:last-child { margin-bottom: 0; }
 
+.img-area + p { clear: both; }
+
+.img-area .thumbnail { float: left; min-width: 376px; }
+
+.img-area .thumbnail img { width: auto; height: 100%; }
+
+.img-area .thumbnail p { font-size: 1.8rem; padding-top: 14px; }
+
 .img-area .touch-slider { float: left; }
 
-.img-area .touch-slider .carousel { width: 376px; height: 235px; }
+.img-area .touch-slider .carousel { min-width: 376px; }
 
-.img-area .touch-slider .carousel .carousel-cell img { width: auto; height: 100%; }
+.img-area .touch-slider .carousel .carousel-cell .thumbnail { background: #000; border: 1px solid rgba(0, 0, 0, 0.2); }
+
+.img-area .touch-slider .carousel .carousel-cell .thumbnail img { width: auto; height: 100%; }
+
+.img-area .touch-slider .carousel .carousel-cell p { font-size: 1.8rem; padding-top: 14px; clear: both; }
 
 .img-area .touch-slider .carousel .flickity-prev-next-button { display: none; }
 
