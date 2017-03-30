@@ -1759,9 +1759,9 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .img-area .touch-slider .carousel { min-width: 376px; }
 
-.img-area .touch-slider .carousel .carousel-cell .thumbnail { background: #000; }
+.img-area .touch-slider .carousel .carousel-cell .thumbnail { width: 100%; min-height: 235px; background: #000; }
 
-.img-area .touch-slider .carousel .carousel-cell .thumbnail img { width: 100%; height: 100%; }
+.img-area .touch-slider .carousel .carousel-cell .thumbnail img { width: auto; height: 100%; }
 
 .img-area .touch-slider .carousel .carousel-cell p { font-size: 1.8rem; padding-top: 14px; clear: both; }
 
