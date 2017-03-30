@@ -1575,6 +1575,14 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .fr { float: right; }
 
+.mt20 { margin-top: 20px; }
+
+.mb20 { margin-bottom: 20px; }
+
+.ml20 { margin-left: 20px; }
+
+.mr20 { margin-right: 20px; }
+
 .dim-area { position: fixed; top: 0; bottom: 0; left: 0; right: 0; background: rgba(0, 0, 0, 0.1); }
 
 [class^="btn-"] { cursor: pointer; }
@@ -1737,7 +1745,7 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .sub-view .container p:last-child { margin-bottom: 0; }
 
-.img-area .touch-slider { float: left; margin-right: 20px; }
+.img-area .touch-slider { float: left; }
 
 .img-area .touch-slider .carousel { width: 376px; height: 235px; }
 
