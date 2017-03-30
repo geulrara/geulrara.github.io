@@ -1751,6 +1751,8 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .sub-view .container p { text-align: justify; margin-bottom: 40px; }
 
+.sub-view .container p a { border-bottom: 1px solid #4a4a4a; }
+
 .sub-view .container p:last-child { margin-bottom: 0; }
 
 .img-area + p { clear: both; }
@@ -1792,5 +1794,7 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 .sub-view footer ul.footer-menu li a img { vertical-align: middle; }
 
 .sub-view footer ul.footer-menu li a span { font-size: 1.6rem; margin-right: 33px; }
+
+.sub-view footer ul.footer-menu li:last-child a span { margin-right: 0; }
 
 /*# sourceMappingURL=map/style.css.map */
