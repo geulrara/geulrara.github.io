@@ -1733,9 +1733,9 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .sub-view .container h2 { font-family: "SangSangTitleB", sans-serif; margin-bottom: 28px; }
 
-.sub-view .container p { text-align: justify; }
+.sub-view .container p { text-align: justify; margin-bottom: 40px; }
 
-.img-area { margin: 45px 0; }
+.sub-view .container p:last-child { margin-bottom: 0; }
 
 .img-area .touch-slider { float: left; margin-right: 20px; }
 
