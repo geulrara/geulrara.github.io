@@ -1571,11 +1571,9 @@ h6 { font-size: 16px; font-size: 1.6rem; }
 
 .btn-popup-close span { position: absolute; top: -9999px; visibility: hidden; }
 
-.modal:target + .modal-dialog { -webkit-transform: translate(0, 0); -ms-transform: translate(0, 0); transform: translate(0, 0); top: 50%; }
+.modal:target + .modal-dialog { top: 50%; }
 
-.modal:target:before { -webkit-transition: -webkit-transform 0.9s ease-out; -moz-transition: -moz-transform 0.9s ease-out; -o-transition: -o-transform 0.9s ease-out; transition: transform 0.9s ease-out; z-index: 99; }
-
-.modal-popup .modal-dialog { position: fixed; top: -50%; left: 50%; width: 420px; height: 224px; background: #ffface; border: #fade20 solid 1px; border-radius: 5px; margin-top: -112px; margin-left: -210px; -webkit-transform: translate(0, -500%); -ms-transform: translate(0, -500%); transform: translate(0, -500%); -webkit-transition: -webkit-transform 0.3s ease-out; -moz-transition: -moz-transform 0.3s ease-out; -o-transition: -o-transform 0.3s ease-out; transition: transform 0.3s ease-out; box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2); z-index: 100; }
+.modal-popup .modal-dialog { position: fixed; top: -50%; left: 50%; width: 420px; height: 224px; background: #ffface; border: #fade20 solid 1px; border-radius: 5px; margin-top: -112px; margin-left: -210px; box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2); z-index: 100; }
 
 .modal-popup .modal-dialog .modal-header h4 { padding: 22px; color: #84501c; }
 
