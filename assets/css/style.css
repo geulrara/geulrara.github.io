@@ -1571,13 +1571,13 @@ h6 { font-size: 16px; font-size: 1.6rem; }
 
 .btn-popup-close span { position: absolute; top: -9999px; visibility: hidden; }
 
-.modal:target + .modal-dialog { top: 50%; }
+.modal-popup .modal:target + .modal-dialog { top: 50%; }
 
-.modal-popup .modal-dialog { position: fixed; top: -50%; left: 50%; width: 420px; height: 224px; background: #ffface; border: #fade20 solid 1px; border-radius: 5px; margin-top: -112px; margin-left: -210px; box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2); z-index: 100; }
+.modal-popup .modal-dialog { position: fixed; top: -50%; left: 50%; width: 420px; height: 224px; border: #fade20 solid 1px; border-radius: 5px; margin-top: -112px; margin-left: -210px; background: #ffface; box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2); z-index: 100; }
 
 .modal-popup .modal-dialog .modal-header h4 { padding: 22px; color: #84501c; }
 
-.modal-popup .modal-dialog .modal-body { height: 154px; font-size: 2.2rem; color: #4f452c; padding: 0 22px 22px 22px; overflow-y: auto; }
+.modal-popup .modal-dialog .modal-body { height: 134px; font-size: 2.2rem; color: #4f452c; padding: 0 22px; overflow-y: auto; }
 
 html { font-family: "Noto Sans", sans-serif; font-size: 10px; }
 
