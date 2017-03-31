@@ -1781,11 +1781,7 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .img-area .touch-slider { float: left; }
 
-.img-area .touch-slider .carousel { width: 376px; }
-
-.img-area .touch-slider .carousel .carousel-cell .thumbnail { width: 376px; height: 235px; background: #000; border: 1px solid #b8b8b8; }
-
-.img-area .touch-slider .carousel .carousel-cell .thumbnail img { outline: 1px solid #b8b8b8; }
+.img-area .touch-slider .carousel { width: 376px; height: 236px; background: #000; border: 1px solid #b8b8b8; }
 
 .img-area .touch-slider .carousel .carousel-cell figcaption { font-size: 1.8rem; padding-top: 14px; clear: both; }
 
