@@ -1625,7 +1625,7 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .pop-wrap .wrap:nth-of-type(1) { padding-top: 50px; }
 
-/* 07-4.내책읽기, 07-5.내책읽기, 07-6.내책읽기 (07_read-my-book.html) */
+/* ---------------------------------------------------------------------- 07-4.내책읽기, 07-5.내책읽기, 07-6.내책읽기 (07_read-my-book.html) ----------------------------------------------------------------------- */
 .cover-area { width: 100%; height: 100vh; background: url("/assets/images/bg/cover-bg-01.png") center no-repeat; background-size: cover; }
 
 .cover-area .text-box { height: 100vh; padding: 95px 80px; color: #fff; }
@@ -1638,7 +1638,7 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .cover-area .text-box .contents span { background: rgba(0, 0, 0, 0.2); }
 
-/* 20-1.서브_상세화면_내책읽기 (20-1_sub-view-reed-my-book-list.html)  */
+/* ---------------------------------------------------------------------- 20-1.서브_상세화면_내책읽기 (20-1_sub-view-reed-my-book-list.html) ----------------------------------------------------------------------- */
 .sub-menu { width: 406px; height: 100vh; background: #fff; border-right: 1px solid rgba(0, 0, 0, 0.1); overflow-y: auto; overflow-x: hidden; }
 
 .sub-menu h2 { font-family: "SangSangTitleB", sans-serif; padding: 30px 30px 15px 30px; }
@@ -1649,7 +1649,7 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .sub-menu ul li a { line-height: 32px; }
 
-/* 24-1.메인_공통_최근검색어, 24-2.메인_공통_최근검색어, 24-3.메인_공통_최근검색어 24_main-recent_searches.html */
+/* ---------------------------------------------------------------------- 24-1.메인_공통_최근검색어, 24-2.메인_공통_최근검색어, 24-3.메인_공통_최근검색어 (24_main-recent_searches.html) ----------------------------------------------------------------------- */
 .search-menu { width: 512px; height: 100vh; background: #fff; border-left: 1px solid rgba(0, 0, 0, 0.1); overflow-y: auto; overflow-x: hidden; }
 
 .search-menu .search-area { position: relative; padding: 30px 26px; background: #ebeff2; }
@@ -1690,7 +1690,7 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .search-menu .keyword li .delete-area .btn-delete { background: #d8d8d8; border: 1px solid #c5c4c4; }
 
-/* 17-1.웹팝업_교과연계, 17-2.웹팝업_교과연계, 17-3.웹팝업_교과연계 (17_popup-curriculum.html) */
+/* ---------------------------------------------------------------------- 17-1.웹팝업_교과연계, 17-2.웹팝업_교과연계, 17-3.웹팝업_교과연계 (17_popup-curriculum.html) ----------------------------------------------------------------------- */
 .pop-wrap .wrap [class^="col-"] { float: left; }
 
 .pop-wrap .wrap .col-icon-box { margin-left: 36px; margin-right: 36px; }
@@ -1713,7 +1713,7 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .pop-wrap .wrap .col-text-box ul li.lable { font-family: "SangSangTitleB", sans-serif; margin-left: 20px; margin-right: 30px; }
 
-/* 30.공지사항 (30_notice-list.html) */
+/* ---------------------------------------------------------------------- 30.공지사항 (30_notice-list.html) ----------------------------------------------------------------------- */
 .notice .title { height: 65px; line-height: 65px; color: #fff; text-align: center; background: #f34a3c; }
 
 .notice .title .btn-notice-close { float: right; width: 65px; height: 65px; }
@@ -1740,7 +1740,7 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .accordion .accordion-item .accordion-copy-open { display: block; }
 
-/* 10-1.서브_상세화면 (10-1_sub-view.html) */
+/* ---------------------------------------------------------------------- 10-1.서브_상세화면 (10-1_sub-view.html) ----------------------------------------------------------------------- */
 .sub-view header { padding: 0 56px; position: relative; width: 100%; height: 90px; background: url(/assets/images/bg/bg-sub-book-header.png); }
 
 .sub-view header h5 { padding-top: 38px; font-weight: bold; }
@@ -1806,6 +1806,45 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 .sub-view footer ul.footer-menu li a span { font-size: 1.6rem; margin-right: 33px; }
 
 .sub-view footer ul.footer-menu li:last-child a span { margin-right: 0; }
+
+/* ---------------------------------------------------------------------- 10-2.이미지_영상_풀화면_캡션, 10-3.이미지_영상_풀화면_캡션 (10-2_sub-view-image-caption) ----------------------------------------------------------------------- */
+.sub-view-image .btn-image-close { position: absolute; top: 28px; right: 28px; width: 34px; height: 35px; z-index: 1; }
+
+.sub-view-image .btn-image-close:before { display: block; content: ""; width: 100%; height: 100%; background: url("/assets/images/carousel/btn-full-img-close.png") center no-repeat; background-size: 34px 35px; }
+
+.sub-view-image .btn-image-close span { position: absolute; top: -9999px; visibility: hidden; }
+
+.sub-view-image .touch-slider .carousel { background: #000; border: 1px solid #b8b8b8; }
+
+.sub-view-image .touch-slider .carousel .carousel-cell { width: 100vw; }
+
+.sub-view-image .touch-slider .carousel .carousel-cell .thumbnail { text-align: center; }
+
+.sub-view-image .touch-slider .carousel .carousel-cell .thumbnail img { width: auto; height: 100vh; max-width: 1280px; }
+
+.sub-view-image .touch-slider .carousel .carousel-cell figcaption { position: absolute; bottom: 0; padding: 28px 28px 68px 28px; font-size: 1.8rem; color: #fff; background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.8) 100%); }
+
+.sub-view-image .touch-slider .carousel .carousel-cell figcaption h4 { font-weight: bold; margin-bottom: 18px; }
+
+.sub-view-image .touch-slider .carousel .carousel-cell figcaption h4 .lable-science { margin-right: 18px; }
+
+.sub-view-image .touch-slider .carousel .carousel-cell figcaption h4 .sub-title { font-weight: normal; }
+
+.sub-view-image .touch-slider .carousel .carousel-cell figcaption p { height: 60px; overflow-y: auto; }
+
+.sub-view-image .touch-slider .carousel .flickity-prev-next-button { background: transparent; width: 35px; height: 65px; border-radius: 0; }
+
+.sub-view-image .touch-slider .carousel .flickity-prev-next-button svg { display: none; }
+
+.sub-view-image .touch-slider .carousel .flickity-prev-next-button.previous { left: 28px; }
+
+.sub-view-image .touch-slider .carousel .flickity-prev-next-button.previous:before { display: block; content: ""; width: 100%; height: 100%; background: url("../../assets/images/carousel/btn-full-img.png") center no-repeat; background-size: 35px 65px; }
+
+.sub-view-image .touch-slider .carousel .flickity-prev-next-button.next { right: 28px; }
+
+.sub-view-image .touch-slider .carousel .flickity-prev-next-button.next:before { display: block; content: ""; width: 100%; height: 100%; background: url("../../assets/images/carousel/btn-full-img.png") center no-repeat; -ms-transform: rotate(180deg); -webkit-transform: rotate(180deg); transform: rotate(180deg); background-size: 35px 65px; }
+
+.sub-view-image .touch-slider .carousel .flickity-page-dots { display: none; }
 
 body { background: #ededed !important; font-size: 1.6rem !important; height: 100vh; }
 
