@@ -1847,6 +1847,8 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 .sub-view-image .touch-slider .carousel .flickity-page-dots { display: none; }
 
 /* ---------------------------------------------------------------------- 25.메인_공통_통합검색, 26-1.메인_공통_사진검색 28.메인_공통_영상검색 (25_main-search-tab.html) ----------------------------------------------------------------------- */
+.search-tab { overflow: hidden; }
+
 .search-tab .tab-area { border-bottom: 1px solid #dbdbdb; }
 
 .search-tab .tab-area .tab-wrap { position: relative; display: flex; width: 100%; }
