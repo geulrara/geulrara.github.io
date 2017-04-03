@@ -1822,7 +1822,7 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .sub-view-image .touch-slider .carousel .carousel-cell .thumbnail img { width: auto; height: 100vh; max-width: 1280px; }
 
-.sub-view-image .touch-slider .carousel .carousel-cell figcaption { position: absolute; bottom: 0; padding: 28px 28px 68px 28px; font-size: 1.8rem; color: #fff; background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.8) 100%); }
+.sub-view-image .touch-slider .carousel .carousel-cell figcaption { position: absolute; bottom: 0; padding: 28px; font-size: 1.8rem; color: #fff; background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.8) 100%); }
 
 .sub-view-image .touch-slider .carousel .carousel-cell figcaption h4 { font-weight: bold; margin-bottom: 18px; }
 
