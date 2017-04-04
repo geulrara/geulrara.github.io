@@ -1625,6 +1625,10 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .pop-wrap .wrap:nth-of-type(1) { padding-top: 50px; }
 
+@viewport { width: extend-to-zoom 1280px;
+  min-zoom: 1;
+  max-zoom: 1; }
+
 /* ---------------------------------------------------------------------- 07-4.내책읽기, 07-5.내책읽기, 07-6.내책읽기 (07_read-my-book.html) ----------------------------------------------------------------------- */
 .cover-area { width: 100%; height: 100vh; background: url("/assets/images/bg/cover-bg-01.png") center no-repeat; background-size: cover; }
 
@@ -1867,9 +1871,9 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .search-tab .tab-area .tab-label-content .tab-content ul li h5 { margin-bottom: 10px; }
 
-.search-tab .tab-area .tab-label-content .tab-content ul li .img-area { float: left; width: 146px; height: 92px; }
+.search-tab .tab-area .tab-label-content .tab-content ul li .img-area { float: left; width: 146px; height: 92px; border-radius: 8px; overflow: hidden; border: 1px solid #ccc; }
 
-.search-tab .tab-area .tab-label-content .tab-content ul li .img-area img { width: 100%; height: auto; }
+.search-tab .tab-area .tab-label-content .tab-content ul li .img-area img { width: 100%; height: auto; vertical-align: middle; }
 
 .search-tab .tab-area .tab-label-content .tab-content ul li .text-area { float: left; height: 84px; overflow: hidden; }
 
