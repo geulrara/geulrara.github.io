@@ -1489,8 +1489,6 @@ http://flickity.metafizzy.co
 
 @font-face { font-family: 'SangSangTitleM'; src: url("../../assets/fonts/SangSangTitleM.eot"); src: url("../../assets/fonts/SangSangTitleM.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/SangSangTitleM.woff") format("woff"); font-weight: normal; font-style: normal; }
 
-@-ms-viewport , @-o-viewport, @viewport { width: device-width; }
-
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, figure, legend, input, textarea, button, p, blockquote, th, td, form, fieldset, blockquote, iframe { margin: 0; padding: 0; -moz-text-size-adjust: none; -ms-text-size-adjust: none; -webkit-text-size-adjust: none; text-size-adjust: none; }
 
 article, aside, canvas, details, embed, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
@@ -1579,9 +1577,15 @@ h6 { font-size: 16px; font-size: 1.6rem; }
 
 .modal-popup .modal-dialog .modal-body { height: 134px; font-size: 2.2rem; color: #4f452c; padding: 0 22px; overflow-y: auto; }
 
+@-ms-viewport , @-o-viewport, @viewport { width: device-width;
+  min-width: 800px;
+  min-height: 100vh;
+  min-zoom: 1;
+  max-zoom: 1; }
+
 html { font-family: "Noto Sans", sans-serif; font-size: 10px; }
 
-html body { min-width: 800px; min-height: 100vh; font-size: 2.4rem; color: #4a4a4a; line-height: 1.5; }
+html body { font-size: 2.4rem; color: #4a4a4a; line-height: 1.5; }
 
 html body * { box-sizing: border-box; word-wrap: break-word; }
 
@@ -1624,10 +1628,6 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 .pop-wrap .wrap { padding-top: 30px; }
 
 .pop-wrap .wrap:nth-of-type(1) { padding-top: 50px; }
-
-@viewport { width: extend-to-zoom 1280px;
-  min-zoom: 1;
-  max-zoom: 1; }
 
 /* ---------------------------------------------------------------------- 07-4.내책읽기, 07-5.내책읽기, 07-6.내책읽기 (07_read-my-book.html) ----------------------------------------------------------------------- */
 .cover-area { width: 100%; height: 100vh; background: url("/assets/images/bg/cover-bg-01.png") center no-repeat; background-size: cover; }
@@ -1783,7 +1783,7 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .img-area .touch-slider { float: left; }
 
-.img-area .touch-slider .carousel { width: 376px; height: 236px; background: #000; border: 1px solid #b8b8b8; }
+.img-area .touch-slider .carousel { width: 376px; height: 236px; background: #000; border: 1px solid #b8b8b8; margin-bottom: 40px; }
 
 .img-area .touch-slider .carousel .carousel-cell figcaption { font-size: 1.8rem; padding-top: 14px; clear: both; }
 
@@ -1820,7 +1820,7 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .sub-view-image .touch-slider .carousel { background: #000; border: 1px solid #b8b8b8; }
 
-.sub-view-image .touch-slider .carousel .carousel-cell { width: 100vw; }
+.sub-view-image .touch-slider .carousel .carousel-cell { width: 100vw; overflow: hidden; }
 
 .sub-view-image .touch-slider .carousel .carousel-cell .thumbnail { text-align: center; }
 
