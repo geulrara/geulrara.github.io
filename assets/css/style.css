@@ -1846,14 +1846,14 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .sub-view-image .touch-slider .carousel .flickity-page-dots { display: none; }
 
-/* ---------------------------------------------------------------------- 25.메인_공통_통합검색, 26-1.메인_공통_사진검색 28.메인_공통_영상검색 (25_main-search-tab.html) ----------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------- 25.메인_공통_통합검색, 26-1.메인_공통_사진검색, 28.메인_공통_영상검색 (25_main-search-tab.html) ----------------------------------------------------------------------- */
 .search-tab { overflow: hidden; }
 
 .search-tab .tab-area { border-bottom: 1px solid #dbdbdb; }
 
 .search-tab .tab-area .tab-wrap { position: relative; display: flex; width: 100%; }
 
-.search-tab .tab-area .slide { position: absolute; bottom: 0; transition: left 0.3s ease-out; }
+.search-tab .tab-area .slide { position: absolute; bottom: 0; height: 2px; background: #cdcdcd; transition: left 0.3s ease-out; }
 
 .search-tab .tab-area .slide .width { position: absolute; left: 50%; bottom: 0; height: 1px; width: 64px; margin-left: -32px; background: #f56056; }
 
