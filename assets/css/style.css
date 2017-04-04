@@ -1853,7 +1853,7 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .search-tab .tab-area .tab-wrap { position: relative; display: flex; width: 100%; }
 
-.search-tab .tab-area .slide { position: absolute; bottom: 0; height: 2px; background: #cdcdcd; transition: left 0.3s ease-out; }
+.search-tab .tab-area .slide { position: absolute; left: 0; bottom: 0; height: 2px; transition: left 0.3s ease-out; }
 
 .search-tab .tab-area .slide .width { position: absolute; left: 50%; bottom: 0; height: 1px; width: 64px; margin-left: -32px; background: #f56056; }
 
