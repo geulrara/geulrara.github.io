@@ -1969,6 +1969,63 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .search-tab .tab-area .tab-label-content .tab-content.video .video-box:nth-of-type(2) { margin-top: 0; }
 
+/* ---------------------------------------------------------------------- 27.이미지상세뷰어, 29.영상-상세-뷰어 (27_main-search-tab_view.html) ----------------------------------------------------------------------- */
+.search-tab-view header { width: 100px; height: 85px; }
+
+.search-tab-view header .btn-view-prev { width: 85px; height: 85px; }
+
+.search-tab-view header .btn-view-prev:before { display: block; content: ""; width: 100%; height: 100%; background: url("/assets/images/svg/btn-view-prev.svg") center no-repeat; background-size: 34px 28px; }
+
+.search-tab-view .slider-gallery { height: -webkit-calc( 100vh - 85px); height: -moz-calc( 100vh - 85px); height: calc( 100vh - 85px); overflow: hidden; padding: 0 56px; }
+
+.search-tab-view .slider-gallery .touch-slider { float: left; width: -webkit-calc( 100% - 292px); width: -moz-calc( 100% - 292px); width: calc( 100% - 292px); overflow-y: auto; }
+
+.search-tab-view .slider-gallery .touch-slider .carousel { width: 100%; }
+
+.search-tab-view .slider-gallery .touch-slider .carousel .carousel-cell { clear: both; }
+
+.search-tab-view .slider-gallery .touch-slider .carousel .carousel-cell .thumbnail { width: 100%; height: 550px; text-align: center; border-radius: 8px; background: #000; overflow: hidden; }
+
+.search-tab-view .slider-gallery .touch-slider .carousel .carousel-cell .thumbnail img { width: auto; height: 100%; max-width: 875px; }
+
+.search-tab-view .slider-gallery .touch-slider .carousel .carousel-cell figcaption { padding: 28px 0; font-size: 1.8rem; background: #fff; clear: both; }
+
+.search-tab-view .slider-gallery .touch-slider .carousel .carousel-cell figcaption h4 { font-weight: bold; margin-bottom: 18px; }
+
+.search-tab-view .slider-gallery .touch-slider .carousel .carousel-cell figcaption h4 .lable-science { margin-right: 18px; }
+
+.search-tab-view .slider-gallery .touch-slider .carousel .carousel-cell figcaption h4 .sub-title { font-weight: normal; }
+
+.search-tab-view .slider-gallery .touch-slider .carousel .carousel-cell figcaption p { height: 60px; overflow-y: auto; }
+
+.search-tab-view .slider-gallery .touch-slider .carousel .flickity-prev-next-button { top: 40%; width: 35px; height: 65px; border-radius: 0; background: transparent; }
+
+.search-tab-view .slider-gallery .touch-slider .carousel .flickity-prev-next-button svg { display: none; }
+
+.search-tab-view .slider-gallery .touch-slider .carousel .flickity-prev-next-button.previous { left: 28px; }
+
+.search-tab-view .slider-gallery .touch-slider .carousel .flickity-prev-next-button.previous:before { display: block; content: ""; width: 100%; height: 100%; background: url("/assets/images/svg/btn-view-img.svg") center no-repeat; background-size: 35px 65px; }
+
+.search-tab-view .slider-gallery .touch-slider .carousel .flickity-prev-next-button.next { right: 28px; }
+
+.search-tab-view .slider-gallery .touch-slider .carousel .flickity-prev-next-button.next:before { display: block; content: ""; width: 100%; height: 100%; background: url("/assets/images/svg/btn-view-img.svg") center no-repeat; -ms-transform: rotate(180deg); -webkit-transform: rotate(180deg); transform: rotate(180deg); background-size: 35px 65px; }
+
+.search-tab-view .slider-gallery .touch-slider .carousel .flickity-page-dots { display: none; }
+
+.search-tab-view .slider-gallery .view-content { float: right; width: 270px; height: -webkit-calc( 100vh - 85px); height: -moz-calc( 100vh - 85px); height: calc( 100vh - 85px); overflow-y: auto; }
+
+.search-tab-view .slider-gallery .view-content.images .img-box { position: relative; height: 130px; border-radius: 8px; overflow: hidden; width: 46.42857%; float: left; margin-bottom: 10px; }
+
+.search-tab-view .slider-gallery .view-content.images .img-box:nth-child(2n + 1) { margin-left: 1.78571%; margin-right: -100%; clear: both; }
+
+.search-tab-view .slider-gallery .view-content.images .img-box:nth-child(2n + 2) { margin-left: 51.78571%; margin-right: -100%; clear: none; }
+
+.search-tab-view .slider-gallery .view-content.images .img-box.selected, .search-tab-view .slider-gallery .view-content.images .img-box:hover, .search-tab-view .slider-gallery .view-content.images .img-box:focus, .search-tab-view .slider-gallery .view-content.images .img-box:active { position: relative; border: 6px solid #f56056; background: rgba(0, 0, 0, 0.6); }
+
+.search-tab-view .slider-gallery .view-content.images .img-box.selected:before, .search-tab-view .slider-gallery .view-content.images .img-box:hover:before, .search-tab-view .slider-gallery .view-content.images .img-box:focus:before, .search-tab-view .slider-gallery .view-content.images .img-box:active:before { position: absolute; display: block; content: ""; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); background-image: url("/assets/images/svg/icon-selected.svg"); background-repeat: no-repeat; background-position: center; background-size: 46px 31px; z-index: 1; }
+
+.search-tab-view .slider-gallery .view-content.images .img-box img { width: auto; height: 100%; position: relative; left: 50%; transform: translateX(-50%); }
+
 body { background: #ededed !important; font-size: 1.6rem !important; height: 100vh; }
 
 .guide { margin-bottom: 0; }
@@ -1983,7 +2040,7 @@ body { background: #ededed !important; font-size: 1.6rem !important; height: 100
 
 .wrap article .title:before { content: "\f013"; font-family: FontAwesome; font-size: 2.4rem; color: #1566c1; padding-right: 1rem; }
 
-.wrap .all-link { width: 96.5812%; float: left; margin-left: 1.7094%; margin-right: 1.7094%; margin-top: 2.4rem; }
+.wrap .all-link { width: 96.42857%; float: left; margin-left: 1.78571%; margin-right: 1.78571%; margin-top: 2.4rem; }
 
 .wrap .all-link .location { padding: 2.3rem 2.4rem; border: 1px solid #ddd; margin-bottom: 2.4rem; background: #fff; }
 
