@@ -1982,11 +1982,11 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .search-tab-view .slider-gallery .touch-slider .carousel { width: 100%; }
 
-.search-tab-view .slider-gallery .touch-slider .carousel .carousel-cell { clear: both; }
+.search-tab-view .slider-gallery .touch-slider .carousel .carousel-cell { width: 100%; clear: both; }
 
-.search-tab-view .slider-gallery .touch-slider .carousel .carousel-cell .thumbnail { width: 100%; height: 550px; text-align: center; border-radius: 8px; background: #000; overflow: hidden; }
+.search-tab-view .slider-gallery .touch-slider .carousel .carousel-cell .thumbnail { position: relative; width: 100%; height: 550px; border-radius: 8px; background: #000; overflow: hidden; }
 
-.search-tab-view .slider-gallery .touch-slider .carousel .carousel-cell .thumbnail img { width: auto; height: 100%; max-width: 875px; }
+.search-tab-view .slider-gallery .touch-slider .carousel .carousel-cell .thumbnail img { position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%); width: auto; height: 100%; }
 
 .search-tab-view .slider-gallery .touch-slider .carousel .carousel-cell figcaption { padding: 28px 0; font-size: 1.8rem; background: #fff; clear: both; }
 
@@ -2024,6 +2024,6 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .search-tab-view .slider-gallery .view-content.images .img-box.selected:before, .search-tab-view .slider-gallery .view-content.images .img-box:hover:before, .search-tab-view .slider-gallery .view-content.images .img-box:focus:before, .search-tab-view .slider-gallery .view-content.images .img-box:active:before { position: absolute; display: block; content: ""; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); background-image: url("/assets/images/svg/icon-selected.svg"); background-repeat: no-repeat; background-position: center; background-size: 46px 31px; z-index: 1; }
 
-.search-tab-view .slider-gallery .view-content.images .img-box img { width: auto; height: 100%; position: relative; left: 50%; transform: translateX(-50%); }
+.search-tab-view .slider-gallery .view-content.images .img-box img { position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%); width: auto; height: 100%; border-radius: 8px; }
 
 /*# sourceMappingURL=map/style.css.map */
