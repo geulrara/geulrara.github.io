@@ -48,7 +48,7 @@
       // 스와이프 기능
       wrapAround: true,
       // 자동 슬라이드 기능 (기본시간 : 3000)
-      autoPlay: true,
+      autoPlay: false,
     });
 
 })(window, document, window.jQuery);
