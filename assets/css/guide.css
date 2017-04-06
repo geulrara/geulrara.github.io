@@ -1777,7 +1777,7 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .img-area .thumbnail img { position: relative; left: 50%; transform: translateX(-50%); object-fit: cover; }
 
-.img-area .thumbnail .img { width: 376px; height: 235px; border: 1px solid #b8b8b8; overflow: hidden; }
+.img-area .thumbnail .img { width: 376px; height: 234px; border: 1px solid #b8b8b8; overflow: hidden; }
 
 .img-area .thumbnail .img img { position: relative; left: 50%; transform: translateX(-50%); object-fit: cover; }
 
@@ -1785,17 +1785,17 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .img-area .touch-slider { float: left; }
 
-.img-area .touch-slider .carousel { width: 376px; height: 236px; background: #000; border: 1px solid #b8b8b8; margin-bottom: 40px; }
+.img-area .touch-slider .carousel-auto { width: 376px; height: 234px; background: #000; border: 1px solid #b8b8b8; margin-bottom: 40px; }
 
-.img-area .touch-slider .carousel .carousel-cell figcaption { font-size: 1.8rem; padding-top: 14px; clear: both; }
+.img-area .touch-slider .carousel-auto .carousel-cell figcaption { font-size: 1.8rem; padding-top: 14px; clear: both; }
 
-.img-area .touch-slider .carousel .flickity-prev-next-button { display: none; }
+.img-area .touch-slider .carousel-auto .flickity-prev-next-button { display: none; }
 
-.img-area .touch-slider .carousel .flickity-page-dots { top: -30px; bottom: 0; height: 30px; text-align: right; }
+.img-area .touch-slider .carousel-auto .flickity-page-dots { top: -30px; bottom: 0; height: 30px; text-align: right; }
 
-.img-area .touch-slider .carousel .flickity-page-dots .dot { width: 8px; height: 8px; margin: 0; margin-left: 12px; box-sizing: border-box; background: #ababab; border: 1px solid #979797; border-radius: 0; }
+.img-area .touch-slider .carousel-auto .flickity-page-dots .dot { width: 8px; height: 8px; margin: 0; margin-left: 12px; box-sizing: border-box; background: #ababab; border: 1px solid #979797; border-radius: 0; }
 
-.img-area .touch-slider .carousel .flickity-page-dots .dot.is-selected { opacity: 1; background: #f37e7a; border: 1px solid #ee6866; }
+.img-area .touch-slider .carousel-auto .flickity-page-dots .dot.is-selected { opacity: 1; background: #f37e7a; border: 1px solid #ee6866; }
 
 .sub-view footer { position: fixed; bottom: 0; width: 100%; height: 90px; padding: 0 56px; background: url(/assets/images/bg/bg-sub-book-footer.png); }
 

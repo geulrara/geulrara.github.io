@@ -50,5 +50,15 @@
       // 자동 슬라이드 기능 (기본시간 : 3000)
       autoPlay: false,
     });
+    // 자동 스와이프
+    $('.carousel-auto').flickity({
+      // options
+      cellAlign: 'left',
+      contain: true,
+      // 스와이프 기능
+      wrapAround: true,
+      // 자동 슬라이드 기능 (기본시간 : 3000)
+      autoPlay: true,
+    });
 
 })(window, document, window.jQuery);
