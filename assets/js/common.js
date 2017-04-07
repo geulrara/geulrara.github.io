@@ -61,4 +61,11 @@
       autoPlay: true,
     });
 
+    // 드로그 앱 드롭
+    // [참고] http://farhadi.ir/projects/html5sortable/
+    $('.sortable').sortable({
+        forcePlaceholderSize: true
+    });
+
+
 })(window, document, window.jQuery);

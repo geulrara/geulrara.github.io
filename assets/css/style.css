@@ -1547,7 +1547,7 @@ input:-moz-placeholder { color: #4a4a4a; }
 
 .kw-icon { background-image: url("/assets/images/sprite/sprite-icon.png"); }
 
-.pop-wrap .wrap:after, .sub-menu ul:after, .search-menu .search-area:after, .search-tab .search-area:after, .search-menu .keyword-btn-set:after, .search-tab .keyword-btn-set:after, .search-menu .keyword:after, .search-tab .keyword:after, .search-menu .keyword li:after, .search-tab .keyword li:after, .pop-wrap .wrap .col-text-box ul:after, .sub-view footer:after { content: ''; display: block; clear: both; }
+.pop-wrap .wrap:after, .sub-menu ul:after, .sub-dd-menu ul:after, .search-menu .search-area:after, .search-tab .search-area:after, .search-menu .keyword-btn-set:after, .search-tab .keyword-btn-set:after, .search-menu .keyword:after, .search-tab .keyword:after, .search-menu .keyword li:after, .search-tab .keyword li:after, .pop-wrap .wrap .col-text-box ul:after, .sub-view footer:after { content: ''; display: block; clear: both; }
 
 h1, h2, h3, h4, h5, h6 { line-height: 1; }
 
@@ -1643,15 +1643,15 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 .cover-area .text-box .contents span { background: rgba(0, 0, 0, 0.2); }
 
 /* ---------------------------------------------------------------------- 20-1.서브_상세화면_내책읽기 (20-1_sub-view-reed-my-book-list.html) ----------------------------------------------------------------------- */
-.sub-menu { width: 406px; height: 100vh; background: #fff; border-right: 1px solid rgba(0, 0, 0, 0.1); overflow-y: auto; overflow-x: hidden; }
+.sub-menu, .sub-dd-menu { width: 406px; height: 100vh; background: #fff; border-right: 1px solid rgba(0, 0, 0, 0.1); overflow-y: auto; overflow-x: hidden; }
 
-.sub-menu h2 { font-family: "SangSangTitleB", sans-serif; padding: 30px 30px 15px 30px; }
+.sub-menu h2, .sub-dd-menu h2 { font-family: "SangSangTitleB", sans-serif; padding: 15px 28px; line-height: 1.5; display: -webkit-box; overflow: hidden; text-overflow: ellipsis; -webkit-line-clamp: 1; -webkit-box-orient: vertical; word-wrap: break-word; }
 
-.sub-menu ul li { position: relative; padding: 8px 30px 8px 46px; font-size: 2.2rem; line-height: 1; }
+.sub-menu ul li, .sub-dd-menu ul li { position: relative; padding: 8px 28px; font-size: 2.2rem; line-height: 1; }
 
-.sub-menu ul li:before { position: absolute; top: 8px; left: 30px; display: inline-block; content: "."; line-height: 16px; }
+.sub-menu ul li:before, .sub-dd-menu ul li:before { position: absolute; top: 8px; left: 28px; display: inline-block; content: "."; line-height: 16px; }
 
-.sub-menu ul li a { line-height: 32px; }
+.sub-menu ul li a, .sub-dd-menu ul li a { line-height: 32px; padding-left: 16px; }
 
 /* ---------------------------------------------------------------------- 24-1.메인_공통_최근검색어, 24-2.메인_공통_최근검색어, 24-3.메인_공통_최근검색어 (24_main-recent_searches.html) ----------------------------------------------------------------------- */
 .search-menu, .search-tab { width: 512px; height: 100vh; background: #fff; border-left: 1px solid rgba(0, 0, 0, 0.1); overflow-y: auto; overflow-x: hidden; }
@@ -1824,9 +1824,9 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .sub-view-image .touch-slider .carousel .carousel-cell { width: 100vw; height: 100vh; overflow: hidden; }
 
-.sub-view-image .touch-slider .carousel .carousel-cell .thumbnail { text-align: center; }
+.sub-view-image .touch-slider .carousel .carousel-cell .thumbnail { position: relative; text-align: center; height: 100vh; }
 
-.sub-view-image .touch-slider .carousel .carousel-cell .thumbnail video { position: relative; top: 50%; transform: translateY(-50%); width: 100%; height: auto; }
+.sub-view-image .touch-slider .carousel .carousel-cell .thumbnail video { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; height: auto; }
 
 .sub-view-image .touch-slider .carousel .carousel-cell .thumbnail img { width: auto; height: 100vh; max-width: 1280px; }
 
@@ -2046,5 +2046,20 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 .search-tab-view .slider-gallery .view-content.video .video-box.selected:before, .search-tab-view .slider-gallery .view-content.video .video-box:hover:before, .search-tab-view .slider-gallery .view-content.video .video-box:focus:before, .search-tab-view .slider-gallery .view-content.video .video-box:active:before { position: absolute; display: block; content: ""; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); background-image: url("/assets/images/svg/icon-selected.svg"); background-repeat: no-repeat; background-position: center; background-size: 46px 31px; z-index: 1; }
 
 .search-tab-view .slider-gallery .view-content.video .video-box video { position: relative; top: 50%; transform: translateY(-50%); width: 100%; height: auto; }
+
+/* ---------------------------------------------------------------------- 20-2.서브_상세화면_내책읽기편집2 (20-2_sub-view-reed-my-book-list-edit.html) ----------------------------------------------------------------------- */
+.sub-dd-menu h2 { position: relative; padding-left: 66px; }
+
+.sub-dd-menu h2:before { position: absolute; top: 28px; left: 28px; display: inline-block; content: ""; width: 26px; height: 26px; background: #fff url("/assets/images/common/btn-dd-delete.png") center no-repeat; background-size: 26px 26px; }
+
+.sub-dd-menu ul li.sortable-placeholder { max-height: 111px; overflow: hidden; border-bottom: 1px solid #ccc; box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
+
+.sub-dd-menu ul li { padding-left: 38px; padding-right: 60px; border-top: 1px solid #ccc; max-height: 111px; overflow: hidden; cursor: pointer; }
+
+.sub-dd-menu ul li:before { position: absolute; top: 50%; left: 30px; display: inline-block; content: ""; width: 20px; height: 20px; margin-top: -10px; background: #fff url("/assets/images/common/btn-dd-delete.png") center no-repeat; background-size: 20px 20px; }
+
+.sub-dd-menu ul li:after { position: absolute; top: 50%; right: 25px; display: inline-block; content: ""; width: 24px; height: 24px; margin-top: -12px; background: #fff url("../../assets/images/svg/btn-dd-move.svg") center no-repeat; background-size: 24px 24px; }
+
+.sub-dd-menu ul li a { display: -webkit-box; overflow: hidden; text-overflow: ellipsis; -webkit-line-clamp: 3; -webkit-box-orient: vertical; word-wrap: break-word; padding-left: 30px; }
 
 /*# sourceMappingURL=map/style.css.map */
