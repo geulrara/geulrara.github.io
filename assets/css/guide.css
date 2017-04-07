@@ -2054,15 +2054,15 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .sub-dd-menu h2:before { position: absolute; top: 28px; left: 28px; display: inline-block; content: ""; width: 26px; height: 26px; background: #fff url("/assets/images/common/btn-dd-delete.png") center no-repeat; background-size: 26px 26px; }
 
-.sub-dd-menu ul li.sortable-placeholder { max-height: 111px; overflow: hidden; border-bottom: 1px solid #ccc; box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
+.sub-dd-menu ul.dreg-drop li.sortable-placeholder { max-height: 111px; overflow: hidden; border-bottom: 1px solid #ccc; box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
 
-.sub-dd-menu ul li { padding-left: 38px; padding-right: 60px; border-top: 1px solid #ccc; max-height: 111px; overflow: hidden; cursor: pointer; }
+.sub-dd-menu ul.dreg-drop li { padding-left: 38px; padding-right: 60px; border-top: 1px solid #ccc; max-height: 111px; overflow: hidden; cursor: pointer; }
 
-.sub-dd-menu ul li:before { position: absolute; top: 50%; left: 30px; display: inline-block; content: ""; width: 20px; height: 20px; margin-top: -10px; background: #fff url("/assets/images/common/btn-dd-delete.png") center no-repeat; background-size: 20px 20px; }
+.sub-dd-menu ul.dreg-drop li:before { position: absolute; top: 50%; left: 30px; display: inline-block; content: ""; width: 20px; height: 20px; margin-top: -10px; background: #fff url("/assets/images/common/btn-dd-delete.png") center no-repeat; background-size: 20px 20px; }
 
-.sub-dd-menu ul li:after { position: absolute; top: 50%; right: 25px; display: inline-block; content: ""; width: 24px; height: 24px; margin-top: -12px; background: #fff url("../../assets/images/svg/btn-dd-move.svg") center no-repeat; background-size: 24px 24px; }
+.sub-dd-menu ul.dreg-drop li:after { position: absolute; top: 50%; right: 25px; display: inline-block; content: ""; width: 24px; height: 24px; margin-top: -12px; background: #fff url("../../assets/images/svg/btn-dd-move.svg") center no-repeat; background-size: 24px 24px; }
 
-.sub-dd-menu ul li a { display: -webkit-box; overflow: hidden; text-overflow: ellipsis; -webkit-line-clamp: 3; -webkit-box-orient: vertical; word-wrap: break-word; padding-left: 30px; }
+.sub-dd-menu ul.dreg-drop li a { display: -webkit-box; overflow: hidden; text-overflow: ellipsis; -webkit-line-clamp: 3; -webkit-box-orient: vertical; word-wrap: break-word; padding-left: 30px; }
 
 .sub-dd-menu .btn-area { position: fixed; left: 0; right: 0; bottom: 0; width: 406px; height: 70px; line-height: 70px; text-align: center; border-top: 1px solid #dbdbdb; border-right: 1px solid rgba(0, 0, 0, 0.1); background: rgba(255, 255, 255, 0.8); }
 
