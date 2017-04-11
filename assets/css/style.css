@@ -1745,7 +1745,7 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 .accordion .accordion-item .accordion-copy-open { display: block; }
 
 /* ---------------------------------------------------------------------- 10-1.서브_상세화면 (10-1_sub-view.html) ----------------------------------------------------------------------- */
-.sub-view header { padding: 0 56px; position: relative; width: 100%; height: 90px; background: url(../../assets/images/bg/bg-sub-book-header.png); }
+.sub-view header { padding: 0 56px; position: relative; width: 100%; height: 90px; background: url(../../assets/images/bg/bg-sub-book-header.png); border-bottom: 1px solid #d5d5d5; }
 
 .sub-view header h5 { padding-top: 38px; font-weight: bold; }
 
