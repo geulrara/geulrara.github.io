@@ -2129,13 +2129,13 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .books-type-3 .wrap dl { width: 644px; }
 
-.books-type-3 .wrap dl dt { width: 13.40206%; float: left; margin-right: 1.03093%; font-size: 1.8rem; color: #888; min-height: 60px; padding-top: 20px; }
+.books-type-3 .wrap dl dt { width: 14.28571%; float: left; font-size: 1.8rem; color: #888; min-height: 60px; padding-top: 20px; }
 
-.books-type-3 .wrap dl dd { position: relative; width: 85.56701%; float: right; margin-right: 0; font-size: 2.2rem; min-height: 60px; border-bottom: 1px solid #bdbdbd; }
+.books-type-3 .wrap dl dd { position: relative; width: 85.71429%; float: right; margin-right: 0; font-size: 2.2rem; min-height: 60px; border-bottom: 1px solid #bdbdbd; }
 
-.books-type-3 .wrap dl dd input { position: absolute; left: 0; right: 0; bottom: 0; height: 50px; line-height: 50px; }
+.books-type-3 .wrap dl dd input { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 50px; line-height: 50px; }
 
-.books-type-3 .wrap dl dd.selected, .books-type-3 .wrap dl dd:hover, .books-type-3 .wrap dl dd:focus, .books-type-3 .wrap dl dd:active { border-bottom: 1px solid #fc847c; }
+.books-type-3 .wrap dl dd:hover, .books-type-3 .wrap dl dd:focus, .books-type-3 .wrap dl dd:active { border-bottom: 1px solid #fc847c; }
 
 .books-type-3 .wrap dl:nth-of-type(3) dt { height: 170px; }
 
@@ -2158,5 +2158,108 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 .books-type-3 .wrap div ul li figure figcaption { position: absolute; top: -9999px; visibility: hidden; }
 
 .books-type-3 .btn-area { text-align: center; margin-top: 19px; }
+
+/* ---------------------------------------------------------------------- 15.웹팝업_지식네비게이션 (15_popup-knowledge-navigation.html) ----------------------------------------------------------------------- */
+.knowledge-navigation { min-width: 1090px; max-width: 1090px; height: 670px; }
+
+.knowledge-navigation .wrap .title-area { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 250px; height: 250px; font-weight: bold; border-radius: 50%; color: #fff; background: #b157a8; background: -moz-linear-gradient(top, #b157a8 0%, #b157a8 41%, #9f4e97 41%, #9f4e97 100%); background: -webkit-gradient(left top, left bottom, color-stop(0%, #b157a8), color-stop(41%, #b157a8), color-stop(41%, #9f4e97), color-stop(100%, #9f4e97)); background: -webkit-linear-gradient(top, #b157a8 0%, #b157a8 41%, #9f4e97 41%, #9f4e97 100%); background: -o-linear-gradient(top, #b157a8 0%, #b157a8 41%, #9f4e97 41%, #9f4e97 100%); background: -ms-linear-gradient(top, #b157a8 0%, #b157a8 41%, #9f4e97 41%, #9f4e97 100%); background: linear-gradient(to bottom, #b157a8 0%, #b157a8 41%, #9f4e97 41%, #9f4e97 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b157a8', endColorstr='#9f4e97', GradientType=0 ); }
+
+.knowledge-navigation .wrap .title-area p { text-align: center; }
+
+.knowledge-navigation .wrap .title-area p:first-child { font-size: 3.8rem; height: 103px; line-height: 1; padding: 43px 22px 22px; display: -webkit-box; overflow: hidden; text-overflow: ellipsis; -webkit-line-clamp: 1; -webkit-box-orient: vertical; word-wrap: break-word; }
+
+.knowledge-navigation .wrap .title-area p:last-child { font-size: 2.4rem; height: 100px; padding: 15px 22px; display: -webkit-box; overflow: hidden; text-overflow: ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical; word-wrap: break-word; }
+
+.knowledge-navigation .wrap [class$="-line"] { float: left; width: 50%; height: 432px; }
+
+.knowledge-navigation .wrap [class$="-line"] hr { display: block; width: 228px; height: 2px; border-width: 0; margin: 0; }
+
+.knowledge-navigation .wrap [class$="-line"] hr.knowledge { background: #eb99e3; }
+
+.knowledge-navigation .wrap [class$="-line"] hr.science { background: #f39800; }
+
+.knowledge-navigation .wrap [class$="-line"] hr.arts { background: #e95412; }
+
+.knowledge-navigation .wrap [class$="-line"] hr.social { background: #9e2a93; }
+
+.knowledge-navigation .wrap [class$="-line"] hr.korean { background: #9da704; }
+
+.knowledge-navigation .wrap [class$="-line"] hr.math { background: #17a6c4; }
+
+.knowledge-navigation .wrap .left-line { position: relative; }
+
+.knowledge-navigation .wrap .left-line [class*="left-"] { position: absolute; }
+
+.knowledge-navigation .wrap .left-line [class*="left-"]:before { position: absolute; top: -7px; left: -14px; display: block; content: ""; width: 15px; height: 15px; border-radius: 50%; background: #eb99e3; }
+
+.knowledge-navigation .wrap .left-line hr.left-60 { top: 113px; right: -56px; transform: rotate(60deg); }
+
+.knowledge-navigation .wrap .left-line hr.left-30 { top: 156px; right: -15px; transform: rotate(30deg); }
+
+.knowledge-navigation .wrap .left-line hr.left-0 { top: 212px; right: 0; transform: rotate(0deg); }
+
+.knowledge-navigation .wrap .left-line hr.left--30 { top: 269px; right: -15px; transform: rotate(-30deg); }
+
+.knowledge-navigation .wrap .left-line hr.left--60 { top: 312px; right: -56px; transform: rotate(-60deg); }
+
+.knowledge-navigation .wrap .right-line { position: relative; }
+
+.knowledge-navigation .wrap .right-line [class*="right-"] { position: absolute; }
+
+.knowledge-navigation .wrap .right-line [class*="right-"]:after { position: absolute; top: -13px; right: -64px; display: block; content: ""; width: 64px; height: 28px; font-size: 18px; font-weight: bold; color: #fff; text-align: center; line-height: 28px; border-radius: 6px; }
+
+.knowledge-navigation .wrap .right-line hr.right--60 { top: 113px; left: -56px; transform: rotate(-60deg); }
+
+.knowledge-navigation .wrap .right-line hr.right--60:after { top: 6px; left: 207px; }
+
+.knowledge-navigation .wrap .right-line hr.right--30 { top: 156px; left: -15px; transform: rotate(-30deg); }
+
+.knowledge-navigation .wrap .right-line hr.right--30:after { top: -8px; left: 200px; }
+
+.knowledge-navigation .wrap .right-line hr.right-0 { top: 212px; left: 0; transform: rotate(0deg); }
+
+.knowledge-navigation .wrap .right-line hr.right-0:after { top: -13px; left: 202px; }
+
+.knowledge-navigation .wrap .right-line hr.right-30 { top: 269px; left: -15px; transform: rotate(30deg); }
+
+.knowledge-navigation .wrap .right-line hr.right-30:after { top: -18px; left: 200px; }
+
+.knowledge-navigation .wrap .right-line hr.right-60 { top: 312px; left: -56px; transform: rotate(60deg); }
+
+.knowledge-navigation .wrap .right-line hr.right-60:after { top: -33px; left: 204px; }
+
+.knowledge-navigation .wrap .right-line hr.science:after { content: "과학"; transform: rotate(60deg); background: #f39800; }
+
+.knowledge-navigation .wrap .right-line hr.arts:after { content: "예체능"; transform: rotate(30deg); background: #e95412; }
+
+.knowledge-navigation .wrap .right-line hr.social:after { content: "사회"; transform: rotate(0deg); background: #9e2a93; }
+
+.knowledge-navigation .wrap .right-line hr.korean:after { content: "국어"; transform: rotate(-30deg); background: #9da704; }
+
+.knowledge-navigation .wrap .right-line hr.math:after { content: "수학"; transform: rotate(-60deg); background: #17a6c4; }
+
+.knowledge-navigation .wrap [class$="-line"] .text-area { position: relative; font-size: 2.4rem; }
+
+.knowledge-navigation .wrap [class$="-line"] .text-area [class*="order"] { position: absolute; width: 230px; display: -webkit-box; overflow: hidden; text-overflow: ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical; word-wrap: break-word; }
+
+.knowledge-navigation .wrap [class$="-line"] .text-area .order-1 { top: -8px; right: 138px; }
+
+.knowledge-navigation .wrap [class$="-line"] .text-area .order-2 { top: 79px; right: 223px; }
+
+.knowledge-navigation .wrap [class$="-line"] .text-area .order-3 { top: 196px; right: 255px; }
+
+.knowledge-navigation .wrap [class$="-line"] .text-area .order-4 { top: 313px; right: 223px; }
+
+.knowledge-navigation .wrap [class$="-line"] .text-area .order-5 { top: 401px; right: 138px; }
+
+.knowledge-navigation .wrap [class$="-line"] .text-area .order-6 { top: -4px; left: 183px; }
+
+.knowledge-navigation .wrap [class$="-line"] .text-area .order-7 { top: 84px; left: 249px; }
+
+.knowledge-navigation .wrap [class$="-line"] .text-area .order-8 { top: 195px; left: 279px; }
+
+.knowledge-navigation .wrap [class$="-line"] .text-area .order-9 { top: 307px; left: 249px; }
+
+.knowledge-navigation .wrap [class$="-line"] .text-area .order-10 { top: 391px; left: 183px; }
 
 /*# sourceMappingURL=map/style.css.map */
