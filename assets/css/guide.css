@@ -1666,7 +1666,7 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .search-menu .search-area .search-wrap, .search-tab .search-area .search-wrap { position: relative; display: inline-block; height: 50px; line-height: 50px; border: 1px solid #d1d4d7; margin-right: 110px; background: #fff; border-radius: 25px; }
 
-.search-menu .search-area .search-wrap input, .search-tab .search-area .search-wrap input { width: 100%; padding: 0 50px 0 20px; }
+.search-menu .search-area .search-wrap input, .search-tab .search-area .search-wrap input { width: 100%; height: 100%; padding: 10px 50px 10px 20px; }
 
 .search-menu .search-area .search-wrap label, .search-tab .search-area .search-wrap label { visibility: hidden; }
 
@@ -1726,7 +1726,7 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .notice .title .btn-notice-close { float: right; width: 65px; height: 65px; }
 
-.notice .title .btn-notice-close:after { display: block; content: ""; width: 26px; height: 26px; margin: 0 20px; background: url(../../assets/images/svg/btn-notice-close.svg) center center no-repeat; background-size: 100%; }
+.notice .title .btn-notice-close:after { display: block; content: ""; width: 26px; height: 26px; margin: 0 20px; background: url("../../assets/images/svg/btn-notice-close.svg") center center no-repeat; background-size: 100%; }
 
 .notice .title .btn-notice-close span { position: absolute; top: -9999px; visibility: hidden; }
 
@@ -1734,9 +1734,9 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .accordion .accordion-item.js-open .accordion-title { cursor: default; }
 
-.accordion .accordion-item.js-open .accordion-title:after { background: url(../../assets/images/svg/btn-accordion-open.svg) top right no-repeat; }
+.accordion .accordion-item.js-open .accordion-title:after { background: url("../../assets/images/svg/btn-accordion-open.svg") top right no-repeat; }
 
-.accordion .accordion-item .accordion-title:after { float: right; display: inline-block; content: ""; width: 25px; height: 13px; margin-top: -32px; background: url(../../assets/images/svg/btn-accordion-close.svg) top right no-repeat; background-size: 100%; }
+.accordion .accordion-item .accordion-title:after { float: right; display: inline-block; content: ""; width: 25px; height: 13px; margin-top: -32px; background: url("../../assets/images/svg/btn-accordion-close.svg") top right no-repeat; background-size: 100%; }
 
 .accordion .accordion-item .accordion-title { font-size: 2.4rem; padding: 25px 35px; border-bottom: 1px solid #dbdbdb; cursor: pointer; }
 
@@ -1749,7 +1749,7 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 .accordion .accordion-item .accordion-copy-open { display: block; }
 
 /* ---------------------------------------------------------------------- 10-1.서브_상세화면 (10-1_sub-view.html) ----------------------------------------------------------------------- */
-.sub-view header { padding: 0 56px; position: relative; width: 100%; height: 90px; background: url(../../assets/images/bg/bg-sub-book-header.png); border-bottom: 1px solid #d5d5d5; }
+.sub-view header { padding: 0 56px; position: relative; width: 100%; height: 90px; background: url("../../assets/images/bg/bg-sub-book-header.png"); border-bottom: 1px solid #d5d5d5; }
 
 .sub-view header h5 { padding-top: 38px; font-weight: bold; }
 
@@ -1757,7 +1757,7 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .sub-view header h5 .sub-title { margin-left: 20px; font-weight: normal; }
 
-.sub-view header h5 .sub-title:before { display: inline-block; content: ""; width: 20px; height: 20px; margin-right: 6px; vertical-align: -3px; background: url(../../assets/images/svg/icon-sub-title.svg) center left no-repeat; background-size: 100%; }
+.sub-view header h5 .sub-title:before { display: inline-block; content: ""; width: 20px; height: 20px; margin-right: 6px; vertical-align: -3px; background: url("../../assets/images/svg/icon-sub-title.svg") center left no-repeat; background-size: 100%; }
 
 .sub-view .btn-menu-list { position: absolute; top: 50%; transform: translateY(-50%); width: 40px; height: 49px; background: #f56056; border-top: 1px solid #ed3730; border-bottom: 1px solid #ed3730; border-right: 1px solid #ed3730; border-bottom-right-radius: 25px; border-top-right-radius: 25px; }
 
@@ -1765,7 +1765,7 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .sub-view .btn-menu-list span { position: absolute; top: -9999px; visibility: hidden; }
 
-.sub-view .container { height: -webkit-calc( 100vh - 180px); height: -moz-calc( 100vh - 180px); height: calc( 100vh - 180px); padding: 22px 56px; background: url(../../assets/images/bg/bg-sub-book-common.png); overflow-y: auto; }
+.sub-view .container { height: -webkit-calc( 100vh - 180px); height: -moz-calc( 100vh - 180px); height: calc( 100vh - 180px); padding: 22px 56px; background: url("../../assets/images/bg/bg-sub-book-common.png"); overflow-y: auto; }
 
 .sub-view .container h2 { font-family: "SangSangTitleB", sans-serif; margin-bottom: 28px; }
 
@@ -1801,7 +1801,7 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .img-area .touch-slider .carousel-auto .flickity-page-dots .dot.is-selected { opacity: 1; background: #f37e7a; border: 1px solid #ee6866; }
 
-.sub-view footer { position: fixed; bottom: 0; width: 100%; height: 90px; padding: 0 56px; background: url(../../assets/images/bg/bg-sub-book-footer.png); }
+.sub-view footer { position: fixed; bottom: 0; width: 100%; height: 90px; padding: 0 56px; background: url("../../assets/images/bg/bg-sub-book-footer.png"); }
 
 .sub-view footer .paging { float: left; font-size: 1.4rem; margin-top: 35px; }
 
@@ -2101,7 +2101,7 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .books-type-1 .wrap div ul li figure .img-box.make img, .books-type-2 .wrap div ul li figure .img-box.make img, .books-type-3 .wrap div ul li figure .img-box.make img { width: 100%; height: 100%; }
 
-.books-type-1 .wrap div ul li figure .img-box.make .cover, .books-type-2 .wrap div ul li figure .img-box.make .cover, .books-type-3 .wrap div ul li figure .img-box.make .cover { position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: 1; transform: inherit; }
+.books-type-1 .wrap div ul li figure .img-box.make .cover, .books-type-2 .wrap div ul li figure .img-box.make .cover, .books-type-3 .wrap div ul li figure .img-box.make .cover { position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: 1; -ms-transform: inherit; -webkit-transform: inherit; transform: inherit; }
 
 .books-type-1 .wrap div ul li figure .img-box.make.selected, .books-type-2 .wrap div ul li figure .img-box.make.selected, .books-type-3 .wrap div ul li figure .img-box.make.selected, .books-type-1 .wrap div ul li figure .img-box.make:hover, .books-type-2 .wrap div ul li figure .img-box.make:hover, .books-type-3 .wrap div ul li figure .img-box.make:hover, .books-type-1 .wrap div ul li figure .img-box.make:focus, .books-type-2 .wrap div ul li figure .img-box.make:focus, .books-type-3 .wrap div ul li figure .img-box.make:focus, .books-type-1 .wrap div ul li figure .img-box.make:active, .books-type-2 .wrap div ul li figure .img-box.make:active, .books-type-3 .wrap div ul li figure .img-box.make:active { position: relative; cursor: pointer; }
 
@@ -2192,15 +2192,15 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .knowledge-navigation .wrap .left-line [class*="left-"]:before { position: absolute; top: -7px; left: -14px; display: block; content: ""; width: 15px; height: 15px; border-radius: 50%; background: #eb99e3; }
 
-.knowledge-navigation .wrap .left-line hr.left-60 { top: 113px; right: -56px; transform: rotate(60deg); }
+.knowledge-navigation .wrap .left-line hr.left-60 { top: 113px; right: -56px; -ms-transform: rotate(60deg); -webkit-transform: rotate(60deg); transform: rotate(60deg); }
 
-.knowledge-navigation .wrap .left-line hr.left-30 { top: 156px; right: -15px; transform: rotate(30deg); }
+.knowledge-navigation .wrap .left-line hr.left-30 { top: 156px; right: -15px; -ms-transform: rotate(30deg); -webkit-transform: rotate(30deg); transform: rotate(30deg); }
 
-.knowledge-navigation .wrap .left-line hr.left-0 { top: 212px; right: 0; transform: rotate(0deg); }
+.knowledge-navigation .wrap .left-line hr.left-0 { top: 212px; right: 0; -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); transform: rotate(0deg); }
 
-.knowledge-navigation .wrap .left-line hr.left--30 { top: 269px; right: -15px; transform: rotate(-30deg); }
+.knowledge-navigation .wrap .left-line hr.left--30 { top: 269px; right: -15px; -ms-transform: rotate(-30deg); -webkit-transform: rotate(-30deg); transform: rotate(-30deg); }
 
-.knowledge-navigation .wrap .left-line hr.left--60 { top: 312px; right: -56px; transform: rotate(-60deg); }
+.knowledge-navigation .wrap .left-line hr.left--60 { top: 312px; right: -56px; -ms-transform: rotate(-60deg); -webkit-transform: rotate(-60deg); transform: rotate(-60deg); }
 
 .knowledge-navigation .wrap .right-line { position: relative; }
 
@@ -2208,35 +2208,35 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .knowledge-navigation .wrap .right-line [class*="right-"]:after { position: absolute; top: -13px; right: -64px; display: block; content: ""; width: 64px; height: 28px; font-size: 18px; font-weight: bold; color: #fff; text-align: center; line-height: 28px; border-radius: 6px; }
 
-.knowledge-navigation .wrap .right-line hr.right--60 { top: 113px; left: -56px; transform: rotate(-60deg); }
+.knowledge-navigation .wrap .right-line hr.right--60 { top: 113px; left: -56px; -ms-transform: rotate(-60deg); -webkit-transform: rotate(-60deg); transform: rotate(-60deg); }
 
 .knowledge-navigation .wrap .right-line hr.right--60:after { top: 6px; left: 207px; }
 
-.knowledge-navigation .wrap .right-line hr.right--30 { top: 156px; left: -15px; transform: rotate(-30deg); }
+.knowledge-navigation .wrap .right-line hr.right--30 { top: 156px; left: -15px; -ms-transform: rotate(-30deg); -webkit-transform: rotate(-30deg); transform: rotate(-30deg); }
 
 .knowledge-navigation .wrap .right-line hr.right--30:after { top: -8px; left: 200px; }
 
-.knowledge-navigation .wrap .right-line hr.right-0 { top: 212px; left: 0; transform: rotate(0deg); }
+.knowledge-navigation .wrap .right-line hr.right-0 { top: 212px; left: 0; -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); transform: rotate(0deg); }
 
 .knowledge-navigation .wrap .right-line hr.right-0:after { top: -13px; left: 202px; }
 
-.knowledge-navigation .wrap .right-line hr.right-30 { top: 269px; left: -15px; transform: rotate(30deg); }
+.knowledge-navigation .wrap .right-line hr.right-30 { top: 269px; left: -15px; -ms-transform: rotate(30deg); -webkit-transform: rotate(30deg); transform: rotate(30deg); }
 
 .knowledge-navigation .wrap .right-line hr.right-30:after { top: -18px; left: 200px; }
 
-.knowledge-navigation .wrap .right-line hr.right-60 { top: 312px; left: -56px; transform: rotate(60deg); }
+.knowledge-navigation .wrap .right-line hr.right-60 { top: 312px; left: -56px; -ms-transform: rotate(60deg); -webkit-transform: rotate(60deg); transform: rotate(60deg); }
 
 .knowledge-navigation .wrap .right-line hr.right-60:after { top: -33px; left: 204px; }
 
-.knowledge-navigation .wrap .right-line hr.science:after { content: "과학"; transform: rotate(60deg); background: #f39800; }
+.knowledge-navigation .wrap .right-line hr.science:after { content: "과학"; -ms-transform: rotate(60deg); -webkit-transform: rotate(60deg); transform: rotate(60deg); background: #f39800; }
 
-.knowledge-navigation .wrap .right-line hr.arts:after { content: "예체능"; transform: rotate(30deg); background: #e95412; }
+.knowledge-navigation .wrap .right-line hr.arts:after { content: "예체능"; -ms-transform: rotate(30deg); -webkit-transform: rotate(30deg); transform: rotate(30deg); background: #e95412; }
 
-.knowledge-navigation .wrap .right-line hr.social:after { content: "사회"; transform: rotate(0deg); background: #9e2a93; }
+.knowledge-navigation .wrap .right-line hr.social:after { content: "사회"; -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); transform: rotate(0deg); background: #9e2a93; }
 
-.knowledge-navigation .wrap .right-line hr.korean:after { content: "국어"; transform: rotate(-30deg); background: #9da704; }
+.knowledge-navigation .wrap .right-line hr.korean:after { content: "국어"; -ms-transform: rotate(-30deg); -webkit-transform: rotate(-30deg); transform: rotate(-30deg); background: #9da704; }
 
-.knowledge-navigation .wrap .right-line hr.math:after { content: "수학"; transform: rotate(-60deg); background: #17a6c4; }
+.knowledge-navigation .wrap .right-line hr.math:after { content: "수학"; -ms-transform: rotate(-60deg); -webkit-transform: rotate(-60deg); transform: rotate(-60deg); background: #17a6c4; }
 
 .knowledge-navigation .wrap [class$="-line"] .text-area { position: relative; font-size: 2.4rem; }
 
