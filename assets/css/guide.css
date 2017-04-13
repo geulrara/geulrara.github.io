@@ -3575,7 +3575,7 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 .search-tab-view .slider-gallery .view-content.video .video-box video { position: relative; top: 50%; transform: translateY(-50%); width: 100%; height: auto; }
 
 /* ---------------------------------------------------------------------- 20-2.서브_상세화면_내책읽기편집2 (20-2_sub-view-reed-my-book-list-edit.html) ----------------------------------------------------------------------- */
-.sub-dd-menu { margin-bottom: 70px; }
+.sub-dd-menu { padding-bottom: 70px; }
 
 .sub-dd-menu h2 { position: relative; padding-left: 66px; }
 
