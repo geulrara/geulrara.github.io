@@ -3092,9 +3092,11 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .remote { width: 940px; height: 640px; }
 
-.container { min-width: 940px; }
+.container { min-width: 940px; background: #fff; }
 
 .container .content { padding: 30px 50px; }
+
+.bg-color { background: #082c45; }
 
 .fl { float: left; }
 
@@ -3187,11 +3189,11 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .remote-check-progress-all .container .content .item-title { float: left; }
 
-.remote-check-progress-all .container .content .item-title .sub-title { margin-top: 18px; }
+.remote-check-progress-all .container .content .item-title .sub-title { margin-top: 18px; margin-left: 10px; }
 
 .remote-check-progress-all .container .content .btn-island-go { float: right; width: 400px; height: 63px; font-size: 2rem; font-weight: bold; color: #fff; margin-right: 11px; margin-bottom: 20px; background: url("../../assets/images/common/bg-btn-go.png") no-repeat; }
 
-.remote-check-progress-all .container .item-table { width: 821px; height: 141px; clear: both; }
+.remote-check-progress-all .container .item-table { width: 821px; height: 141px; margin: 0 auto; clear: both; }
 
 .remote-check-progress-all .container .item-table ol li { float: left; width: 20%; text-align: center; }
 
