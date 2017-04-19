@@ -3370,6 +3370,8 @@ h3 { font-size: 20px; font-size: 2rem; }
 .check-progress-weekly-diagnosis.remote-full .table-type tbody td .btn-scoring-results-full-off, .remote-full.smart-weekly-diagnosis .table-type tbody td .btn-scoring-results-full-off { background-position: 0px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 104px; height: 48px; }
 
 /* -------------------------------------------------------------------------------------- 04_스마트주간진단_01저학년, 04_스마트주간진단_02고학년 (kyowon-smart-redpen/html/full-smart-weekly-diagnosis.html) --------------------------------------------------------------------------------------- */
+.smart-weekly-diagnosis .container .content .table-title { display: inline-block; }
+
 .smart-weekly-diagnosis .container .content .week-tab-menu { margin-left: 0; margin-right: -10px; }
 
 /* -------------------------------------------------------------------------------------- 03_웹공유_01진척도점검_04주간진단_03칭찬딱지모아보기_01, 03_웹공유_01진척도점검_04주간진단_03칭찬딱지모아보기_02 (kyowon-smart-redpen/html/remote-check-progress-weekly-compliment.html) --------------------------------------------------------------------------------------- */
