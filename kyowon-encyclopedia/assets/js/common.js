@@ -69,12 +69,10 @@
 
     // 가로 스크롤 배너
     var element     = $('#scrolling'),
-          wrapper     = element.wrap('<div style="overflow: auto;">'),
+          wrapper     = element.wrap('<div style="overflow: auto;">');
 
-          getCurrentFold = function(scroll, width) {
+          getCurrentFolder = function(scroll, width) {
               return Math.ceil(width / scroll);
-          },
-
-          folds = Math.ceil(element.offsetWidth / wrapper.offsetWidth);
+          };
 
 })(window, document, window.jQuery);

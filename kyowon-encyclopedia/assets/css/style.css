@@ -3008,10 +3008,6 @@ http://flickity.metafizzy.co
 
 .slideOutUp { -webkit-animation-name: slideOutUp; animation-name: slideOutUp; }
 
-@font-face { font-family: 'SangSangTitleB'; src: url("../../assets/fonts/SangSangTitleB.eot"); src: url("../../assets/fonts/SangSangTitleB.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/SangSangTitleB.woff") format("woff"); font-weight: normal; font-style: normal; }
-
-@font-face { font-family: 'SangSangTitleM'; src: url("../../assets/fonts/SangSangTitleM.eot"); src: url("../../assets/fonts/SangSangTitleM.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/SangSangTitleM.woff") format("woff"); font-weight: normal; font-style: normal; }
-
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, figure, legend, input, textarea, button, p, blockquote, th, td, form, fieldset, blockquote, iframe { margin: 0; padding: 0; -moz-text-size-adjust: none; -ms-text-size-adjust: none; -webkit-text-size-adjust: none; text-size-adjust: none; }
 
 article, aside, canvas, details, embed, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
@@ -3072,6 +3068,16 @@ input:-moz-placeholder { color: #4a4a4a; }
 
 .pop-wrap .wrap:after, .sub-menu ul:after, .sub-dd-menu ul:after, .search-menu .search-area:after, .search-tab .search-area:after, .search-menu .keyword-btn-set:after, .search-tab .keyword-btn-set:after, .search-menu .keyword:after, .search-tab .keyword:after, .search-menu .keyword li:after, .search-tab .keyword li:after, .curriculum .wrap .col-text-box ul:after, .sub-view footer:after, .books-type-1 .wrap div ul li:after, .books-type-2 .wrap div ul li:after, .books-type-3 .wrap div ul li:after, .books-type-3 .wrap dl:after { content: ''; display: block; clear: both; }
 
+@font-face { font-family: 'SangSangTitleB'; src: url("../../assets/fonts/SangSangTitleB.eot"); src: url("../../assets/fonts/SangSangTitleB.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/SangSangTitleB.woff") format("woff"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'SangSangTitleM'; src: url("../../assets/fonts/SangSangTitleM.eot"); src: url("../../assets/fonts/SangSangTitleM.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/SangSangTitleM.woff") format("woff"); font-weight: normal; font-style: normal; }
+
+html { font-family: "Noto Sans", sans-serif; font-size: 10px; }
+
+html body { font-size: 2.4rem; color: #4a4a4a; line-height: 1.5; }
+
+html body * { box-sizing: border-box; word-wrap: break-word; }
+
 h1, h2, h3, h4, h5, h6 { line-height: 1; }
 
 h1 { font-size: 60px; font-size: 6rem; }
@@ -3105,12 +3111,6 @@ h6 { font-size: 16px; font-size: 1.6rem; }
   min-height: 100vh;
   min-zoom: 1;
   max-zoom: 1; }
-
-html { font-family: "Noto Sans", sans-serif; font-size: 10px; }
-
-html body { font-size: 2.4rem; color: #4a4a4a; line-height: 1.5; }
-
-html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .fl { float: left; }
 
@@ -3158,7 +3158,23 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .pop-wrap .wrap .messge { position: absolute; left: 0; right: 0; bottom: 27px; font-size: 1.8rem; color: #f56056; text-align: center; }
 
-/* ---------------------------------------------------------------------- 07-4.내책읽기, 07-5.내책읽기, 07-6.내책읽기 (07_read-my-book.html) ----------------------------------------------------------------------- */
+@keyframes loading { 0% { transform-origin: 100% 100%;
+    transform: rotate(0deg); }
+  100% { transform-origin: 100% 100%;
+    transform: rotate(360deg); } }
+
+.search-tab .tab-area .tab-label-content .tab-content .loading { position: absolute; display: block; z-index: 13; margin: 15px auto; width: 100px; height: 100px; border: 5px solid transparent; border-radius: 50%; background-color: transparent; }
+
+.search-tab .tab-area .tab-label-content .tab-content .loading:before { position: absolute; display: block; content: ''; z-index: 12; top: 4px; left: 4px; width: 82px; height: 82px; border-radius: 50%; background-color: #fff; }
+
+.search-tab .tab-area .tab-label-content .tab-content .loading:after { position: absolute; display: block; top: 0; content: ''; z-index: 11; top: 0px; left: 0px; width: 45px; height: 45px; border-radius: 200px 0 0 0; background: linear-gradient(45deg, transparent 0%, #459ad7 90%, #459ad7 100%); animation: loading .9s linear infinite; }
+
+/* ----------------------------------------------------------------------
+ 07-4.내책읽기,
+ 07-5.내책읽기,
+ 07-6.내책읽기
+ (07_read-my-book.html)
+----------------------------------------------------------------------- */
 .cover-area { width: 100%; height: 100vh; background: url("../../assets/images/bg/cover-bg-01.png") center no-repeat; background-size: cover; }
 
 .cover-area .text-box { height: 100vh; padding: 95px 80px; color: #fff; }
@@ -3171,7 +3187,10 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .cover-area .text-box .contents span { background: rgba(0, 0, 0, 0.2); }
 
-/* ---------------------------------------------------------------------- 20-1.서브_상세화면_내책읽기 (20-1_sub-view-reed-my-book-list.html) ----------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------
+ 20-1.서브_상세화면_내책읽기
+ (20-1_sub-view-reed-my-book-list.html)
+----------------------------------------------------------------------- */
 .sub-menu, .sub-dd-menu { width: 406px; height: 100vh; background: #fff; border-right: 1px solid rgba(0, 0, 0, 0.1); overflow-y: auto; overflow-x: hidden; }
 
 .sub-menu h2, .sub-dd-menu h2 { font-family: "SangSangTitleB", sans-serif; padding: 15px 28px; line-height: 1.5; display: -webkit-box; overflow: hidden; text-overflow: ellipsis; -webkit-line-clamp: 1; -webkit-box-orient: vertical; word-wrap: break-word; }
@@ -3182,7 +3201,12 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .sub-menu ul li a, .sub-dd-menu ul li a { line-height: 32px; padding-left: 16px; }
 
-/* ---------------------------------------------------------------------- 24-1.메인_공통_최근검색어, 24-2.메인_공통_최근검색어, 24-3.메인_공통_최근검색어 (24_main-recent_searches.html) ----------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------
+ 24-1.메인_공통_최근검색어,
+ 24-2.메인_공통_최근검색어,
+ 24-3.메인_공통_최근검색어
+ (24_main-recent_searches.html)
+----------------------------------------------------------------------- */
 .search-menu, .search-tab { width: 512px; height: 100vh; background: #fff; border-left: 1px solid rgba(0, 0, 0, 0.1); overflow-y: auto; overflow-x: hidden; }
 
 .search-menu .search-area, .search-tab .search-area { position: relative; padding: 30px 26px; background: #ebeff2; }
@@ -3223,7 +3247,12 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .search-menu .keyword li .delete-area .btn-delete, .search-tab .keyword li .delete-area .btn-delete { background: #d8d8d8; border: 1px solid #c5c4c4; }
 
-/* ---------------------------------------------------------------------- 17-1.웹팝업_교과연계, 17-2.웹팝업_교과연계, 17-3.웹팝업_교과연계 (17_popup-curriculum.html) ----------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------
+ 17-1.웹팝업_교과연계,
+ 17-2.웹팝업_교과연계,
+ 17-3.웹팝업_교과연계
+ (17_popup-curriculum.html)
+----------------------------------------------------------------------- */
 .curriculum .wrap [class^="col-"] { float: left; }
 
 .curriculum .wrap .col-icon-box { margin-left: 36px; margin-right: 36px; }
@@ -3244,7 +3273,10 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .curriculum .wrap .col-text-box ul li.lable { font-family: "SangSangTitleB", sans-serif; margin-left: 20px; margin-right: 30px; }
 
-/* ---------------------------------------------------------------------- 30.공지사항 (30_notice-list.html) ----------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------
+ 30.공지사항
+ (30_notice-list.html)
+----------------------------------------------------------------------- */
 .notice .title { height: 65px; line-height: 65px; color: #fff; text-align: center; background: #f34a3c; }
 
 .notice .title .btn-notice-close { float: right; width: 65px; height: 65px; }
@@ -3271,7 +3303,10 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .accordion .accordion-item .accordion-copy-open { display: block; }
 
-/* ---------------------------------------------------------------------- 10-1.서브_상세화면 (10-1_sub-view.html) ----------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------
+ 10-1.서브_상세화면
+ (10-1_sub-view.html)
+----------------------------------------------------------------------- */
 .sub-view header { padding: 0 56px; position: relative; width: 100%; height: 90px; background: url("../../assets/images/bg/bg-sub-book-header.png"); border-bottom: 1px solid #d5d5d5; }
 
 .sub-view header h5 { padding-top: 38px; font-weight: bold; }
@@ -3340,7 +3375,11 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .sub-view footer ul.footer-menu li:last-child a span { margin-right: 0; }
 
-/* ---------------------------------------------------------------------- 10-2.이미지_영상_풀화면_캡션, 10-3.이미지_영상_풀화면_캡션 (10-2_sub-view-image-caption) ----------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------
+ 10-2.이미지_영상_풀화면_캡션,
+ 10-3.이미지_영상_풀화면_캡션
+ (10-2_sub-view-image-caption)
+----------------------------------------------------------------------- */
 .sub-view-image .btn-image-close { position: absolute; top: 28px; right: 28px; width: 34px; height: 35px; z-index: 1; }
 
 .sub-view-image .btn-image-close:before { display: block; content: ""; width: 100%; height: 100%; background: url("../../assets/images/carousel/btn-full-img-close.png") center no-repeat; background-size: 34px 35px; }
@@ -3381,7 +3420,12 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .sub-view-image .touch-slider .carousel .flickity-page-dots { display: none; }
 
-/* ---------------------------------------------------------------------- 25.메인_공통_통합검색, 26-1.메인_공통_사진검색, 28.메인_공통_영상검색 (25_main-search-tab.html) ----------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------
+ 25.메인_공통_통합검색,
+ 26-1.메인_공통_사진검색,
+ 28.메인_공통_영상검색
+ (25_main-search-tab.html)
+----------------------------------------------------------------------- */
 .search-tab { overflow: hidden; }
 
 .search-tab .tab-area { border-bottom: 1px solid #dbdbdb; }
@@ -3395,6 +3439,8 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 .search-tab .tab-area .tab-label-content { width: 100%; height: 120px; }
 
 .search-tab .tab-area .tab-label-content .tab-content { position: absolute; top: 120px; display: none; height: -webkit-calc( 100vh - 230px); height: -moz-calc( 100vh - 230px); height: calc( 100vh - 230px); overflow-y: auto; }
+
+.search-tab .tab-area .tab-label-content .tab-content .loading { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
 
 .search-tab .tab-area .slide { width: calc(100% / 3); }
 
@@ -3438,9 +3484,11 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .search-tab .tab-area label[for="tab3"]:before { background: url("../../assets/images/common/icon-tab-video-off.png") bottom center no-repeat; }
 
-.search-tab .tab-area .tab-label-content .tab-content.Integrated ul li { padding: 20px 31px 15px 31px; border-top: 1px solid #eaeaea; }
+.search-tab .tab-area .tab-label-content .tab-content.Integrated ul li { position: relative; padding: 20px 31px 15px 31px; border-top: 1px solid #eaeaea; }
 
 .search-tab .tab-area .tab-label-content .tab-content.Integrated ul li:first-child { border-top: 0; }
+
+.search-tab .tab-area .tab-label-content .tab-content.Integrated ul li:hover:before, .search-tab .tab-area .tab-label-content .tab-content.Integrated ul li:hover::before, .search-tab .tab-area .tab-label-content .tab-content.Integrated ul li:focus:before, .search-tab .tab-area .tab-label-content .tab-content.Integrated ul li:focus::before { position: absolute; top: 0; left: 0; bottom: 0; right: 0; display: block; content: ''; background: rgba(0, 0, 0, 0.1); z-index: 1; }
 
 .search-tab .tab-area .tab-label-content .tab-content.Integrated ul li h5 { margin-bottom: 10px; }
 
@@ -3500,7 +3548,10 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .search-tab .tab-area .tab-label-content .tab-content.video .video-box:nth-of-type(2) { margin-top: 0; }
 
-/* ---------------------------------------------------------------------- 27.이미지상세뷰어 (27_main-search-tab-img-view.html) ----------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------
+ 27.이미지상세뷰어
+ (27_main-search-tab-img-view.html)
+----------------------------------------------------------------------- */
 .search-tab-view header { width: 100px; height: 85px; }
 
 .search-tab-view header .btn-view-prev { width: 85px; height: 85px; }
@@ -3559,7 +3610,10 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .search-tab-view .slider-gallery .view-content.images .img-box img { position: relative; left: 50%; transform: translateX(-50%); border-radius: 8px; object-fit: cover; }
 
-/* ---------------------------------------------------------------------- 29.영상-상세-뷰어 (29_main-search-tab-video-view.html) ----------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------
+ 29.영상-상세-뷰어
+ (29_main-search-tab-video-view.html)
+----------------------------------------------------------------------- */
 .search-tab-view .slider-gallery .touch-slider .carousel .carousel-cell .thumbnail .btn-play { position: absolute; left: 50%; transform: translateX(-50%); top: 215px; width: 122px; height: 122px; z-index: 10; }
 
 .search-tab-view .slider-gallery .touch-slider .carousel .carousel-cell .thumbnail .btn-play:before { position: absolute; top: 0; display: block; content: ""; width: 100%; height: 100%; background-image: url("../../assets/images/common/icon-play.png"); background-repeat: no-repeat; background-position: center; background-size: 122px 122px; }
@@ -3574,18 +3628,23 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .search-tab-view .slider-gallery .view-content.video .video-box video { position: relative; top: 50%; transform: translateY(-50%); width: 100%; height: auto; }
 
-/* ---------------------------------------------------------------------- 20-2.서브_상세화면_내책읽기편집2 (20-2_sub-view-reed-my-book-list-edit.html) ----------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------
+ 20-2.서브_상세화면_내책읽기편집2
+ (20-2_sub-view-reed-my-book-list-edit.html)
+----------------------------------------------------------------------- */
 .sub-dd-menu { padding-bottom: 70px; }
 
 .sub-dd-menu h2 { position: relative; padding-left: 66px; }
 
-.sub-dd-menu h2:before { position: absolute; top: 28px; left: 28px; display: inline-block; content: ""; width: 26px; height: 26px; background: url("../../assets/images/common/btn-dd-delete.png") center no-repeat; background-size: 26px 26px; }
+.sub-dd-menu h2 .btn-delete { position: absolute; top: 28px; left: 28px; display: inline-block; content: ""; width: 26px; height: 26px; background: url("../../assets/images/common/btn-dd-delete.png") center no-repeat; background-size: 26px 26px; }
 
 .sub-dd-menu ul.dreg-drop li.sortable-placeholder { min-height: 60px; padding-top: 0; padding-bottom: 0; overflow: hidden; border-bottom: 1px solid #ccc; box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
 
 .sub-dd-menu ul.dreg-drop li { position: relative; padding: 13px 60px 13px 38px; border-top: 1px solid #ccc; min-height: 60px; line-height: 60px; overflow: hidden; cursor: pointer; }
 
-.sub-dd-menu ul.dreg-drop li:before { position: absolute; top: 50%; left: 30px; display: inline-block; content: ""; width: 20px; height: 20px; margin-top: -10px; background: url("../../assets/images/common/btn-dd-delete.png") center no-repeat; background-size: 20px 20px; }
+.sub-dd-menu ul.dreg-drop li .btn-delete { position: absolute; top: 50%; left: 30px; display: inline-block; content: ""; width: 20px; height: 20px; margin-top: -10px; background: url("../../assets/images/common/btn-dd-delete.png") center no-repeat; background-size: 20px 20px; }
+
+.sub-dd-menu ul.dreg-drop li:before { content: ""; }
 
 .sub-dd-menu ul.dreg-drop li:after { position: absolute; top: 50%; right: 25px; display: inline-block; content: ""; width: 24px; height: 24px; margin-top: -12px; background: url("../../assets/images/svg/btn-dd-move.svg") center no-repeat; background-size: 24px 24px; }
 
@@ -3595,7 +3654,12 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .sub-dd-menu .btn-area .btn-completion, .sub-dd-menu .btn-area .btn-save { margin-right: 20px; }
 
-/* ---------------------------------------------------------------------- 07-3.위젯_내가만든책선택하기 (07-3_books-created-choose.html) 18.위젯_내가만든책항목추가 (18_books-created-add.html) ----------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------
+ 07-3.위젯_내가만든책선택하기
+ (07-3_books-created-choose.html)
+ 18.위젯_내가만든책항목추가
+ (18_books-created-add.html)
+----------------------------------------------------------------------- */
 .books-type-1 .title, .books-type-2 .title, .books-type-3 .title { position: relative; }
 
 .books-type-1 .title .btn-set, .books-type-2 .title .btn-set, .books-type-3 .title .btn-set { position: absolute; top: 50%; right: 28px; margin-top: -22px; }
@@ -3640,12 +3704,18 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .books-type-1 .wrap div ul li .btn-modified .icon-modified:before, .books-type-2 .wrap div ul li .btn-modified .icon-modified:before, .books-type-3 .wrap div ul li .btn-modified .icon-modified:before { position: absolute; top: 4px; left: 0; display: inline-block; content: ""; width: 18px; height: 18px; background: url("../../assets/images/book/icon-modified.png") center no-repeat; background-size: 18px 18px; }
 
-/* ---------------------------------------------------------------------- 16.웹팝업_전집연계 (16_popup_all_books.html) ----------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------
+ 16.웹팝업_전집연계
+ (16_popup_all_books.html)
+----------------------------------------------------------------------- */
 .books-type-2 .wrap div ul li figure figcaption p.img-title { font-size: 1.8rem; color: #ee4742; text-align: left !important; }
 
 .books-type-2 .wrap div ul li figure figcaption p.img-caption { width: 204px; display: -webkit-box; overflow: hidden; text-overflow: ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical; word-wrap: break-word; }
 
-/* ---------------------------------------------------------------------- 19.위젯_내책신규생성하기 (19_my-book-new-add.html) ----------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------
+ 19.위젯_내책신규생성하기
+ (19_my-book-new-add.html)
+----------------------------------------------------------------------- */
 .books-type-3 { min-width: 706px; max-width: 706px; height: 100vh; }
 
 .books-type-3 .wrap { width: auto; padding-top: 10px !important; margin: 0 31px; }
@@ -3682,7 +3752,10 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .books-type-3 .btn-area { text-align: center; margin-top: 19px; }
 
-/* ---------------------------------------------------------------------- 15.웹팝업_지식네비게이션 (15_popup-knowledge-navigation.html) ----------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------
+ 15.웹팝업_지식네비게이션
+ (15_popup-knowledge-navigation.html)
+----------------------------------------------------------------------- */
 .knowledge-navigation { min-width: 1090px; max-width: 1090px; height: 670px; }
 
 .knowledge-navigation .wrap { position: relative; padding-top: 70px !important; }
@@ -3719,15 +3792,15 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .knowledge-navigation .wrap .left-line [class*="left-"]:before { position: absolute; top: -7px; left: -14px; display: block; content: ""; width: 15px; height: 15px; border-radius: 50%; background: #eb99e3; }
 
-.knowledge-navigation .wrap .left-line hr.left-60 { top: 113px; right: -56px; -ms-transform: rotate(60deg); -webkit-transform: rotate(60deg); transform: rotate(60deg); }
+.knowledge-navigation .wrap .left-line hr.left-order-1 { top: 113px; right: -56px; -ms-transform: rotate(60deg); -webkit-transform: rotate(60deg); transform: rotate(60deg); }
 
-.knowledge-navigation .wrap .left-line hr.left-30 { top: 156px; right: -15px; -ms-transform: rotate(30deg); -webkit-transform: rotate(30deg); transform: rotate(30deg); }
+.knowledge-navigation .wrap .left-line hr.left-order-2 { top: 156px; right: -15px; -ms-transform: rotate(30deg); -webkit-transform: rotate(30deg); transform: rotate(30deg); }
 
-.knowledge-navigation .wrap .left-line hr.left-0 { top: 212px; right: 0; -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); }
+.knowledge-navigation .wrap .left-line hr.left-order-3 { top: 212px; right: 0; -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); }
 
-.knowledge-navigation .wrap .left-line hr.left--30 { top: 269px; right: -15px; -ms-transform: rotate(-30deg); -webkit-transform: rotate(-30deg); transform: rotate(-30deg); }
+.knowledge-navigation .wrap .left-line hr.left-order-4 { top: 269px; right: -15px; -ms-transform: rotate(-30deg); -webkit-transform: rotate(-30deg); transform: rotate(-30deg); }
 
-.knowledge-navigation .wrap .left-line hr.left--60 { top: 312px; right: -56px; -ms-transform: rotate(-60deg); -webkit-transform: rotate(-60deg); transform: rotate(-60deg); }
+.knowledge-navigation .wrap .left-line hr.left-order-5 { top: 312px; right: -56px; -ms-transform: rotate(-60deg); -webkit-transform: rotate(-60deg); transform: rotate(-60deg); }
 
 .knowledge-navigation .wrap .right-line { position: relative; }
 
@@ -3735,25 +3808,25 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .knowledge-navigation .wrap .right-line [class*="right-"]:after { position: absolute; top: -13px; right: -64px; display: block; content: ""; width: 64px; height: 28px; font-size: 18px; font-weight: bold; color: #fff; text-align: center; line-height: 28px; border-radius: 6px; }
 
-.knowledge-navigation .wrap .right-line hr.right--60 { top: 113px; left: -56px; -ms-transform: rotate(-60deg); -webkit-transform: rotate(-60deg); transform: rotate(-60deg); }
+.knowledge-navigation .wrap .right-line hr.right-order-6 { top: 113px; left: -56px; -ms-transform: rotate(-60deg); -webkit-transform: rotate(-60deg); transform: rotate(-60deg); }
 
-.knowledge-navigation .wrap .right-line hr.right--60:after { top: 6px; left: 207px; }
+.knowledge-navigation .wrap .right-line hr.right-order-6:after { top: 6px; left: 207px; }
 
-.knowledge-navigation .wrap .right-line hr.right--30 { top: 156px; left: -15px; -ms-transform: rotate(-30deg); -webkit-transform: rotate(-30deg); transform: rotate(-30deg); }
+.knowledge-navigation .wrap .right-line hr.right-order-7 { top: 156px; left: -15px; -ms-transform: rotate(-30deg); -webkit-transform: rotate(-30deg); transform: rotate(-30deg); }
 
-.knowledge-navigation .wrap .right-line hr.right--30:after { top: -8px; left: 200px; }
+.knowledge-navigation .wrap .right-line hr.right-order-7:after { top: -8px; left: 200px; }
 
-.knowledge-navigation .wrap .right-line hr.right-0 { top: 212px; left: 0; -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+.knowledge-navigation .wrap .right-line hr.right-order-8 { top: 212px; left: 0; -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); transform: rotate(0deg); }
 
-.knowledge-navigation .wrap .right-line hr.right-0:after { top: -13px; left: 202px; }
+.knowledge-navigation .wrap .right-line hr.right-order-8:after { top: -13px; left: 202px; }
 
-.knowledge-navigation .wrap .right-line hr.right-30 { top: 269px; left: -15px; -ms-transform: rotate(30deg); -webkit-transform: rotate(30deg); transform: rotate(30deg); }
+.knowledge-navigation .wrap .right-line hr.right-order-9 { top: 269px; left: -15px; -ms-transform: rotate(30deg); -webkit-transform: rotate(30deg); transform: rotate(30deg); }
 
-.knowledge-navigation .wrap .right-line hr.right-30:after { top: -18px; left: 200px; }
+.knowledge-navigation .wrap .right-line hr.right-order-9:after { top: -18px; left: 200px; }
 
-.knowledge-navigation .wrap .right-line hr.right-60 { top: 312px; left: -56px; -ms-transform: rotate(60deg); -webkit-transform: rotate(60deg); transform: rotate(60deg); }
+.knowledge-navigation .wrap .right-line hr.right-order-10 { top: 312px; left: -56px; -ms-transform: rotate(60deg); -webkit-transform: rotate(60deg); transform: rotate(60deg); }
 
-.knowledge-navigation .wrap .right-line hr.right-60:after { top: -33px; left: 204px; }
+.knowledge-navigation .wrap .right-line hr.right-order-10:after { top: -33px; left: 204px; }
 
 .knowledge-navigation .wrap .right-line hr.science:after { content: "과학"; -ms-transform: rotate(60deg); -webkit-transform: rotate(60deg); transform: rotate(60deg); background: #f39800; }
 
