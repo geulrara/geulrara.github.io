@@ -3066,6 +3066,9 @@ input:-moz-placeholder { color: #4a4a4a; }
 
 .kw-icon { background-image: url("/assets/images/sprite/sprite-icon.png"); }
 
+@keyframes spin { from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); } }
+
 .pop-wrap .wrap:after, .sub-menu ul:after, .sub-dd-menu ul:after, .search-menu .search-area:after, .search-tab .search-area:after, .search-menu .keyword-btn-set:after, .search-tab .keyword-btn-set:after, .search-menu .keyword:after, .search-tab .keyword:after, .search-menu .keyword li:after, .search-tab .keyword li:after, .curriculum .wrap .col-text-box ul:after, .sub-view footer:after, .books-type-1 .wrap div ul li:after, .books-type-2 .wrap div ul li:after, .books-type-3 .wrap div ul li:after, .books-type-3 .wrap dl:after { content: ''; display: block; clear: both; }
 
 @font-face { font-family: 'SangSangTitleB'; src: url("../../assets/fonts/SangSangTitleB.eot"); src: url("../../assets/fonts/SangSangTitleB.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/SangSangTitleB.woff") format("woff"); font-weight: normal; font-style: normal; }
@@ -3157,17 +3160,6 @@ h6 { font-size: 16px; font-size: 1.6rem; }
 .pop-wrap .wrap:nth-of-type(1) { padding-top: 50px; }
 
 .pop-wrap .wrap .messge { position: absolute; left: 0; right: 0; bottom: 27px; font-size: 1.8rem; color: #f56056; text-align: center; }
-
-@keyframes loading { 0% { transform-origin: 100% 100%;
-    transform: rotate(0deg); }
-  100% { transform-origin: 100% 100%;
-    transform: rotate(360deg); } }
-
-.search-tab .tab-area .tab-label-content .tab-content .loading { position: absolute; display: block; z-index: 13; margin: 15px auto; width: 100px; height: 100px; border: 5px solid transparent; border-radius: 50%; background-color: transparent; }
-
-.search-tab .tab-area .tab-label-content .tab-content .loading:before { position: absolute; display: block; content: ''; z-index: 12; top: 4px; left: 4px; width: 82px; height: 82px; border-radius: 50%; background-color: #fff; }
-
-.search-tab .tab-area .tab-label-content .tab-content .loading:after { position: absolute; display: block; top: 0; content: ''; z-index: 11; top: 0px; left: 0px; width: 45px; height: 45px; border-radius: 200px 0 0 0; background: linear-gradient(45deg, transparent 0%, #459ad7 90%, #459ad7 100%); animation: loading .9s linear infinite; }
 
 /* ----------------------------------------------------------------------
  07-4.내책읽기,
@@ -3287,9 +3279,9 @@ h6 { font-size: 16px; font-size: 1.6rem; }
 
 .accordion { width: 100%; }
 
-.accordion .accordion-item.js-open .accordion-title { cursor: default; }
-
 .accordion .accordion-item.js-open .accordion-title:after { background: url("../../assets/images/svg/btn-accordion-open.svg") top right no-repeat; }
+
+.accordion .accordion-item.js-open .accordion-copy { display: block; }
 
 .accordion .accordion-item .accordion-title:after { float: right; display: inline-block; content: ""; width: 25px; height: 13px; margin-top: -32px; background: url("../../assets/images/svg/btn-accordion-close.svg") top right no-repeat; background-size: 100%; }
 
@@ -3300,8 +3292,6 @@ h6 { font-size: 16px; font-size: 1.6rem; }
 .accordion .accordion-item .accordion-copy { display: none; font-size: 2.2rem; color: #888; line-height: 40px; padding: 25px 35px; background: #f8f8f8; border-bottom: 1px solid #dbdbdb; }
 
 .accordion .accordion-item .accordion-copy img { width: 100%; height: auto; margin-top: 20px; margin-bottom: 20px; }
-
-.accordion .accordion-item .accordion-copy-open { display: block; }
 
 /* ----------------------------------------------------------------------
  10-1.서브_상세화면
@@ -3440,7 +3430,11 @@ h6 { font-size: 16px; font-size: 1.6rem; }
 
 .search-tab .tab-area .tab-label-content .tab-content { position: absolute; top: 120px; display: none; height: -webkit-calc( 100vh - 230px); height: -moz-calc( 100vh - 230px); height: calc( 100vh - 230px); overflow-y: auto; }
 
-.search-tab .tab-area .tab-label-content .tab-content .loading { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.search-tab .tab-area .tab-label-content .tab-content .loader-spin { position: relative; width: 87px; height: 87px; overflow: hidden; z-index: 100; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+
+.search-tab .tab-area .tab-label-content .tab-content .loader-spin .loader-circle { position: relative; width: 87px; height: 87px; background: url("../../assets/images/common/loading-spin.png") center no-repeat; animation: spin 1s infinite linear; }
+
+.search-tab .tab-area .tab-label-content .tab-content .loader-spin .loader-character { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 61px; height: 41px; background: url("../../assets/images/common/loading-character.png") center no-repeat; }
 
 .search-tab .tab-area .slide { width: calc(100% / 3); }
 

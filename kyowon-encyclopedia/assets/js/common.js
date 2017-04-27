@@ -30,13 +30,21 @@
 
     // Accordion 사용
     // [참고] http://codepen.io/dope/pen/yyxVga
-    var $title = $('.js-title'),
-          copy   = '.js-copy';
+    var $item  = $('.accordion-item'),
+          open   = 'js-open';
 
-    $title.click(function () {
-      $(this).next(copy).slideDown();
-      $(this).parent().addClass('js-open').siblings().children().next().slideUp().parent().removeClass('js-open');
-      return false;
+    $item.click(function() {
+        if ( $(this).hasClass(open) ) {
+            $(this).children().next().slideUp();
+            $(this).removeClass(open);
+            $(this).siblings().removeClass(open);
+        } else {
+            $(this).children().next().slideDown();
+            $(this).addClass(open);
+            $(this).siblings().removeClass(open);
+            $(this).siblings().children().next().slideUp();
+        }
+        return;
     });
 
     // Main Touch Slider
