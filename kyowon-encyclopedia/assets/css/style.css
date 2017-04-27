@@ -3219,13 +3219,23 @@ h6 { font-size: 16px; font-size: 1.6rem; }
 
 .search-menu .keyword-btn-set, .search-tab .keyword-btn-set, .search-menu .keyword, .search-tab .keyword { padding: 28px 30px 0 30px; }
 
-.search-menu .keyword-btn-set .btn-new-search, .search-tab .keyword-btn-set .btn-new-search, .search-menu .keyword .btn-new-search, .search-tab .keyword .btn-new-search { font-size: 1.8rem; color: #0f9fff; }
+.search-menu .keyword-btn-set .btn-new-search span, .search-tab .keyword-btn-set .btn-new-search span, .search-menu .keyword .btn-new-search span, .search-tab .keyword .btn-new-search span { float: left; font-size: 1.8rem; color: #0f9fff; line-height: 32px; }
 
-.search-menu .keyword-btn-set .delete-area, .search-tab .keyword-btn-set .delete-area, .search-menu .keyword .delete-area, .search-tab .keyword .delete-area { margin-top: -5px; }
+.search-menu .keyword-btn-set .btn-new-search [class^="btn-"], .search-tab .keyword-btn-set .btn-new-search [class^="btn-"], .search-menu .keyword .btn-new-search [class^="btn-"], .search-tab .keyword .btn-new-search [class^="btn-"] { float: left; width: 60px; height: 32px; font-size: 18px; color: #4a4a4a; border: 1px solid #d8d8d8; }
 
-.search-menu .keyword-btn-set .delete-area span, .search-tab .keyword-btn-set .delete-area span, .search-menu .keyword .delete-area span, .search-tab .keyword .delete-area span { font-size: 1.8rem; color: #888; height: 26px; line-height: 26px; vertical-align: 5px; }
+.search-menu .keyword-btn-set .btn-new-search [class^="btn-"].active, .search-tab .keyword-btn-set .btn-new-search [class^="btn-"].active, .search-menu .keyword .btn-new-search [class^="btn-"].active, .search-tab .keyword .btn-new-search [class^="btn-"].active { color: #888; background: #efefef; }
 
-.search-menu .keyword-btn-set .delete-area .btn-delete, .search-tab .keyword-btn-set .delete-area .btn-delete, .search-menu .keyword .delete-area .btn-delete, .search-tab .keyword .delete-area .btn-delete { width: 26px; height: 26px; text-align: center; border-radius: 6px; background: #a9a9ab; border: 1px solid #9a999b; vertical-align: text-top; margin-left: 15px; }
+.search-menu .keyword-btn-set .btn-new-search .btn-on, .search-tab .keyword-btn-set .btn-new-search .btn-on, .search-menu .keyword .btn-new-search .btn-on, .search-tab .keyword .btn-new-search .btn-on { margin-left: 40px; border-top-left-radius: 6px; border-bottom-left-radius: 6px; }
+
+.search-menu .keyword-btn-set .btn-new-search .btn-on.active, .search-tab .keyword-btn-set .btn-new-search .btn-on.active, .search-menu .keyword .btn-new-search .btn-on.active, .search-tab .keyword .btn-new-search .btn-on.active { box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.1) inset; }
+
+.search-menu .keyword-btn-set .btn-new-search .btn-off, .search-tab .keyword-btn-set .btn-new-search .btn-off, .search-menu .keyword .btn-new-search .btn-off, .search-tab .keyword .btn-new-search .btn-off { margin-left: -1px; border-top-right-radius: 6px; border-bottom-right-radius: 6px; }
+
+.search-menu .keyword-btn-set .btn-new-search .btn-off.active, .search-tab .keyword-btn-set .btn-new-search .btn-off.active, .search-menu .keyword .btn-new-search .btn-off.active, .search-tab .keyword .btn-new-search .btn-off.active { box-shadow: 1px 0 2px 0 rgba(0, 0, 0, 0.1) inset; }
+
+.search-menu .keyword-btn-set .delete-area span, .search-tab .keyword-btn-set .delete-area span, .search-menu .keyword .delete-area span, .search-tab .keyword .delete-area span { font-size: 1.8rem; color: #888; height: 32px; line-height: 32px; vertical-align: 5px; }
+
+.search-menu .keyword-btn-set .delete-area .btn-delete, .search-tab .keyword-btn-set .delete-area .btn-delete, .search-menu .keyword .delete-area .btn-delete, .search-tab .keyword .delete-area .btn-delete { width: 26px; height: 26px; text-align: center; border-radius: 6px; background: #a9a9ab; border: 1px solid #9a999b; vertical-align: text-top; margin-top: 1px; margin-left: 15px; }
 
 .search-menu .keyword-btn-set .delete-area .btn-delete:before, .search-tab .keyword-btn-set .delete-area .btn-delete:before, .search-menu .keyword .delete-area .btn-delete:before, .search-tab .keyword .delete-area .btn-delete:before { display: inline-block; content: ""; width: 100%; height: 100%; background: url("../../assets/images/svg/icon-search-delete.svg") center no-repeat; background-size: 13px 14px; }
 

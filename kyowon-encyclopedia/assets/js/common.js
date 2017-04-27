@@ -79,8 +79,24 @@
     var element     = $('#scrolling'),
           wrapper     = element.wrap('<div style="overflow: auto;">');
 
-          getCurrentFolder = function(scroll, width) {
-              return Math.ceil(width / scroll);
-          };
+    getCurrentFolder = function(scroll, width) {
+        return Math.ceil(width / scroll);
+    };
+
+    // 최근 검색어 버튼 제어
+    var $btnSearch = $('.btn-new-search button'),
+           btnOn = $('.btn-on'),
+           btnOff = $('.btn-off');
+
+    $btnSearch.click(function() {
+        if ( btnOn.hasClass('active') ) {
+            btnOn.removeClass('active');
+            btnOff.addClass('active');
+        } else {
+            btnOff.removeClass('active');
+            btnOn.addClass('active');
+        }
+    });
+
 
 })(window, document, window.jQuery);
