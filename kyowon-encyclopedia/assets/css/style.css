@@ -3816,33 +3816,33 @@ h6 { font-size: 16px; font-size: 1.6rem; }
 
 .knowledge-navigation .wrap .right-line hr.right-order-6 { top: 113px; left: -56px; -ms-transform: rotate(-60deg); -webkit-transform: rotate(-60deg); transform: rotate(-60deg); }
 
-.knowledge-navigation .wrap .right-line hr.right-order-6:after { top: 6px; left: 207px; }
+.knowledge-navigation .wrap .right-line hr.right-order-6:after { top: 6px; left: 207px; -ms-transform: rotate(60deg); -webkit-transform: rotate(60deg); transform: rotate(60deg); }
 
 .knowledge-navigation .wrap .right-line hr.right-order-7 { top: 156px; left: -15px; -ms-transform: rotate(-30deg); -webkit-transform: rotate(-30deg); transform: rotate(-30deg); }
 
-.knowledge-navigation .wrap .right-line hr.right-order-7:after { top: -8px; left: 200px; }
+.knowledge-navigation .wrap .right-line hr.right-order-7:after { top: -8px; left: 200px; -ms-transform: rotate(30deg); -webkit-transform: rotate(30deg); transform: rotate(30deg); }
 
 .knowledge-navigation .wrap .right-line hr.right-order-8 { top: 212px; left: 0; -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); transform: rotate(0deg); }
 
-.knowledge-navigation .wrap .right-line hr.right-order-8:after { top: -13px; left: 202px; }
+.knowledge-navigation .wrap .right-line hr.right-order-8:after { top: -13px; left: 202px; -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); transform: rotate(0deg); }
 
 .knowledge-navigation .wrap .right-line hr.right-order-9 { top: 269px; left: -15px; -ms-transform: rotate(30deg); -webkit-transform: rotate(30deg); transform: rotate(30deg); }
 
-.knowledge-navigation .wrap .right-line hr.right-order-9:after { top: -18px; left: 200px; }
+.knowledge-navigation .wrap .right-line hr.right-order-9:after { top: -18px; left: 200px; -ms-transform: rotate(-30deg); -webkit-transform: rotate(-30deg); transform: rotate(-30deg); }
 
 .knowledge-navigation .wrap .right-line hr.right-order-10 { top: 312px; left: -56px; -ms-transform: rotate(60deg); -webkit-transform: rotate(60deg); transform: rotate(60deg); }
 
-.knowledge-navigation .wrap .right-line hr.right-order-10:after { top: -33px; left: 204px; }
+.knowledge-navigation .wrap .right-line hr.right-order-10:after { top: -33px; left: 204px; -ms-transform: rotate(-60deg); -webkit-transform: rotate(-60deg); transform: rotate(-60deg); }
 
-.knowledge-navigation .wrap .right-line hr.science:after { content: "과학"; -ms-transform: rotate(60deg); -webkit-transform: rotate(60deg); transform: rotate(60deg); background: #f39800; }
+.knowledge-navigation .wrap .right-line hr.science:after { content: "과학"; background: #f39800; }
 
-.knowledge-navigation .wrap .right-line hr.arts:after { content: "예체능"; -ms-transform: rotate(30deg); -webkit-transform: rotate(30deg); transform: rotate(30deg); background: #e95412; }
+.knowledge-navigation .wrap .right-line hr.arts:after { content: "예체능"; background: #e95412; }
 
-.knowledge-navigation .wrap .right-line hr.social:after { content: "사회"; -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); transform: rotate(0deg); background: #9e2a93; }
+.knowledge-navigation .wrap .right-line hr.social:after { content: "사회"; background: #9e2a93; }
 
-.knowledge-navigation .wrap .right-line hr.korean:after { content: "국어"; -ms-transform: rotate(-30deg); -webkit-transform: rotate(-30deg); transform: rotate(-30deg); background: #9da704; }
+.knowledge-navigation .wrap .right-line hr.korean:after { content: "국어"; background: #9da704; }
 
-.knowledge-navigation .wrap .right-line hr.math:after { content: "수학"; -ms-transform: rotate(-60deg); -webkit-transform: rotate(-60deg); transform: rotate(-60deg); background: #17a6c4; }
+.knowledge-navigation .wrap .right-line hr.math:after { content: "수학"; background: #17a6c4; }
 
 .knowledge-navigation .wrap [class$="-line"] .text-area { position: relative; font-size: 2.4rem; }
 
