@@ -3131,21 +3131,21 @@ h6 { font-size: 16px; font-size: 1.6rem; }
 
 [class^="btn-"] { cursor: pointer; }
 
-.btn-completion, .btn-save { font-size: 2rem; font-weight: bold; color: #fff; width: 110px; height: 40px; line-height: 40px; text-align: center; text-shadow: 0 0 1px rgba(0, 0, 0, 0.6); border-radius: 20px; border: 1px solid #ed3a34; background: #f46157; }
+.btn-completion, .btn-save { width: 110px; height: 40px; line-height: 40px; border-radius: 20px; text-align: center; font-size: 2rem; font-weight: bold; color: #fff; text-shadow: 0 0 1px rgba(0, 0, 0, 0.6); border: 1px solid #ed3a34; background: #f46157; }
 
-.btn-cancel { font-size: 2rem; font-weight: bold; color: #fff; width: 110px; height: 40px; line-height: 40px; text-align: center; text-shadow: 0 0 1px rgba(0, 0, 0, 0.6); border-radius: 20px; border: 1px solid #9a999b; background: #a9a9ab; }
+.btn-cancel { width: 110px; height: 40px; line-height: 40px; border-radius: 20px; text-align: center; font-size: 2rem; font-weight: bold; color: #fff; text-shadow: 0 0 1px rgba(0, 0, 0, 0.6); border: 1px solid #9a999b; background: #a9a9ab; }
 
 [class^="lable-"] { display: inline-block; text-align: center; vertical-align: text-bottom; font-family: "SangSangTitleM", sans-serif; font-size: 2.2rem; }
 
-.lable-science { font-size: 2rem; font-weight: bold; color: #fff; width: 110px; height: 40px; line-height: 40px; text-align: center; text-shadow: 0 0 1px rgba(0, 0, 0, 0.6); border-radius: 20px; border: 1px solid; background: #f39800; }
+.lable-science { font-size: 2rem; font-weight: bold; color: #fff; text-shadow: 0 0 1px rgba(0, 0, 0, 0.6); border: 1px solid; background: #f39800; }
 
-.lable-arts { font-size: 2rem; font-weight: bold; color: #fff; width: 110px; height: 40px; line-height: 40px; text-align: center; text-shadow: 0 0 1px rgba(0, 0, 0, 0.6); border-radius: 20px; border: 1px solid; background: #e95412; }
+.lable-arts { font-size: 2rem; font-weight: bold; color: #fff; text-shadow: 0 0 1px rgba(0, 0, 0, 0.6); border: 1px solid; background: #e95412; }
 
-.lable-social { font-size: 2rem; font-weight: bold; color: #fff; width: 110px; height: 40px; line-height: 40px; text-align: center; text-shadow: 0 0 1px rgba(0, 0, 0, 0.6); border-radius: 20px; border: 1px solid; background: #9e2a93; line-height: 1.55; }
+.lable-social { font-size: 2rem; font-weight: bold; color: #fff; text-shadow: 0 0 1px rgba(0, 0, 0, 0.6); border: 1px solid; background: #9e2a93; line-height: 1.6 !important; }
 
-.lable-korean { font-size: 2rem; font-weight: bold; color: #fff; width: 110px; height: 40px; line-height: 40px; text-align: center; text-shadow: 0 0 1px rgba(0, 0, 0, 0.6); border-radius: 20px; border: 1px solid; background: #9da704; }
+.lable-korean { font-size: 2rem; font-weight: bold; color: #fff; text-shadow: 0 0 1px rgba(0, 0, 0, 0.6); border: 1px solid; background: #9da704; }
 
-.lable-math { font-size: 2rem; font-weight: bold; color: #fff; width: 110px; height: 40px; line-height: 40px; text-align: center; text-shadow: 0 0 1px rgba(0, 0, 0, 0.6); border-radius: 20px; border: 1px solid; background: #17a6c4; }
+.lable-math { font-size: 2rem; font-weight: bold; color: #fff; text-shadow: 0 0 1px rgba(0, 0, 0, 0.6); border: 1px solid; background: #17a6c4; }
 
 .pop-wrap { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); min-width: 906px; max-width: 906px; height: 586px; background: #fff; overflow-y: auto; }
 
@@ -3215,7 +3215,7 @@ h6 { font-size: 16px; font-size: 1.6rem; }
 
 .search-menu .search-area .search-wrap .btn-search-clear:before, .search-tab .search-area .search-wrap .btn-search-clear:before { display: inline-block; content: ""; width: 100%; height: 100%; background: url("../../assets/images/svg/icon-search-clear.svg") center no-repeat; background-size: 11px 11px; }
 
-.search-menu .search-area .btn-search, .search-tab .search-area .btn-search { position: absolute; right: 30px; font-size: 2.4rem; font-weight: bold; color: #fff; width: 98px; height: 50px; line-height: 50px; text-align: center; text-shadow: 0 0 1px rgba(0, 0, 0, 0.6); border-radius: 25px; border: 1px solid; background: #f56056; border: 1px solid #ec352f; }
+.search-menu .search-area .btn-search, .search-tab .search-area .btn-search { position: absolute; right: 30px; width: 98px; height: 50px; line-height: 50px; border-radius: 25px; text-align: center; font-size: 2.4rem; font-weight: bold; color: #fff; text-shadow: 0 0 1px rgba(0, 0, 0, 0.6); border: 1px solid; background: #f56056; border: 1px solid #ec352f; }
 
 .search-menu .message, .search-tab .message { padding: 80px 30px; text-align: center; }
 
@@ -3259,23 +3259,29 @@ h6 { font-size: 16px; font-size: 1.6rem; }
 ----------------------------------------------------------------------- */
 .curriculum .wrap [class^="col-"] { float: left; }
 
-.curriculum .wrap .col-icon-box { margin-left: 36px; margin-right: 36px; }
+.curriculum .wrap .col-icon-box { width: 148px; }
 
-.curriculum .wrap .col-icon-box .elementary-student { background-image: url("../../assets/images/sprite/sprite-icon.png"); background-position: 0px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 86px; height: 85px; }
+.curriculum .wrap .col-icon-box .elementary-student { position: relative; left: 50%; transform: translateX(-50%); background-image: url("../../assets/images/sprite/sprite-icon.png"); background-position: 0px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 86px; height: 85px; }
 
-.curriculum .wrap .col-icon-box .middle-schooler { background-image: url("../../assets/images/sprite/sprite-icon.png"); background-position: -86px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 86px; height: 85px; }
+.curriculum .wrap .col-icon-box .middle-schooler { position: relative; left: 50%; transform: translateX(-50%); background-image: url("../../assets/images/sprite/sprite-icon.png"); background-position: -86px 0px; background-repeat: no-repeat; overflow: hidden; display: block; width: 86px; height: 85px; }
 
 .curriculum .wrap .col-icon-box figcaption { font-family: "SangSangTitleB", sans-serif; font-size: 2.8rem; text-align: center; }
 
 .curriculum .wrap:nth-of-type(1) .col-text-box { border-bottom: 1px solid #dbdbdb; min-height: 201px; }
 
-.curriculum .wrap .col-text-box { width: -webkit-calc( 100% - 158px); width: -moz-calc( 100% - 158px); width: calc( 100% - 158px); min-height: 100px; }
+.curriculum .wrap .col-text-box { width: -webkit-calc( 100% - 148px); width: -moz-calc( 100% - 148px); width: calc( 100% - 148px); min-height: 100px; }
 
 .curriculum .wrap .col-text-box ul { display: block; margin-bottom: 20px; }
 
 .curriculum .wrap .col-text-box ul li { float: left; display: inline-block; font-size: 2.2rem; }
 
-.curriculum .wrap .col-text-box ul li.lable { font-family: "SangSangTitleB", sans-serif; margin-left: 20px; margin-right: 30px; }
+.curriculum .wrap .col-text-box ul li:nth-of-type(1) { width: 68px; }
+
+.curriculum .wrap .col-text-box ul li:nth-of-type(1) [class^="lable-"] { width: 68px; height: 29px; line-height: 29px; border-radius: 6px; text-align: center; }
+
+.curriculum .wrap .col-text-box ul li:nth-of-type(2) { font-family: "SangSangTitleB", sans-serif; width: 132px; padding-left: 18px; }
+
+.curriculum .wrap .col-text-box ul li:last-child { width: -webkit-calc( 100% - 200px); width: -moz-calc( 100% - 200px); width: calc( 100% - 200px); padding-left: 18px; padding-right: 36px; }
 
 /* ----------------------------------------------------------------------
  30.공지사항
@@ -3313,7 +3319,7 @@ h6 { font-size: 16px; font-size: 1.6rem; }
 
 .sub-view header h5 { padding-top: 38px; font-weight: bold; }
 
-.sub-view header h5 .lable-social { margin-right: 20px; }
+.sub-view header h5 [class^="lable-"] { width: 68px; height: 29px; line-height: 29px; border-radius: 6px; text-align: center; margin-right: 20px; }
 
 .sub-view header h5 .sub-title { margin-left: 20px; font-weight: normal; }
 
@@ -3798,13 +3804,13 @@ h6 { font-size: 16px; font-size: 1.6rem; }
 
 .knowledge-navigation .wrap .left-line [class*="left-"]:before { position: absolute; top: -7px; left: -14px; display: block; content: ""; width: 15px; height: 15px; border-radius: 50%; background: #eb99e3; }
 
-.knowledge-navigation .wrap .left-line hr.left-order-1 { top: 113px; right: -56px; -ms-transform: rotate(60deg); -webkit-transform: rotate(60deg); transform: rotate(60deg); }
+.knowledge-navigation .wrap .left-line hr.left-order-4 { top: 113px; right: -56px; -ms-transform: rotate(60deg); -webkit-transform: rotate(60deg); transform: rotate(60deg); }
 
 .knowledge-navigation .wrap .left-line hr.left-order-2 { top: 156px; right: -15px; -ms-transform: rotate(30deg); -webkit-transform: rotate(30deg); transform: rotate(30deg); }
 
-.knowledge-navigation .wrap .left-line hr.left-order-3 { top: 212px; right: 0; -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); }
+.knowledge-navigation .wrap .left-line hr.left-order-1 { top: 212px; right: 0; -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); }
 
-.knowledge-navigation .wrap .left-line hr.left-order-4 { top: 269px; right: -15px; -ms-transform: rotate(-30deg); -webkit-transform: rotate(-30deg); transform: rotate(-30deg); }
+.knowledge-navigation .wrap .left-line hr.left-order-3 { top: 269px; right: -15px; -ms-transform: rotate(-30deg); -webkit-transform: rotate(-30deg); transform: rotate(-30deg); }
 
 .knowledge-navigation .wrap .left-line hr.left-order-5 { top: 312px; right: -56px; -ms-transform: rotate(-60deg); -webkit-transform: rotate(-60deg); transform: rotate(-60deg); }
 
@@ -3814,21 +3820,21 @@ h6 { font-size: 16px; font-size: 1.6rem; }
 
 .knowledge-navigation .wrap .right-line [class*="right-"]:after { position: absolute; top: -13px; right: -64px; display: block; content: ""; width: 64px; height: 28px; font-size: 18px; font-weight: bold; color: #fff; text-align: center; line-height: 28px; border-radius: 6px; }
 
-.knowledge-navigation .wrap .right-line hr.right-order-6 { top: 113px; left: -56px; -ms-transform: rotate(-60deg); -webkit-transform: rotate(-60deg); transform: rotate(-60deg); }
+.knowledge-navigation .wrap .right-line hr.right-order-9 { top: 113px; left: -56px; -ms-transform: rotate(-60deg); -webkit-transform: rotate(-60deg); transform: rotate(-60deg); }
 
-.knowledge-navigation .wrap .right-line hr.right-order-6:after { top: 6px; left: 207px; -ms-transform: rotate(60deg); -webkit-transform: rotate(60deg); transform: rotate(60deg); }
+.knowledge-navigation .wrap .right-line hr.right-order-9:after { top: 6px; left: 207px; -ms-transform: rotate(60deg); -webkit-transform: rotate(60deg); transform: rotate(60deg); }
 
 .knowledge-navigation .wrap .right-line hr.right-order-7 { top: 156px; left: -15px; -ms-transform: rotate(-30deg); -webkit-transform: rotate(-30deg); transform: rotate(-30deg); }
 
 .knowledge-navigation .wrap .right-line hr.right-order-7:after { top: -8px; left: 200px; -ms-transform: rotate(30deg); -webkit-transform: rotate(30deg); transform: rotate(30deg); }
 
-.knowledge-navigation .wrap .right-line hr.right-order-8 { top: 212px; left: 0; -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+.knowledge-navigation .wrap .right-line hr.right-order-6 { top: 212px; left: 0; -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); transform: rotate(0deg); }
 
-.knowledge-navigation .wrap .right-line hr.right-order-8:after { top: -13px; left: 202px; -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+.knowledge-navigation .wrap .right-line hr.right-order-6:after { top: -13px; left: 202px; -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); transform: rotate(0deg); }
 
-.knowledge-navigation .wrap .right-line hr.right-order-9 { top: 269px; left: -15px; -ms-transform: rotate(30deg); -webkit-transform: rotate(30deg); transform: rotate(30deg); }
+.knowledge-navigation .wrap .right-line hr.right-order-8 { top: 269px; left: -15px; -ms-transform: rotate(30deg); -webkit-transform: rotate(30deg); transform: rotate(30deg); }
 
-.knowledge-navigation .wrap .right-line hr.right-order-9:after { top: -18px; left: 200px; -ms-transform: rotate(-30deg); -webkit-transform: rotate(-30deg); transform: rotate(-30deg); }
+.knowledge-navigation .wrap .right-line hr.right-order-8:after { top: -18px; left: 200px; -ms-transform: rotate(-30deg); -webkit-transform: rotate(-30deg); transform: rotate(-30deg); }
 
 .knowledge-navigation .wrap .right-line hr.right-order-10 { top: 312px; left: -56px; -ms-transform: rotate(60deg); -webkit-transform: rotate(60deg); transform: rotate(60deg); }
 
