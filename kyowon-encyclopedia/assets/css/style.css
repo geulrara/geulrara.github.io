@@ -3804,13 +3804,13 @@ h6 { font-size: 16px; font-size: 1.6rem; }
 
 .knowledge-navigation .wrap .left-line [class*="left-"]:before { position: absolute; top: -7px; left: -14px; display: block; content: ""; width: 15px; height: 15px; border-radius: 50%; background: #eb99e3; }
 
-.knowledge-navigation .wrap .left-line hr.left-order-4 { top: 113px; right: -56px; -ms-transform: rotate(60deg); -webkit-transform: rotate(60deg); transform: rotate(60deg); }
+.knowledge-navigation .wrap .left-line hr.left-order-1 { top: 212px; right: 0; -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); }
 
 .knowledge-navigation .wrap .left-line hr.left-order-2 { top: 156px; right: -15px; -ms-transform: rotate(30deg); -webkit-transform: rotate(30deg); transform: rotate(30deg); }
 
-.knowledge-navigation .wrap .left-line hr.left-order-1 { top: 212px; right: 0; -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); }
-
 .knowledge-navigation .wrap .left-line hr.left-order-3 { top: 269px; right: -15px; -ms-transform: rotate(-30deg); -webkit-transform: rotate(-30deg); transform: rotate(-30deg); }
+
+.knowledge-navigation .wrap .left-line hr.left-order-4 { top: 113px; right: -56px; -ms-transform: rotate(60deg); -webkit-transform: rotate(60deg); transform: rotate(60deg); }
 
 .knowledge-navigation .wrap .left-line hr.left-order-5 { top: 312px; right: -56px; -ms-transform: rotate(-60deg); -webkit-transform: rotate(-60deg); transform: rotate(-60deg); }
 
@@ -3820,21 +3820,21 @@ h6 { font-size: 16px; font-size: 1.6rem; }
 
 .knowledge-navigation .wrap .right-line [class*="right-"]:after { position: absolute; top: -13px; right: -64px; display: block; content: ""; width: 64px; height: 28px; font-size: 18px; font-weight: bold; color: #fff; text-align: center; line-height: 28px; border-radius: 6px; }
 
-.knowledge-navigation .wrap .right-line hr.right-order-9 { top: 113px; left: -56px; -ms-transform: rotate(-60deg); -webkit-transform: rotate(-60deg); transform: rotate(-60deg); }
+.knowledge-navigation .wrap .right-line hr.right-order-6 { top: 212px; left: 0; -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); transform: rotate(0deg); }
 
-.knowledge-navigation .wrap .right-line hr.right-order-9:after { top: 6px; left: 207px; -ms-transform: rotate(60deg); -webkit-transform: rotate(60deg); transform: rotate(60deg); }
+.knowledge-navigation .wrap .right-line hr.right-order-6:after { top: -13px; left: 202px; -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); transform: rotate(0deg); }
 
 .knowledge-navigation .wrap .right-line hr.right-order-7 { top: 156px; left: -15px; -ms-transform: rotate(-30deg); -webkit-transform: rotate(-30deg); transform: rotate(-30deg); }
 
 .knowledge-navigation .wrap .right-line hr.right-order-7:after { top: -8px; left: 200px; -ms-transform: rotate(30deg); -webkit-transform: rotate(30deg); transform: rotate(30deg); }
 
-.knowledge-navigation .wrap .right-line hr.right-order-6 { top: 212px; left: 0; -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); transform: rotate(0deg); }
-
-.knowledge-navigation .wrap .right-line hr.right-order-6:after { top: -13px; left: 202px; -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); transform: rotate(0deg); }
-
 .knowledge-navigation .wrap .right-line hr.right-order-8 { top: 269px; left: -15px; -ms-transform: rotate(30deg); -webkit-transform: rotate(30deg); transform: rotate(30deg); }
 
 .knowledge-navigation .wrap .right-line hr.right-order-8:after { top: -18px; left: 200px; -ms-transform: rotate(-30deg); -webkit-transform: rotate(-30deg); transform: rotate(-30deg); }
+
+.knowledge-navigation .wrap .right-line hr.right-order-9 { top: 113px; left: -56px; -ms-transform: rotate(-60deg); -webkit-transform: rotate(-60deg); transform: rotate(-60deg); }
+
+.knowledge-navigation .wrap .right-line hr.right-order-9:after { top: 6px; left: 207px; -ms-transform: rotate(60deg); -webkit-transform: rotate(60deg); transform: rotate(60deg); }
 
 .knowledge-navigation .wrap .right-line hr.right-order-10 { top: 312px; left: -56px; -ms-transform: rotate(60deg); -webkit-transform: rotate(60deg); transform: rotate(60deg); }
 
@@ -3860,23 +3860,23 @@ h6 { font-size: 16px; font-size: 1.6rem; }
   60% { transform: scale(1.15); }
   100% { transform: scale(1); } }
 
-.knowledge-navigation .wrap [class$="-line"] .text-area .order-1 { top: -8px; right: 138px; }
+.knowledge-navigation .wrap [class$="-line"] .text-area .order-1 { top: 196px; right: 255px; }
 
 .knowledge-navigation .wrap [class$="-line"] .text-area .order-2 { top: 79px; right: 223px; }
 
-.knowledge-navigation .wrap [class$="-line"] .text-area .order-3 { top: 196px; right: 255px; }
+.knowledge-navigation .wrap [class$="-line"] .text-area .order-3 { top: 313px; right: 223px; }
 
-.knowledge-navigation .wrap [class$="-line"] .text-area .order-4 { top: 313px; right: 223px; }
+.knowledge-navigation .wrap [class$="-line"] .text-area .order-4 { top: -8px; right: 138px; }
 
 .knowledge-navigation .wrap [class$="-line"] .text-area .order-5 { top: 401px; right: 138px; }
 
-.knowledge-navigation .wrap [class$="-line"] .text-area .order-6 { top: -4px; left: 183px; }
+.knowledge-navigation .wrap [class$="-line"] .text-area .order-6 { top: 195px; left: 279px; }
 
 .knowledge-navigation .wrap [class$="-line"] .text-area .order-7 { top: 84px; left: 249px; }
 
-.knowledge-navigation .wrap [class$="-line"] .text-area .order-8 { top: 195px; left: 279px; }
+.knowledge-navigation .wrap [class$="-line"] .text-area .order-8 { top: 307px; left: 249px; }
 
-.knowledge-navigation .wrap [class$="-line"] .text-area .order-9 { top: 307px; left: 249px; }
+.knowledge-navigation .wrap [class$="-line"] .text-area .order-9 { top: -4px; left: 183px; }
 
 .knowledge-navigation .wrap [class$="-line"] .text-area .order-10 { top: 391px; left: 183px; }
 
