@@ -173,6 +173,27 @@ body .text-xs {
   pointer-events: none;
 }
 
+@keyframes character-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+section img[id^="character-"] {
+  animation: character-float 4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  section img[id^="character-"] {
+    animation: none;
+  }
+}
+
 .max-w-3xl {
   max-width: 60rem;
 }
