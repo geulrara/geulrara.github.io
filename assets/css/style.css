@@ -1,0 +1,178 @@
+/* ==========================================
+  Design Tokens & Color System
+========================================== */
+:root {
+  --color-bg-primary: #030712;
+  --color-bg-secondary: #0F172A;
+  --color-bg-tertiary: #1E293B;
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #F8FAFC;
+  --color-text-muted: #CBD5E1;
+  --color-accent-teal: #2DD4BF;
+  --color-accent-cyan: #38BDF8;
+  --color-border-subtle: rgba(45, 212, 191, 0.3);
+}
+
+body {
+  font-family: 'Pretendard GOV', sans-serif;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-secondary);
+}
+
+body .text-xs {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* ==========================================
+  Typography System (h1 ~ h6)
+========================================== */
+@font-face {
+  font-family: 'JalnanGothic';
+  src: url('https://cdn.jsdelivr.net/gh/koreafonts/fonts@39b0dbea767dfbd60e71e3f450792d64536f7998/JalnanGothic/JalnanGothic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.typography-h1 {
+  font-family: 'JalnanGothic', sans-serif;
+  font-size: 3.5rem;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+}
+
+.typography-h2 {
+  font-family: 'JalnanGothic', sans-serif;
+  font-size: 3rem;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+}
+
+.typography-h3 {
+  font-size: 1.75rem;
+  line-height: 1.3;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.typography-h4 {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.typography-h5 {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.typography-h6 {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 768px) {
+  .typography-h1 {
+    font-size: 2.25rem;
+  }
+
+  .typography-h2 {
+    font-size: 1.875rem;
+  }
+
+  .typography-h3 {
+    font-size: 1.5rem;
+  }
+}
+
+/* ==========================================
+  BEM Components & Common Styles
+========================================== */
+.glass-card {
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--color-border-subtle);
+}
+
+.hero-gradient {
+  background: radial-gradient(circle at 50% 50%, rgba(13, 148, 136, 0.25) 0%, transparent 80%);
+}
+
+/* BEM: portfolio-card */
+.portfolio-card {
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(45, 212, 191, 0.3);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.portfolio-card:hover {
+  border-color: var(--color-accent-teal);
+  transform: translateY(-2px);
+}
+
+.portfolio-card__header {
+  margin-bottom: 1rem;
+}
+
+.portfolio-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 0;
+}
+
+.portfolio-card__body > :not([hidden]) ~ :not([hidden]) {
+  margin-top: 0;
+}
+
+.portfolio-card__footer {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(51, 65, 85, 0.5);
+}
+
+/* Equal Height Grid Utilities using BEM */
+.equal-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-auto-rows: 1fr;
+  align-items: stretch;
+}
+
+.equal-grid__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.equal-grid__item>* {
+  flex: 1;
+}
+
+/* Character Absolute Positioning wrapper without borders */
+.char-wrapper {
+  position: relative;
+}
+
+.char-wrapper__img {
+  position: absolute;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.max-w-3xl {
+  max-width: 60rem;
+}
