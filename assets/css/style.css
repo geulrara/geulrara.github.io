@@ -173,6 +173,16 @@ body .text-xs {
   pointer-events: none;
 }
 
+@media (max-width: 1023px) {
+  .skills-layout {
+    grid-auto-rows: auto;
+  }
+
+  .skills-character {
+    height: 12rem;
+  }
+}
+
 @keyframes character-float {
   0%,
   100% {
