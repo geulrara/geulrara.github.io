@@ -93,9 +93,16 @@ function renderArchive() {
     <button onclick="changePage(${currentPage - 1})" ${currentPage === 1 ? `disabled class="${CLS_BTN_DISABLED}"` : `class="${CLS_BTN_NEXT_PREV}"`}>이전</button>
     `;
 
+  buttonsHTML += `
+    <label class="pagination-mobile-position">
+      <input type="number" min="1" max="${totalPages}" value="${currentPage}" aria-label="페이지 번호 입력" onchange="changePageFromInput(this)" onkeydown="if(event.key === 'Enter'){event.preventDefault();changePageFromInput(this)}">
+      <span>/ ${totalPages}</span>
+    </label>
+    `;
+
   for (let i = 1; i <= totalPages; i++) {
     buttonsHTML += `
-      <button onclick="changePage(${i})" class="${i === currentPage ? CLS_BTN_ACTIVE : CLS_BTN_DEFAULT}">${i}</button>
+      <button onclick="changePage(${i})" class="pagination-page ${i === currentPage ? `pagination-current ${CLS_BTN_ACTIVE}` : CLS_BTN_DEFAULT}" ${i === currentPage ? 'aria-current="page"' : ""}>${i}</button>
     `;
   }
 
@@ -104,6 +111,18 @@ function renderArchive() {
     `;
 
   paginationButtons.innerHTML = buttonsHTML;
+}
+
+function changePageFromInput(input) {
+  const page = input.valueAsNumber;
+  const totalPages = Math.ceil(archiveData.length / itemsPerPage);
+
+  if (!Number.isInteger(page) || page < 1 || page > totalPages) {
+    input.value = currentPage;
+    return;
+  }
+
+  changePage(page);
 }
 
 function changePage(page) {
