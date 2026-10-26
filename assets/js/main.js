@@ -53,6 +53,8 @@ function renderArchive() {
   const startIdx = (currentPage - 1) * itemsPerPage;
   const endIdx = startIdx + itemsPerPage;
   const currentItems = archiveData.slice(startIdx, endIdx);
+  const firstItem = archiveData.length === 0 ? 0 : startIdx + 1;
+  const lastItem = Math.min(endIdx, archiveData.length);
 
   // Render Desktop Table
   tbody.innerHTML = currentItems
@@ -86,7 +88,7 @@ function renderArchive() {
     .join("");
 
   // Update Pagination Info
-  paginationInfo.textContent = `Showing ${startIdx + 1}-${Math.min(endIdx, archiveData.length)} of ${archiveData.length} projects`;
+  paginationInfo.textContent = `Showing ${firstItem}-${lastItem} of ${archiveData.length} projects`;
 
   // Render Pagination Buttons
   let buttonsHTML = `
@@ -132,6 +134,49 @@ function changePage(page) {
   renderArchive();
 }
 
+function initializeMobileNavigation() {
+  const menuToggle = document.getElementById("mobile-menu-toggle");
+  const mobileNavigation = document.getElementById("mobile-navigation");
+  const header = document.querySelector("header");
+
+  if (!menuToggle || !mobileNavigation || !header) return;
+
+  const closeMenu = (restoreFocus = false) => {
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", "메뉴 열기");
+    mobileNavigation.hidden = true;
+    if (restoreFocus) menuToggle.focus();
+  };
+
+  menuToggle.addEventListener("click", () => {
+    const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+    menuToggle.setAttribute("aria-expanded", String(!isExpanded));
+    menuToggle.setAttribute("aria-label", isExpanded ? "메뉴 열기" : "메뉴 닫기");
+    mobileNavigation.hidden = isExpanded;
+  });
+
+  mobileNavigation.addEventListener("click", (event) => {
+    if (event.target.closest("a")) closeMenu();
+  });
+
+  document.addEventListener("click", (event) => {
+    if (menuToggle.getAttribute("aria-expanded") === "true" && !header.contains(event.target)) {
+      closeMenu();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && menuToggle.getAttribute("aria-expanded") === "true") {
+      closeMenu(true);
+    }
+  });
+
+  window.matchMedia("(min-width: 768px)").addEventListener("change", (event) => {
+    if (event.matches) closeMenu();
+  });
+}
+
 window.addEventListener("DOMContentLoaded", () => {
+  initializeMobileNavigation();
   loadArchiveData();
 });
