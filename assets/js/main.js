@@ -2,9 +2,6 @@ let archiveData = [];
 let currentPage = 1;
 const itemsPerPage = 8;
 
-/* ==========================================
-    Tailwind Class Variables (디자인 토큰 패턴 분리)
-   ========================================== */
 const PREFIX_PY = "py-4";
 const TEXT_SLATE_BASE = "text-slate-100";
 
@@ -20,12 +17,11 @@ const CLS_MOBILE_BADGE =
 const CLS_MOBILE_SUB = `text-xs ${TEXT_SLATE_BASE}`;
 
 const CLS_BTN_BASE = "px-3 py-1.5 rounded-lg text-xs font-semibold transition";
-const CLS_BTN_DISABLED = `${CLS_BTN_BASE} bg-slate-800 text-slate-500 cursor-not-allowed`;
 const CLS_BTN_ACTIVE = `${CLS_BTN_BASE} bg-teal-400 text-slate-950 font-bold shadow-md shadow-teal-500/20`;
 const CLS_BTN_DEFAULT = `${CLS_BTN_BASE} bg-slate-800 ${TEXT_SLATE_BASE} hover:bg-slate-700`;
-const CLS_BTN_NEXT_PREV = `${CLS_BTN_BASE} bg-slate-800 text-teal-300 hover:bg-slate-700`;
+const CLS_BTN_ICON_DISABLED = "rounded-lg text-xs font-semibold transition bg-slate-800 text-slate-500 cursor-not-allowed";
+const CLS_BTN_ICON_ACTIVE = "rounded-lg text-xs font-semibold transition bg-slate-800 text-teal-300 hover:bg-slate-700";
 
-// AJAX(Fetch)를 통해 JSON 데이터 로드
 async function loadArchiveData() {
   try {
     const response = await fetch("/assets/data/archive.json");
@@ -56,7 +52,6 @@ function renderArchive() {
   const firstItem = archiveData.length === 0 ? 0 : startIdx + 1;
   const lastItem = Math.min(endIdx, archiveData.length);
 
-  // Render Desktop Table
   tbody.innerHTML = currentItems
     .map(
       (item) => `
@@ -71,7 +66,6 @@ function renderArchive() {
     )
     .join("");
 
-  // Render Mobile Cards
   mobileList.innerHTML = currentItems
     .map(
       (item) => `
@@ -87,12 +81,17 @@ function renderArchive() {
     )
     .join("");
 
-  // Update Pagination Info
   paginationInfo.textContent = `Showing ${firstItem}-${lastItem} of ${archiveData.length} projects`;
 
-  // Render Pagination Buttons
   let buttonsHTML = `
-    <button onclick="changePage(${currentPage - 1})" ${currentPage === 1 ? `disabled class="${CLS_BTN_DISABLED}"` : `class="${CLS_BTN_NEXT_PREV}"`}>이전</button>
+    <div class="pagination-arrow-group">
+    <button onclick="changePage(1)" aria-label="첫 페이지" ${currentPage === 1 ? `disabled class="pagination-page pagination-icon-button ${CLS_BTN_ICON_DISABLED}"` : `class="pagination-page pagination-icon-button ${CLS_BTN_ICON_ACTIVE}"`}>
+      <svg aria-hidden="true" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 18l-6-6 6-6M12 18L6 12l6-6"></path></svg>
+    </button>
+    <button onclick="changePage(${currentPage - 1})" aria-label="이전 페이지" ${currentPage === 1 ? `disabled class="pagination-page pagination-icon-button ${CLS_BTN_ICON_DISABLED}"` : `class="pagination-page pagination-icon-button ${CLS_BTN_ICON_ACTIVE}"`}>
+      <svg aria-hidden="true" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 18l-6-6 6-6"></path></svg>
+    </button>
+    </div>
     `;
 
   buttonsHTML += `
@@ -109,7 +108,14 @@ function renderArchive() {
   }
 
   buttonsHTML += `
-    <button onclick="changePage(${currentPage + 1})" ${currentPage === totalPages ? `disabled class="${CLS_BTN_DISABLED}"` : `class="${CLS_BTN_NEXT_PREV}"`}>다음</button>
+    <div class="pagination-arrow-group">
+    <button onclick="changePage(${currentPage + 1})" aria-label="다음 페이지" ${currentPage === totalPages ? `disabled class="pagination-page pagination-icon-button ${CLS_BTN_ICON_DISABLED}"` : `class="pagination-page pagination-icon-button ${CLS_BTN_ICON_ACTIVE}"`}>
+      <svg aria-hidden="true" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 6l6 6-6 6"></path></svg>
+    </button>
+    <button onclick="changePage(${totalPages})" aria-label="마지막 페이지" ${currentPage === totalPages ? `disabled class="pagination-page pagination-icon-button ${CLS_BTN_ICON_DISABLED}"` : `class="pagination-page pagination-icon-button ${CLS_BTN_ICON_ACTIVE}"`}>
+      <svg aria-hidden="true" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 6l6 6-6 6M12 6l6 6-6 6"></path></svg>
+    </button>
+    </div>
     `;
 
   paginationButtons.innerHTML = buttonsHTML;
@@ -124,14 +130,39 @@ function changePageFromInput(input) {
     return;
   }
 
-  changePage(page);
+  changePage(page, true);
 }
 
-function changePage(page) {
+function changePage(page, scrollToMobileList = false) {
   const totalPages = Math.ceil(archiveData.length / itemsPerPage);
   if (page < 1 || page > totalPages) return;
+
+  const scrollPosition = window.scrollY;
   currentPage = page;
   renderArchive();
+
+  if (scrollToMobileList && window.matchMedia("(max-width: 42.5em)").matches) {
+    const mobileList = document.getElementById("archive-mobile-list");
+    const header = document.querySelector("header");
+
+    if (mobileList) {
+      const headerOffset = header ? header.getBoundingClientRect().height : 0;
+      const listTop = mobileList.getBoundingClientRect().top + window.scrollY - headerOffset;
+      window.scrollTo(window.scrollX, listTop);
+      return;
+    }
+  }
+
+  const bookmark = document.getElementById("archive-list-bookmark");
+  if (bookmark) {
+    const header = document.querySelector("header");
+    const headerOffset = header ? header.getBoundingClientRect().height : 0;
+    const bookmarkTop = bookmark.getBoundingClientRect().top + window.scrollY - headerOffset;
+    window.scrollTo(window.scrollX, bookmarkTop);
+    return;
+  }
+
+  window.scrollTo(window.scrollX, scrollPosition);
 }
 
 function initializeMobileNavigation() {
@@ -171,12 +202,67 @@ function initializeMobileNavigation() {
     }
   });
 
-  window.matchMedia("(min-width: 768px)").addEventListener("change", (event) => {
+  window.matchMedia("(min-width: 53.75em)").addEventListener("change", (event) => {
     if (event.matches) closeMenu();
   });
 }
 
+function initializeProjectsCarousel() {
+  const carousel = document.querySelector(".projects-card-list");
+  if (!carousel) return;
+
+  let touchStartX = 0;
+  let touchStartY = 0;
+  let startIndex = 0;
+
+  carousel.addEventListener(
+    "touchstart",
+    (event) => {
+      if (!window.matchMedia("(max-width: 42.5em)").matches) return;
+
+      touchStartX = event.changedTouches[0].clientX;
+      touchStartY = event.changedTouches[0].clientY;
+      const carouselLeft = carousel.getBoundingClientRect().left;
+      startIndex = [...carousel.children].reduce((closestIndex, card, index, cards) => {
+        const closestCard = cards[closestIndex];
+        return Math.abs(card.getBoundingClientRect().left - carouselLeft) <
+          Math.abs(closestCard.getBoundingClientRect().left - carouselLeft)
+          ? index
+          : closestIndex;
+      }, 0);
+    },
+    { passive: true },
+  );
+
+  carousel.addEventListener(
+    "touchend",
+    (event) => {
+      if (!window.matchMedia("(max-width: 42.5em)").matches) return;
+
+      const swipeDistance = touchStartX - event.changedTouches[0].clientX;
+      const verticalDistance = touchStartY - event.changedTouches[0].clientY;
+      if (Math.abs(swipeDistance) < 40 || Math.abs(swipeDistance) <= Math.abs(verticalDistance)) return;
+
+      const cards = [...carousel.children];
+      if (cards.length === 0) return;
+      const nextIndex = Math.max(
+        0,
+        Math.min(cards.length - 1, startIndex + (swipeDistance > 0 ? 1 : -1)),
+      );
+      const carouselLeft = carousel.getBoundingClientRect().left;
+      const cardLeft = cards[nextIndex].getBoundingClientRect().left;
+
+      carousel.scrollTo({
+        left: carousel.scrollLeft + cardLeft - carouselLeft,
+        behavior: "smooth",
+      });
+    },
+    { passive: true },
+  );
+}
+
 window.addEventListener("DOMContentLoaded", () => {
   initializeMobileNavigation();
+  initializeProjectsCarousel();
   loadArchiveData();
 });

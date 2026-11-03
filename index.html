@@ -18,8 +18,9 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://geulrara.github.io/assets/img/ui-dev.png">
     <meta name="twitter:image:alt" content="UI 디자인 작업을 소개하는 포트폴리오 썸네일">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/tailwind.min.css">
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body class="bg-slate-950 text-slate-100 antialiased selection:bg-teal-500 selection:text-white">
@@ -94,19 +95,19 @@
                     </div>
                 </div>
                 <div class="lg:col-span-4 flex justify-center equal-grid__item char-wrapper items-center hero-character">
-                    <img id="character-coding" src="/assets/img/character-coding.png" alt="UI Architect Character" class="character-image character-image--coding object-contain">
+                    <img id="character-coding" src="/assets/img/character-coding.webp" alt="UI Architect Character" class="character-image character-image--coding object-contain" fetchpriority="high" decoding="async">
                 </div>
             </div>
         </section>
 
         <!-- Profile / Philosophy Section -->
-        <section id="profile" class="min-h-screen py-24 px-6 flex items-center bg-slate-900/80">
+        <section id="profile" class="min-h-screen py-24 px-6 flex items-center line-gradient">
             <div class="max-w-7xl mx-auto w-full space-y-16">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center equal-grid character-layout">
                     <div class="lg:col-span-4 flex justify-center equal-grid__item char-wrapper items-center profile-character">
-                        <img id="character-whiteboard" src="/assets/img/character-whiteboard.png" alt="Planning Character" class="character-image character-image--whiteboard object-contain">
+                        <img id="character-whiteboard" src="/assets/img/character-whiteboard.webp" alt="Planning Character" class="character-image character-image--whiteboard object-contain" loading="lazy" decoding="async">
                     </div>
-                    <div class="lg:col-span-8 space-y-6 equal-grid__item justify-center">
+                    <div class="lg:col-span-8 space-y-6 equal-grid__item justify-center section-copy">
                         <span class="text-teal-300 font-bold text-sm tracking-widest uppercase">Design System Philosophy</span>
                         <h2 class="typography-h2">설계로 좋은 경험을 만듭니다.</h2>
                         <p class="text-slate-100 text-base leading-relaxed">
@@ -171,7 +172,7 @@
         <!-- Skills Section -->
         <section id="skills" class="min-h-screen py-24 px-6 flex items-center hero-gradient">
             <div class="max-w-7xl mx-auto w-full space-y-16">
-                <div class="text-center max-w-3xl mx-auto space-y-4">
+                <div class="text-center max-w-3xl mx-auto space-y-4 section-copy">
                     <span class="text-teal-300 font-bold text-sm tracking-widest uppercase">Expertise & Growth</span>
                     <h2 class="typography-h2">배우고 익히며 역량을 키웁니다.</h2>
                     <p class="text-slate-100 text-base sm:text-lg">멈추지 않는 학습으로 언제나 현업 최고의 기술 감각을 유지합니다.</p>
@@ -179,7 +180,7 @@
 
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center equal-grid skills-layout character-layout">
                     <div class="lg:col-span-4 flex justify-center equal-grid__item char-wrapper items-center skills-character">
-                        <img id="character-uikit" src="/assets/img/character-uikit.png" alt="UI Kit Character" class="character-image character-image--uikit object-contain">
+                        <img id="character-uikit" src="/assets/img/character-uikit.webp" alt="UI Kit Character" class="character-image character-image--uikit object-contain" loading="lazy" decoding="async">
                     </div>
                     <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8 equal-grid__item">
                         <div class="portfolio-card">
@@ -218,15 +219,15 @@
                             <div class="portfolio-card__body space-y-3 text-sm">
                                 <div class="p-3 rounded-2xl bg-slate-800/90 border border-slate-700">
                                     <div class="font-bold text-white">카카오테크 AI 스쿨 입문·심화과정 (1기)</div>
-                                    <div class="text-xs text-teal-300 mt-0.5 font-semibold">2025.08 ~ 2025.09 | 카카오 비즈니스센터</div>
+                                    <div class="text-xs text-teal-300 mt-1 font-semibold">2025.08 ~ 2025.09 | 카카오 비즈니스센터</div>
                                 </div>
                                 <div class="p-3 rounded-2xl bg-slate-800/90 border border-slate-700">
                                     <div class="font-bold text-white">IT 스타트업 실무형 사업 개발자 부트캠프</div>
-                                    <div class="text-xs text-teal-300 mt-0.5 font-semibold">2024.05 ~ 2024.09 | 넥스트러너스평생교육</div>
+                                    <div class="text-xs text-teal-300 mt-1 font-semibold">2024.05 ~ 2024.09 | 넥스트러너스평생교육</div>
                                 </div>
                                 <div class="p-3 rounded-2xl bg-slate-800/90 border border-slate-700">
                                     <div class="font-bold text-white">웹 접근성 진단 평가 & HIA UX 과정</div>
-                                    <div class="text-xs text-teal-300 mt-0.5 font-semibold">한국인터넷전문가협회 인증 (UX/A11y Expert)</div>
+                                    <div class="text-xs text-teal-300 mt-1 font-semibold">한국인터넷전문가협회 인증 (UX/A11y Expert)</div>
                                 </div>
                             </div>
                             <div class="portfolio-card__footer text-xs text-slate-300">Professional Certificates</div>
@@ -237,20 +238,20 @@
         </section>
 
         <!-- Projects Showcase Section -->
-        <section id="projects" class="min-h-screen py-24 px-6 flex items-center bg-slate-900/80">
+        <section id="projects" class="min-h-screen py-24 px-6 flex items-center line-gradient">
             <div class="max-w-7xl mx-auto w-full space-y-16">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center equal-grid character-layout">
-                    <div class="lg:col-span-8 space-y-4 equal-grid__item justify-center">
+                    <div class="lg:col-span-8 space-y-4 equal-grid__item justify-center section-copy">
                         <span class="text-teal-300 font-bold text-sm tracking-widest uppercase">Featured Showcase</span>
                         <h2 class="typography-h2">디테일로 완성도를 높입니다.</h2>
                         <p class="text-slate-100 text-base sm:text-lg">디자인시스템 설계와 체계적인 UI/UX 개발을 통해 성공적으로 프로젝트를 완수했습니다.</p>
                     </div>
                     <div class="lg:col-span-4 flex justify-center equal-grid__item char-wrapper items-center projects-character">
-                        <img id="character-multidevice" src="/assets/img/character-multidevice.png" alt="MultiDevice Character" class="character-image character-image--multidevice object-contain">
+                        <img id="character-multidevice" src="/assets/img/character-multidevice.webp" alt="MultiDevice Character" class="character-image character-image--multidevice object-contain" loading="lazy" decoding="async">
                     </div>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 equal-grid">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 equal-grid projects-card-list">
                     <div class="equal-grid__item">
                         <div class="portfolio-card">
                             <div class="portfolio-card__header space-y-2">
@@ -379,16 +380,16 @@
             <div class="max-w-7xl mx-auto w-full space-y-16">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center equal-grid character-layout">
                     <div class="lg:col-span-4 flex justify-center equal-grid__item char-wrapper items-center archive-character">
-                        <img id="character-support" src="/assets/img/character-success.png" alt="Support Character" class="character-image character-image--support object-contain">
+                        <img id="character-support" src="/assets/img/character-success.webp" alt="Support Character" class="character-image character-image--support object-contain" loading="lazy" decoding="async">
                     </div>
-                    <div class="lg:col-span-8 space-y-4 equal-grid__item justify-center">
+                    <div class="lg:col-span-8 space-y-4 equal-grid__item justify-center section-copy">
                         <span class="text-teal-300 font-bold text-sm tracking-widest uppercase">Career Archive</span>
-                        <h2 class="typography-h2">경험으로 쌓은 결과를 소개합니다.</h2>
+                        <h2 class="typography-h2">축적된 경험이 성과를 만듭니다.</h2>
                         <p class="text-slate-100 text-base sm:text-lg">공공, 금융, 에이전시 전 분야를 아우르는 견고한 웹표준 및 반응형 프로젝트 이력입니다.</p>
                     </div>
                 </div>
 
-                <div class="glass-card p-6 sm:p-8 rounded-3xl border border-slate-700 space-y-6">
+                <div id="archive-list-bookmark" class="glass-card p-6 sm:p-8 rounded-3xl border border-slate-700 space-y-6">
                     <div class="hidden md:block overflow-x-auto">
                         <table class="w-full text-left border-collapse">
                             <thead>
@@ -401,19 +402,16 @@
                                 </tr>
                             </thead>
                             <tbody id="archive-table-body" class="divide-y divide-slate-800 text-sm text-slate-100">
-                                <!-- Populated via JS -->
                             </tbody>
                         </table>
                     </div>
 
                     <div id="archive-mobile-list" class="md:hidden space-y-4">
-                        <!-- Populated via JS -->
                     </div>
 
                     <div class="flex flex-col sm:flex-row items-center justify-between pt-4 border-t border-slate-800 gap-4">
                         <div id="pagination-info" class="text-xs sm:text-sm text-slate-100" aria-live="polite" aria-atomic="true"></div>
                         <div class="flex items-center gap-2" id="pagination-buttons">
-                            <!-- Populated via JS -->
                         </div>
                     </div>
                 </div>
@@ -421,9 +419,9 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="min-h-screen py-24 px-6 flex items-center bg-slate-900/80">
+        <section id="contact" class="min-h-screen py-24 px-6 flex items-center line-gradient">
             <div class="max-w-7xl mx-auto w-full space-y-16">
-                <div class="text-center max-w-3xl mx-auto space-y-4">
+                <div class="text-center max-w-3xl mx-auto space-y-4 section-copy">
                     <span class="text-teal-300 font-bold text-sm tracking-widest uppercase">Get in Touch</span>
                     <h2 class="typography-h2">더 좋은 경험을 함께 만듭니다.</h2>
                     <p class="text-slate-100 text-base sm:text-lg">Figma 디자인 시스템과 AI 활용 스터디를 통해 늘 시대를 앞서갑니다.</p>
@@ -460,7 +458,7 @@
                                 메일 보내기
                             </a>
                         </div>
-                        <img id="character-success" src="/assets/img/character-support.png" alt="Success Character" class="character-image character-image--success object-contain">
+                        <img id="character-success" src="/assets/img/character-support.webp" alt="Success Character" class="character-image character-image--success object-contain" loading="lazy" decoding="async">
                     </div>
                 </div>
             </div>
