@@ -211,25 +211,37 @@ function initializeProjectsCarousel() {
   const carousel = document.querySelector(".projects-card-list");
   if (!carousel) return;
 
-  let touchStartX = 0;
-  let touchStartY = 0;
-  let startIndex = 0;
+  let touchStart = null;
 
   carousel.addEventListener(
     "touchstart",
     (event) => {
-      if (!window.matchMedia("(max-width: 42.5em)").matches) return;
+      if (!window.matchMedia("(max-width: 42.5em)").matches || event.touches.length !== 1) {
+        touchStart = null;
+        return;
+      }
 
-      touchStartX = event.changedTouches[0].clientX;
-      touchStartY = event.changedTouches[0].clientY;
+      const touch = event.changedTouches[0];
+      if (!touch) return;
+
       const carouselLeft = carousel.getBoundingClientRect().left;
-      startIndex = [...carousel.children].reduce((closestIndex, card, index, cards) => {
+      const cards = [...carousel.children];
+      if (cards.length === 0) return;
+
+      const startIndex = cards.reduce((closestIndex, card, index) => {
         const closestCard = cards[closestIndex];
         return Math.abs(card.getBoundingClientRect().left - carouselLeft) <
           Math.abs(closestCard.getBoundingClientRect().left - carouselLeft)
           ? index
           : closestIndex;
       }, 0);
+
+      touchStart = {
+        identifier: touch.identifier,
+        x: touch.clientX,
+        y: touch.clientY,
+        index: startIndex,
+      };
     },
     { passive: true },
   );
@@ -237,17 +249,24 @@ function initializeProjectsCarousel() {
   carousel.addEventListener(
     "touchend",
     (event) => {
-      if (!window.matchMedia("(max-width: 42.5em)").matches) return;
+      if (!touchStart || !window.matchMedia("(max-width: 42.5em)").matches) return;
 
-      const swipeDistance = touchStartX - event.changedTouches[0].clientX;
-      const verticalDistance = touchStartY - event.changedTouches[0].clientY;
+      const touch = [...event.changedTouches].find(
+        ({ identifier }) => identifier === touchStart.identifier,
+      );
+      if (!touch) return;
+
+      const start = touchStart;
+      touchStart = null;
+      const swipeDistance = start.x - touch.clientX;
+      const verticalDistance = start.y - touch.clientY;
       if (Math.abs(swipeDistance) < 40 || Math.abs(swipeDistance) <= Math.abs(verticalDistance)) return;
 
       const cards = [...carousel.children];
       if (cards.length === 0) return;
       const nextIndex = Math.max(
         0,
-        Math.min(cards.length - 1, startIndex + (swipeDistance > 0 ? 1 : -1)),
+        Math.min(cards.length - 1, start.index + (swipeDistance > 0 ? 1 : -1)),
       );
       const carouselLeft = carousel.getBoundingClientRect().left;
       const cardLeft = cards[nextIndex].getBoundingClientRect().left;
@@ -259,6 +278,10 @@ function initializeProjectsCarousel() {
     },
     { passive: true },
   );
+
+  carousel.addEventListener("touchcancel", () => {
+    touchStart = null;
+  }, { passive: true });
 }
 
 window.addEventListener("DOMContentLoaded", () => {
