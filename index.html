@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko" class="scroll-smooth">
+<html lang="ko" class="ui-scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,34 +20,33 @@
     <meta name="twitter:image:alt" content="UI 디자인 작업을 소개하는 포트폴리오 썸네일">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/style.css?v=layout-restore-20261103">
-    <link rel="stylesheet" href="/assets/css/tailwind.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css?v=design-system-20261105">
 </head>
-<body class="bg-slate-950 text-slate-100 antialiased selection:bg-teal-500 selection:text-white">
+<body class="ui-bg-slate-950 ui-text-slate-100 ui-antialiased ui-selection-bg-teal-500 ui-selection-text-white">
 
-    <header class="fixed top-0 left-0 right-0 z-50 glass-card border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="#hero" class="flex items-center gap-3 group">
-                <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center font-bold text-slate-950 shadow-lg shadow-teal-500/30 group-hover:scale-105 transition">
-                    <img id="logo-icon" src="/assets/img/logo_symbol.png" alt="소중한네시간" class="w-6 h-6">
+    <header class="ui-fixed ui-top-0 ui-left-0 ui-right-0 ui-z-50 glass-card ui-border-b ui-border-slate-800">
+        <div class="ui-max-w-7xl ui-mx-auto ui-px-6 ui-h-20 ui-flex ui-items-center ui-justify-between">
+            <a href="#hero" class="ui-flex ui-items-center ui-gap-3 ui-group">
+                <div class="ui-w-10 ui-h-10 ui-rounded-full ui-bg-white ui-flex ui-items-center ui-justify-center ui-font-bold ui-text-slate-950 ui-shadow-lg ui-shadow-teal-500-30 ui-group-hover-scale-105 ui-transition">
+                    <img id="logo-icon" src="/assets/img/logo_symbol.png" alt="소중한네시간" class="ui-w-6 ui-h-6">
                 </div>
                 <div>
-                    <span class="font-bold text-base tracking-tight text-white block">Jeong In Young</span>
-                    <span class="text-xs text-teal-300 font-semibold">UI/UX Publisher</span>
+                    <span class="ui-font-bold ui-text-base ui-tracking-tight ui-text-white ui-block">Jeong In Young</span>
+                    <span class="ui-text-xs ui-text-teal-300 ui-font-semibold">UI/UX Publisher</span>
                 </div>
             </a>
 
-            <nav class="hidden md:flex items-center gap-8">
-                <a href="#hero" class="hover:text-teal-300 transition">Intro</a>
-                <a href="#profile" class="hover:text-teal-300 transition">Philosophy</a>
-                <a href="#skills" class="hover:text-teal-300 transition">Skills</a>
-                <a href="#projects" class="hover:text-teal-300 transition">Showcase</a>
-                <a href="#archive" class="hover:text-teal-300 transition">Archive</a>
-                <a href="#contact" class="hover:text-teal-300 transition">Contact</a>
+            <nav class="ui-hidden ui-md-flex ui-items-center ui-gap-8">
+                <a href="#hero" class="ui-hover-text-teal-300 ui-transition">Intro</a>
+                <a href="#profile" class="ui-hover-text-teal-300 ui-transition">Philosophy</a>
+                <a href="#skills" class="ui-hover-text-teal-300 ui-transition">Skills</a>
+                <a href="#projects" class="ui-hover-text-teal-300 ui-transition">Showcase</a>
+                <a href="#archive" class="ui-hover-text-teal-300 ui-transition">Archive</a>
+                <a href="#contact" class="ui-hover-text-teal-300 ui-transition">Contact</a>
             </nav>
 
-            <div class="header-actions flex items-center gap-3">
-                <a href="#contact" class="header-contact-link inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-gradient-to-r from-teal-400 to-cyan-400 text-slate-950 font-bold text-sm shadow-lg shadow-teal-500/20 hover:opacity-90 transition">
+            <div class="header-actions ui-flex ui-items-center ui-gap-3">
+                <a href="#contact" class="header-contact-link ui-inline-flex ui-items-center ui-justify-center ui-px-5 ui-py-2-5 ui-rounded-xl ui-bg-gradient-to-r ui-from-teal-400 ui-to-cyan-400 ui-text-slate-950 ui-font-bold ui-text-sm ui-shadow-lg ui-shadow-teal-500-20 ui-hover-opacity-90 ui-transition">
                     문의하기
                 </a>
                 <button id="mobile-menu-toggle" class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation" aria-label="메뉴 열기">
@@ -70,99 +69,99 @@
         </nav>
     </header>
 
-    <main class="relative">
+    <main class="ui-relative">
 
         <!-- Hero Section -->
-        <section id="hero" class="min-h-screen pt-28 pb-16 px-6 flex items-center relative overflow-hidden hero-gradient">
-            <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center equal-grid character-layout">
-                <div class="lg:col-span-6 space-y-8 equal-grid__item justify-center">
-                    <div class="inline-flex self-start items-center gap-2 px-4 py-2 rounded-full bg-teal-500/20 border border-teal-500/40 text-teal-300 text-sm font-bold">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg> UI/UX 시니어 개발자 & 디자인시스템 강사</div>
+        <section id="hero" class="ui-min-h-screen ui-pt-28 ui-pb-16 ui-px-6 ui-flex ui-items-center ui-relative ui-overflow-hidden hero-gradient">
+            <div class="ui-max-w-7xl ui-mx-auto ui-w-full ui-grid ui-grid-cols-1 ui-lg-grid-cols-12 ui-gap-12 ui-items-center equal-grid character-layout">
+                <div class="ui-lg-col-span-6 ui-space-y-8 equal-grid__item ui-justify-center">
+                    <div class="ui-inline-flex ui-self-start ui-items-center ui-gap-2 ui-px-4 ui-py-2 ui-rounded-full ui-bg-teal-500-20 ui-border ui-border-teal-500-40 ui-text-teal-300 ui-text-sm ui-font-bold">
+                        <svg class="ui-w-4 ui-h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg> UI/UX 시니어 개발자 & 디자인시스템 강사</div>
                     <h1 class="typography-h1">
                         디자인과 개발 사이,<br/>
-                        <span class="bg-gradient-to-r from-teal-300 to-cyan-300 bg-clip-text text-transparent">센스 있는 아키텍처</span>를 빌드합니다.
+                        <span class="ui-bg-gradient-to-r ui-from-teal-300 ui-to-cyan-300 ui-bg-clip-text ui-text-transparent">센스 있는 아키텍처</span>를 빌드합니다.
                     </h1>
-                    <p class="text-lg text-slate-100 max-w-2xl leading-relaxed font-normal">
+                    <p class="ui-text-lg ui-text-slate-100 ui-max-w-2xl ui-leading-relaxed ui-font-normal">
                         픽셀 단위의 시각적 완성도와 확장 가능한 컴포넌트 아키텍처를 잇는 시니어 퍼블리셔 정인영의 기술력과 인사이트를 만나보세요.
                     </p>
-                    <div class="flex flex-wrap gap-4 pt-2">
-                        <a href="#projects" class="px-8 py-4 rounded-xl bg-teal-400 text-slate-950 font-bold hover:bg-teal-300 transition shadow-lg shadow-teal-500/25 flex items-center gap-2">
-                            주요 프로젝트 보기 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    <div class="ui-flex ui-flex-wrap ui-gap-4 ui-pt-2">
+                        <a href="#projects" class="ui-px-8 ui-py-4 ui-rounded-xl ui-bg-teal-400 ui-text-slate-950 ui-font-bold ui-hover-bg-teal-300 ui-transition ui-shadow-lg ui-shadow-teal-500-25 ui-flex ui-items-center ui-gap-2">
+                            주요 프로젝트 보기 <svg class="ui-w-5 ui-h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </a>
-                        <a href="#contact" class="px-8 py-4 rounded-xl glass-card text-white font-semibold hover:bg-slate-800 transition border border-teal-500/40">
+                        <a href="#contact" class="ui-px-8 ui-py-4 ui-rounded-xl glass-card ui-text-white ui-font-semibold ui-hover-bg-slate-800 ui-transition ui-border ui-border-teal-500-40">
                             프로젝트 제안하기
                         </a>
                     </div>
                 </div>
-                <div class="lg:col-span-6 flex justify-center equal-grid__item char-wrapper items-center hero-character">
-                    <img id="character-coding" src="/assets/img/character-coding.webp" alt="UI Architect Character" class="character-image character-image--coding object-contain" fetchpriority="high" decoding="async">
+                <div class="ui-lg-col-span-6 ui-flex ui-justify-center equal-grid__item char-wrapper ui-items-center hero-character">
+                    <img id="character-coding" src="/assets/img/character-coding.webp" alt="UI Architect Character" class="character-image character-image--coding ui-object-contain" fetchpriority="high" decoding="async">
                 </div>
             </div>
         </section>
 
         <!-- Profile / Philosophy Section -->
-        <section id="profile" class="min-h-screen py-24 px-6 flex items-center line-gradient">
-            <div class="max-w-7xl mx-auto w-full space-y-16">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center equal-grid character-layout">
-                    <div class="lg:col-span-4 flex justify-center equal-grid__item char-wrapper items-center profile-character">
-                        <img id="character-whiteboard" src="/assets/img/character-whiteboard.webp" alt="Planning Character" class="character-image character-image--whiteboard object-contain" loading="lazy" decoding="async">
+        <section id="profile" class="ui-min-h-screen ui-py-24 ui-px-6 ui-flex ui-items-center line-gradient">
+            <div class="ui-max-w-7xl ui-mx-auto ui-w-full ui-space-y-16">
+                <div class="ui-grid ui-grid-cols-1 ui-lg-grid-cols-12 ui-gap-12 ui-items-center equal-grid character-layout">
+                    <div class="ui-lg-col-span-4 ui-flex ui-justify-center equal-grid__item char-wrapper ui-items-center profile-character">
+                        <img id="character-whiteboard" src="/assets/img/character-whiteboard.webp" alt="Planning Character" class="character-image character-image--whiteboard ui-object-contain" loading="lazy" decoding="async">
                     </div>
-                    <div class="lg:col-span-8 space-y-6 equal-grid__item justify-center section-copy">
-                        <span class="text-teal-300 font-bold text-sm tracking-widest uppercase">Design System Philosophy</span>
+                    <div class="ui-lg-col-span-8 ui-space-y-6 equal-grid__item ui-justify-center section-copy">
+                        <span class="ui-text-teal-300 ui-font-bold ui-text-sm ui-tracking-widest ui-uppercase">Design System Philosophy</span>
                         <h2 class="typography-h2">설계로 좋은 경험을 만듭니다.</h2>
-                        <p class="text-slate-100 text-base leading-relaxed">
+                        <p class="ui-text-slate-100 ui-text-base ui-leading-relaxed">
                             디자인 시스템과 확장 가능한 마크업 아키텍처로 프로덕트의 지속 가능성과 일관된 경험을 완성합니다.
                         </p>
                     </div>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 equal-grid">
+                <div class="ui-grid ui-grid-cols-1 ui-md-grid-cols-2 ui-gap-8 equal-grid">
                     <div class="equal-grid__item">
                         <div class="portfolio-card">
                             <div class="portfolio-card__header">
-                                <div class="w-12 h-12 rounded-2xl bg-teal-500/20 text-teal-300 flex items-center justify-center font-bold text-lg">01</div>
+                                <div class="ui-w-12 ui-h-12 ui-rounded-2xl ui-bg-teal-500-20 ui-text-teal-300 ui-flex ui-items-center ui-justify-center ui-font-bold ui-text-lg">01</div>
                             </div>
-                            <div class="portfolio-card__body space-y-2">
-                                <h3 class="typography-h3 text-xl">디자인 토큰 & UI Kit 시스템</h3>
-                                <p class="text-slate-200 text-sm leading-relaxed">디자이너와 개발자 사이의 싱크를 맞추는 디자인 토큰 정의 및 확장 가능한 공통 컴포넌트 표준화.</p>
+                            <div class="portfolio-card__body ui-space-y-2">
+                                <h3 class="typography-h3 ui-text-xl">디자인 토큰 & UI Kit 시스템</h3>
+                                <p class="ui-text-slate-200 ui-text-sm ui-leading-relaxed">디자이너와 개발자 사이의 싱크를 맞추는 디자인 토큰 정의 및 확장 가능한 공통 컴포넌트 표준화.</p>
                             </div>
-                            <div class="portfolio-card__footer text-xs text-teal-300 font-semibold">Design System Architecture</div>
+                            <div class="portfolio-card__footer ui-text-xs ui-text-teal-300 ui-font-semibold">Design System Architecture</div>
                         </div>
                     </div>
                     <div class="equal-grid__item">
                         <div class="portfolio-card">
                             <div class="portfolio-card__header">
-                                <div class="w-12 h-12 rounded-2xl bg-teal-500/20 text-teal-300 flex items-center justify-center font-bold text-lg">02</div>
+                                <div class="ui-w-12 ui-h-12 ui-rounded-2xl ui-bg-teal-500-20 ui-text-teal-300 ui-flex ui-items-center ui-justify-center ui-font-bold ui-text-lg">02</div>
                             </div>
-                            <div class="portfolio-card__body space-y-2">
-                                <h3 class="typography-h3 text-xl">모던 마크업 & BEM 체계화</h3>
-                                <p class="text-slate-200 text-sm leading-relaxed">BEM 방법론 및 SCSS 구조화를 통한 강력한 유지보수성 확보와 SEO 최적화 시맨틱 아키텍처.</p>
+                            <div class="portfolio-card__body ui-space-y-2">
+                                <h3 class="typography-h3 ui-text-xl">모던 마크업 & BEM 체계화</h3>
+                                <p class="ui-text-slate-200 ui-text-sm ui-leading-relaxed">BEM 방법론 및 SCSS 구조화를 통한 강력한 유지보수성 확보와 SEO 최적화 시맨틱 아키텍처.</p>
                             </div>
-                            <div class="portfolio-card__footer text-xs text-teal-300 font-semibold">SCSS & BEM Methodology</div>
+                            <div class="portfolio-card__footer ui-text-xs ui-text-teal-300 ui-font-semibold">SCSS & BEM Methodology</div>
                         </div>
                     </div>
                     <div class="equal-grid__item">
                         <div class="portfolio-card">
                             <div class="portfolio-card__header">
-                                <div class="w-12 h-12 rounded-2xl bg-teal-500/20 text-teal-300 flex items-center justify-center font-bold text-lg">03</div>
+                                <div class="ui-w-12 ui-h-12 ui-rounded-2xl ui-bg-teal-500-20 ui-text-teal-300 ui-flex ui-items-center ui-justify-center ui-font-bold ui-text-lg">03</div>
                             </div>
-                            <div class="portfolio-card__body space-y-2">
-                                <h3 class="typography-h3 text-xl">웹 접근성 & UDL 검수 총괄</h3>
-                                <p class="text-slate-200 text-sm leading-relaxed">모든 사용자에게 평등한 디지털 경험을 제공하는 웹 접근성 검수 및 AI 디지털교과서 UDL 설계.</p>
+                            <div class="portfolio-card__body ui-space-y-2">
+                                <h3 class="typography-h3 ui-text-xl">웹 접근성 & UDL 검수 총괄</h3>
+                                <p class="ui-text-slate-200 ui-text-sm ui-leading-relaxed">모든 사용자에게 평등한 디지털 경험을 제공하는 웹 접근성 검수 및 AI 디지털교과서 UDL 설계.</p>
                             </div>
-                            <div class="portfolio-card__footer text-xs text-teal-300 font-semibold">Accessibility & UDL QA</div>
+                            <div class="portfolio-card__footer ui-text-xs ui-text-teal-300 ui-font-semibold">Accessibility & UDL QA</div>
                         </div>
                     </div>
                     <div class="equal-grid__item">
                         <div class="portfolio-card">
                             <div class="portfolio-card__header">
-                                <div class="w-12 h-12 rounded-2xl bg-teal-500/20 text-teal-300 flex items-center justify-center font-bold text-lg">04</div>
+                                <div class="ui-w-12 ui-h-12 ui-rounded-2xl ui-bg-teal-500-20 ui-text-teal-300 ui-flex ui-items-center ui-justify-center ui-font-bold ui-text-lg">04</div>
                             </div>
-                            <div class="portfolio-card__body space-y-2">
-                                <h3 class="typography-h3 text-xl">React & Thymeleaf 협업 브릿지</h3>
-                                <p class="text-slate-200 text-sm leading-relaxed">엔터프라이즈 백엔드 환경과 프론트엔드 컴포넌트(JSX)를 완벽히 잇는 소통과 기술 브릿지.</p>
+                            <div class="portfolio-card__body ui-space-y-2">
+                                <h3 class="typography-h3 ui-text-xl">React & Thymeleaf 협업 브릿지</h3>
+                                <p class="ui-text-slate-200 ui-text-sm ui-leading-relaxed">엔터프라이즈 백엔드 환경과 프론트엔드 컴포넌트(JSX)를 완벽히 잇는 소통과 기술 브릿지.</p>
                             </div>
-                            <div class="portfolio-card__footer text-xs text-teal-300 font-semibold">Cross-Functional Bridge</div>
+                            <div class="portfolio-card__footer ui-text-xs ui-text-teal-300 ui-font-semibold">Cross-Functional Bridge</div>
                         </div>
                     </div>
                 </div>
@@ -170,67 +169,67 @@
         </section>
 
         <!-- Skills Section -->
-        <section id="skills" class="min-h-screen py-24 px-6 flex items-center hero-gradient">
-            <div class="max-w-7xl mx-auto w-full space-y-16">
-                <div class="text-center max-w-3xl mx-auto space-y-4 section-copy">
-                    <span class="text-teal-300 font-bold text-sm tracking-widest uppercase">Expertise & Growth</span>
+        <section id="skills" class="ui-min-h-screen ui-py-24 ui-px-6 ui-flex ui-items-center hero-gradient">
+            <div class="ui-max-w-7xl ui-mx-auto ui-w-full ui-space-y-16">
+                <div class="ui-text-center ui-max-w-3xl ui-mx-auto ui-space-y-4 section-copy">
+                    <span class="ui-text-teal-300 ui-font-bold ui-text-sm ui-tracking-widest ui-uppercase">Expertise & Growth</span>
                     <h2 class="typography-h2">배우고 익히며 역량을 키웁니다.</h2>
-                    <p class="text-slate-100 text-base sm:text-lg">멈추지 않는 학습으로 언제나 현업 최고의 기술 감각을 유지합니다.</p>
+                    <p class="ui-text-slate-100 ui-text-base ui-sm-text-lg">멈추지 않는 학습으로 언제나 현업 최고의 기술 감각을 유지합니다.</p>
                 </div>
 
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center equal-grid skills-layout character-layout">
-                    <div class="lg:col-span-4 flex justify-center equal-grid__item char-wrapper items-center skills-character">
-                        <img id="character-uikit" src="/assets/img/character-uikit.webp" alt="UI Kit Character" class="character-image character-image--uikit object-contain" loading="lazy" decoding="async">
+                <div class="ui-grid ui-grid-cols-1 ui-lg-grid-cols-12 ui-gap-8 ui-items-center equal-grid skills-layout character-layout">
+                    <div class="ui-lg-col-span-4 ui-flex ui-justify-center equal-grid__item char-wrapper ui-items-center skills-character">
+                        <img id="character-uikit" src="/assets/img/character-uikit.webp" alt="UI Kit Character" class="character-image character-image--uikit ui-object-contain" loading="lazy" decoding="async">
                     </div>
-                    <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8 equal-grid__item">
+                    <div class="ui-lg-col-span-8 ui-grid ui-grid-cols-1 ui-md-grid-cols-2 ui-gap-8 equal-grid__item">
                         <div class="portfolio-card">
                             <div class="portfolio-card__header">
-                                <h3 class="typography-h3 flex items-center gap-2 text-xl font-bold">
-                                    <svg class="w-5 h-5 text-teal-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg> Skill Proficiency Matrix
+                                <h3 class="typography-h3 ui-flex ui-items-center ui-gap-2 ui-text-xl ui-font-bold">
+                                    <svg class="ui-w-5 ui-h-5 ui-text-teal-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg> Skill Proficiency Matrix
                                 </h3>
                             </div>
-                            <div class="portfolio-card__body space-y-4">
+                            <div class="portfolio-card__body ui-space-y-4">
                                 <div>
-                                    <div class="flex justify-between text-sm mb-1 font-semibold text-slate-100"><span>UI/UX 기획 및 설계</span><span class="text-teal-300 font-bold">A (최우수)</span></div>
-                                    <div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden"><div class="bg-teal-400 h-full w-[95%]"></div></div>
+                                    <div class="ui-flex ui-justify-between ui-text-sm ui-mb-1 ui-font-semibold ui-text-slate-100"><span>UI/UX 기획 및 설계</span><span class="ui-text-teal-300 ui-font-bold">A (최우수)</span></div>
+                                    <div class="ui-w-full ui-bg-slate-800 ui-h-2-5 ui-rounded-full ui-overflow-hidden"><div class="ui-bg-teal-400 ui-h-full ui-width-95-percent"></div></div>
                                 </div>
                                 <div>
-                                    <div class="flex justify-between text-sm mb-1 font-semibold text-slate-100"><span>HTML5 / CSS3 / SCSS</span><span class="text-teal-300 font-bold">A (최우수)</span></div>
-                                    <div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden"><div class="bg-teal-400 h-full w-[95%]"></div></div>
+                                    <div class="ui-flex ui-justify-between ui-text-sm ui-mb-1 ui-font-semibold ui-text-slate-100"><span>HTML5 / CSS3 / SCSS</span><span class="ui-text-teal-300 ui-font-bold">A (최우수)</span></div>
+                                    <div class="ui-w-full ui-bg-slate-800 ui-h-2-5 ui-rounded-full ui-overflow-hidden"><div class="ui-bg-teal-400 ui-h-full ui-width-95-percent"></div></div>
                                 </div>
                                 <div>
-                                    <div class="flex justify-between text-sm mb-1 font-semibold text-slate-100"><span>JavaScript (jQuery)</span><span class="text-teal-300 font-bold">A (최우수)</span></div>
-                                    <div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden"><div class="bg-teal-400 h-full w-[90%]"></div></div>
+                                    <div class="ui-flex ui-justify-between ui-text-sm ui-mb-1 ui-font-semibold ui-text-slate-100"><span>JavaScript (jQuery)</span><span class="ui-text-teal-300 ui-font-bold">A (최우수)</span></div>
+                                    <div class="ui-w-full ui-bg-slate-800 ui-h-2-5 ui-rounded-full ui-overflow-hidden"><div class="ui-bg-teal-400 ui-h-full ui-width-90-percent"></div></div>
                                 </div>
                                 <div>
-                                    <div class="flex justify-between text-sm mb-1 font-semibold text-slate-100"><span>React UI 개발</span><span class="text-cyan-300 font-bold">B (우수)</span></div>
-                                    <div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden"><div class="bg-cyan-400 h-full w-[80%]"></div></div>
+                                    <div class="ui-flex ui-justify-between ui-text-sm ui-mb-1 ui-font-semibold ui-text-slate-100"><span>React UI 개발</span><span class="ui-text-cyan-300 ui-font-bold">B (우수)</span></div>
+                                    <div class="ui-w-full ui-bg-slate-800 ui-h-2-5 ui-rounded-full ui-overflow-hidden"><div class="ui-bg-cyan-400 ui-h-full ui-width-80-percent"></div></div>
                                 </div>
                             </div>
-                            <div class="portfolio-card__footer text-xs text-slate-300">Continuous Skill Enhancement</div>
+                            <div class="portfolio-card__footer ui-text-xs ui-text-slate-300">Continuous Skill Enhancement</div>
                         </div>
 
                         <div class="portfolio-card">
                             <div class="portfolio-card__header">
-                                <h3 class="typography-h3 flex items-center gap-2 text-xl font-bold">
-                                    <svg class="w-5 h-5 text-teal-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-5.495-2.102 12.083 12.083 0 01-.665-6.479L12 14zm-4 6v-7.5l4-2.222"></path></svg> Key Education & Training
+                                <h3 class="typography-h3 ui-flex ui-items-center ui-gap-2 ui-text-xl ui-font-bold">
+                                    <svg class="ui-w-5 ui-h-5 ui-text-teal-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-5.495-2.102 12.083 12.083 0 01-.665-6.479L12 14zm-4 6v-7.5l4-2.222"></path></svg> Key Education & Training
                                 </h3>
                             </div>
-                            <div class="portfolio-card__body space-y-3 text-sm">
-                                <div class="p-3 rounded-2xl bg-slate-800/90 border border-slate-700">
-                                    <div class="font-bold text-white">카카오테크 AI 스쿨 입문·심화과정 (1기)</div>
-                                    <div class="text-xs text-teal-300 mt-1 font-semibold">2025.08 ~ 2025.09 | 카카오 비즈니스센터</div>
+                            <div class="portfolio-card__body ui-space-y-3 ui-text-sm">
+                                <div class="ui-p-3 ui-rounded-2xl ui-bg-slate-800-90 ui-border ui-border-slate-700">
+                                    <div class="ui-font-bold ui-text-white">카카오테크 AI 스쿨 입문·심화과정 (1기)</div>
+                                    <div class="ui-text-xs ui-text-teal-300 ui-mt-1 ui-font-semibold">2025.08 ~ 2025.09 | 카카오 비즈니스센터</div>
                                 </div>
-                                <div class="p-3 rounded-2xl bg-slate-800/90 border border-slate-700">
-                                    <div class="font-bold text-white">IT 스타트업 실무형 사업 개발자 부트캠프</div>
-                                    <div class="text-xs text-teal-300 mt-1 font-semibold">2024.05 ~ 2024.09 | 넥스트러너스평생교육</div>
+                                <div class="ui-p-3 ui-rounded-2xl ui-bg-slate-800-90 ui-border ui-border-slate-700">
+                                    <div class="ui-font-bold ui-text-white">IT 스타트업 실무형 사업 개발자 부트캠프</div>
+                                    <div class="ui-text-xs ui-text-teal-300 ui-mt-1 ui-font-semibold">2024.05 ~ 2024.09 | 넥스트러너스평생교육</div>
                                 </div>
-                                <div class="p-3 rounded-2xl bg-slate-800/90 border border-slate-700">
-                                    <div class="font-bold text-white">웹 접근성 진단 평가 & HIA UX 과정</div>
-                                    <div class="text-xs text-teal-300 mt-1 font-semibold">한국인터넷전문가협회 인증 (UX/A11y Expert)</div>
+                                <div class="ui-p-3 ui-rounded-2xl ui-bg-slate-800-90 ui-border ui-border-slate-700">
+                                    <div class="ui-font-bold ui-text-white">웹 접근성 진단 평가 & HIA UX 과정</div>
+                                    <div class="ui-text-xs ui-text-teal-300 ui-mt-1 ui-font-semibold">한국인터넷전문가협회 인증 (UX/A11y Expert)</div>
                                 </div>
                             </div>
-                            <div class="portfolio-card__footer text-xs text-slate-300">Professional Certificates</div>
+                            <div class="portfolio-card__footer ui-text-xs ui-text-slate-300">Professional Certificates</div>
                         </div>
                     </div>
                 </div>
@@ -238,136 +237,136 @@
         </section>
 
         <!-- Projects Showcase Section -->
-        <section id="projects" class="min-h-screen py-24 px-6 flex items-center line-gradient">
-            <div class="max-w-7xl mx-auto w-full space-y-16">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center equal-grid character-layout">
-                    <div class="lg:col-span-8 space-y-4 equal-grid__item justify-center section-copy">
-                        <span class="text-teal-300 font-bold text-sm tracking-widest uppercase">Featured Showcase</span>
+        <section id="projects" class="ui-min-h-screen ui-py-24 ui-px-6 ui-flex ui-items-center line-gradient">
+            <div class="ui-max-w-7xl ui-mx-auto ui-w-full ui-space-y-16">
+                <div class="ui-grid ui-grid-cols-1 ui-lg-grid-cols-12 ui-gap-12 ui-items-center equal-grid character-layout">
+                    <div class="ui-lg-col-span-8 ui-space-y-4 equal-grid__item ui-justify-center section-copy">
+                        <span class="ui-text-teal-300 ui-font-bold ui-text-sm ui-tracking-widest ui-uppercase">Featured Showcase</span>
                         <h2 class="typography-h2">디테일로 완성도를 높입니다.</h2>
-                        <p class="text-slate-100 text-base sm:text-lg">디자인시스템 설계와 체계적인 UI/UX 개발을 통해 성공적으로 프로젝트를 완수했습니다.</p>
+                        <p class="ui-text-slate-100 ui-text-base ui-sm-text-lg">디자인시스템 설계와 체계적인 UI/UX 개발을 통해 성공적으로 프로젝트를 완수했습니다.</p>
                     </div>
-                    <div class="lg:col-span-4 flex justify-center equal-grid__item char-wrapper items-center projects-character">
-                        <img id="character-multidevice" src="/assets/img/character-multidevice.webp" alt="MultiDevice Character" class="character-image character-image--multidevice object-contain" loading="lazy" decoding="async">
+                    <div class="ui-lg-col-span-4 ui-flex ui-justify-center equal-grid__item char-wrapper ui-items-center projects-character">
+                        <img id="character-multidevice" src="/assets/img/character-multidevice.webp" alt="MultiDevice Character" class="character-image character-image--multidevice ui-object-contain" loading="lazy" decoding="async">
                     </div>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 equal-grid projects-card-list">
+                <div class="ui-grid ui-grid-cols-1 ui-md-grid-cols-2 ui-lg-grid-cols-3 ui-gap-8 equal-grid projects-card-list">
                     <div class="equal-grid__item">
                         <div class="portfolio-card">
-                            <div class="portfolio-card__header space-y-2">
-                                <div class="flex justify-between items-center">
-                                    <span class="px-3 py-1 rounded-full bg-teal-500/20 text-teal-300 text-xs font-bold">24.08 ~ 24.10</span>
-                                    <span class="text-xs text-slate-100 font-medium">참여도 100%</span>
+                            <div class="portfolio-card__header ui-space-y-2">
+                                <div class="ui-flex ui-justify-between ui-items-center">
+                                    <span class="ui-px-3 ui-py-1 ui-rounded-full ui-bg-teal-500-20 ui-text-teal-300 ui-text-xs ui-font-bold">24.08 ~ 24.10</span>
+                                    <span class="ui-text-xs ui-text-slate-100 ui-font-medium">참여도 100%</span>
                                 </div>
-                                <h3 class="typography-h3 text-xl">LG전자 진단 DX 데이터포털 구축</h3>
+                                <h3 class="typography-h3 ui-text-xl">LG전자 진단 DX 데이터포털 구축</h3>
                             </div>
                             <div class="portfolio-card__body">
-                                <p class="text-slate-100 text-sm">대시보드와 진단 UI 컴포넌트를 전담 설계·구현하여 직관적인 데이터 탐색 환경 완성.</p>
+                                <p class="ui-text-slate-100 ui-text-sm">대시보드와 진단 UI 컴포넌트를 전담 설계·구현하여 직관적인 데이터 탐색 환경 완성.</p>
                             </div>
-                            <div class="portfolio-card__footer flex flex-wrap gap-2">
-                                <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-teal-300 text-xs font-medium">Thymeleaf</span>
-                                <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-teal-300 text-xs font-medium">SCSS</span>
-                                <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-teal-300 text-xs font-medium">Git</span>
+                            <div class="portfolio-card__footer ui-flex ui-flex-wrap ui-gap-2">
+                                <span class="ui-px-2-5 ui-py-1 ui-rounded-lg ui-bg-slate-800 ui-text-teal-300 ui-text-xs ui-font-medium">Thymeleaf</span>
+                                <span class="ui-px-2-5 ui-py-1 ui-rounded-lg ui-bg-slate-800 ui-text-teal-300 ui-text-xs ui-font-medium">SCSS</span>
+                                <span class="ui-px-2-5 ui-py-1 ui-rounded-lg ui-bg-slate-800 ui-text-teal-300 ui-text-xs ui-font-medium">Git</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="equal-grid__item">
                         <div class="portfolio-card">
-                            <div class="portfolio-card__header space-y-2">
-                                <div class="flex justify-between items-center">
-                                    <span class="px-3 py-1 rounded-full bg-teal-500/20 text-teal-300 text-xs font-bold">24.06 ~ 24.07</span>
-                                    <span class="text-xs text-slate-100 font-medium">참여도 50%</span>
+                            <div class="portfolio-card__header ui-space-y-2">
+                                <div class="ui-flex ui-justify-between ui-items-center">
+                                    <span class="ui-px-3 ui-py-1 ui-rounded-full ui-bg-teal-500-20 ui-text-teal-300 ui-text-xs ui-font-bold">24.06 ~ 24.07</span>
+                                    <span class="ui-text-xs ui-text-slate-100 ui-font-medium">참여도 50%</span>
                                 </div>
-                                <h3 class="typography-h3 text-xl">미래엔 AI 디지털교과서 UDL 검수</h3>
+                                <h3 class="typography-h3 ui-text-xl">미래엔 AI 디지털교과서 UDL 검수</h3>
                             </div>
                             <div class="portfolio-card__body">
-                                <p class="text-slate-100 text-sm">React 기반 인터랙티브 교육 환경에서 모든 학생의 접근성을 보장하는 UDL 검수 수행.</p>
+                                <p class="ui-text-slate-100 ui-text-sm">React 기반 인터랙티브 교육 환경에서 모든 학생의 접근성을 보장하는 UDL 검수 수행.</p>
                             </div>
-                            <div class="portfolio-card__footer flex flex-wrap gap-2">
-                                <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-teal-300 text-xs font-medium">React</span>
-                                <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-teal-300 text-xs font-medium">SCSS</span>
-                                <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-teal-300 text-xs font-medium">Yarn</span>
+                            <div class="portfolio-card__footer ui-flex ui-flex-wrap ui-gap-2">
+                                <span class="ui-px-2-5 ui-py-1 ui-rounded-lg ui-bg-slate-800 ui-text-teal-300 ui-text-xs ui-font-medium">React</span>
+                                <span class="ui-px-2-5 ui-py-1 ui-rounded-lg ui-bg-slate-800 ui-text-teal-300 ui-text-xs ui-font-medium">SCSS</span>
+                                <span class="ui-px-2-5 ui-py-1 ui-rounded-lg ui-bg-slate-800 ui-text-teal-300 ui-text-xs ui-font-medium">Yarn</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="equal-grid__item">
                         <div class="portfolio-card">
-                            <div class="portfolio-card__header space-y-2">
-                                <div class="flex justify-between items-center">
-                                    <span class="px-3 py-1 rounded-full bg-teal-500/20 text-teal-300 text-xs font-bold">23.10 ~ 24.02</span>
-                                    <span class="text-xs text-slate-100 font-medium">참여도 70%</span>
+                            <div class="portfolio-card__header ui-space-y-2">
+                                <div class="ui-flex ui-justify-between ui-items-center">
+                                    <span class="ui-px-3 ui-py-1 ui-rounded-full ui-bg-teal-500-20 ui-text-teal-300 ui-text-xs ui-font-bold">23.10 ~ 24.02</span>
+                                    <span class="ui-text-xs ui-text-slate-100 ui-font-medium">참여도 70%</span>
                                 </div>
-                                <h3 class="typography-h3 text-xl">LG Pro Cloud 프로젝트</h3>
+                                <h3 class="typography-h3 ui-text-xl">LG Pro Cloud 프로젝트</h3>
                             </div>
                             <div class="portfolio-card__body">
-                                <p class="text-slate-100 text-sm">React와 SCSS를 활용한 클라우드 서비스 플랫폼 UI 구축 및 퍼블리싱 리딩.</p>
+                                <p class="ui-text-slate-100 ui-text-sm">React와 SCSS를 활용한 클라우드 서비스 플랫폼 UI 구축 및 퍼블리싱 리딩.</p>
                             </div>
-                            <div class="portfolio-card__footer flex flex-wrap gap-2">
-                                <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-teal-300 text-xs font-medium">React</span>
-                                <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-teal-300 text-xs font-medium">SCSS</span>
-                                <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-teal-300 text-xs font-medium">Node</span>
+                            <div class="portfolio-card__footer ui-flex ui-flex-wrap ui-gap-2">
+                                <span class="ui-px-2-5 ui-py-1 ui-rounded-lg ui-bg-slate-800 ui-text-teal-300 ui-text-xs ui-font-medium">React</span>
+                                <span class="ui-px-2-5 ui-py-1 ui-rounded-lg ui-bg-slate-800 ui-text-teal-300 ui-text-xs ui-font-medium">SCSS</span>
+                                <span class="ui-px-2-5 ui-py-1 ui-rounded-lg ui-bg-slate-800 ui-text-teal-300 ui-text-xs ui-font-medium">Node</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="equal-grid__item">
                         <div class="portfolio-card">
-                            <div class="portfolio-card__header space-y-2">
-                                <div class="flex justify-between items-center">
-                                    <span class="px-3 py-1 rounded-full bg-teal-500/20 text-teal-300 text-xs font-bold">23.04 ~ 23.07</span>
-                                    <span class="text-xs text-slate-100 font-medium">퍼블리싱 PL</span>
+                            <div class="portfolio-card__header ui-space-y-2">
+                                <div class="ui-flex ui-justify-between ui-items-center">
+                                    <span class="ui-px-3 ui-py-1 ui-rounded-full ui-bg-teal-500-20 ui-text-teal-300 ui-text-xs ui-font-bold">23.04 ~ 23.07</span>
+                                    <span class="ui-text-xs ui-text-slate-100 ui-font-medium">퍼블리싱 PL</span>
                                 </div>
-                                <h3 class="typography-h3 text-xl">더존비즈온 HIS UI KIT 디자인 시스템</h3>
+                                <h3 class="typography-h3 ui-text-xl">더존비즈온 HIS UI KIT 디자인 시스템</h3>
                             </div>
                             <div class="portfolio-card__body">
-                                <p class="text-slate-100 text-sm">병원급(Amaranth H) 및 의원급 솔루션(WEHAGO H) 기반 디자인 시스템 총괄 구축.</p>
+                                <p class="ui-text-slate-100 ui-text-sm">병원급(Amaranth H) 및 의원급 솔루션(WEHAGO H) 기반 디자인 시스템 총괄 구축.</p>
                             </div>
-                            <div class="portfolio-card__footer flex flex-wrap gap-2">
-                                <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-teal-300 text-xs font-medium">React</span>
-                                <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-teal-300 text-xs font-medium">Webpack</span>
-                                <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-teal-300 text-xs font-medium">Design System</span>
+                            <div class="portfolio-card__footer ui-flex ui-flex-wrap ui-gap-2">
+                                <span class="ui-px-2-5 ui-py-1 ui-rounded-lg ui-bg-slate-800 ui-text-teal-300 ui-text-xs ui-font-medium">React</span>
+                                <span class="ui-px-2-5 ui-py-1 ui-rounded-lg ui-bg-slate-800 ui-text-teal-300 ui-text-xs ui-font-medium">Webpack</span>
+                                <span class="ui-px-2-5 ui-py-1 ui-rounded-lg ui-bg-slate-800 ui-text-teal-300 ui-text-xs ui-font-medium">Design System</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="equal-grid__item">
                         <div class="portfolio-card">
-                            <div class="portfolio-card__header space-y-2">
-                                <div class="flex justify-between items-center">
-                                    <span class="px-3 py-1 rounded-full bg-teal-500/20 text-teal-300 text-xs font-bold">19.02 ~ 20.05</span>
-                                    <span class="text-xs text-slate-100 font-medium">퍼블리싱 PL</span>
+                            <div class="portfolio-card__header ui-space-y-2">
+                                <div class="ui-flex ui-justify-between ui-items-center">
+                                    <span class="ui-px-3 ui-py-1 ui-rounded-full ui-bg-teal-500-20 ui-text-teal-300 ui-text-xs ui-font-bold">19.02 ~ 20.05</span>
+                                    <span class="ui-text-xs ui-text-slate-100 ui-font-medium">퍼블리싱 PL</span>
                                 </div>
-                                <h3 class="typography-h3 text-xl">삼성 자율진단 프로그램 사이트</h3>
+                                <h3 class="typography-h3 ui-text-xl">삼성 자율진단 프로그램 사이트</h3>
                             </div>
                             <div class="portfolio-card__body">
-                                <p class="text-slate-100 text-sm">대규모 엔터프라이즈 환경에서의 자율진단 프로그램 UI 설계 및 마크업 구축 리딩.</p>
+                                <p class="ui-text-slate-100 ui-text-sm">대규모 엔터프라이즈 환경에서의 자율진단 프로그램 UI 설계 및 마크업 구축 리딩.</p>
                             </div>
-                            <div class="portfolio-card__footer flex flex-wrap gap-2">
-                                <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-teal-300 text-xs font-medium">HTML</span>
-                                <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-teal-300 text-xs font-medium">SCSS</span>
-                                <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-teal-300 text-xs font-medium">JS</span>
+                            <div class="portfolio-card__footer ui-flex ui-flex-wrap ui-gap-2">
+                                <span class="ui-px-2-5 ui-py-1 ui-rounded-lg ui-bg-slate-800 ui-text-teal-300 ui-text-xs ui-font-medium">HTML</span>
+                                <span class="ui-px-2-5 ui-py-1 ui-rounded-lg ui-bg-slate-800 ui-text-teal-300 ui-text-xs ui-font-medium">SCSS</span>
+                                <span class="ui-px-2-5 ui-py-1 ui-rounded-lg ui-bg-slate-800 ui-text-teal-300 ui-text-xs ui-font-medium">JS</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="equal-grid__item">
                         <div class="portfolio-card">
-                            <div class="portfolio-card__header space-y-2">
-                                <div class="flex justify-between items-center">
-                                    <span class="px-3 py-1 rounded-full bg-teal-500/20 text-teal-300 text-xs font-bold">19.02 ~ 20.05</span>
-                                    <span class="text-xs text-slate-100 font-medium">퍼블리싱 PL</span>
+                            <div class="portfolio-card__header ui-space-y-2">
+                                <div class="ui-flex ui-justify-between ui-items-center">
+                                    <span class="ui-px-3 ui-py-1 ui-rounded-full ui-bg-teal-500-20 ui-text-teal-300 ui-text-xs ui-font-bold">19.02 ~ 20.05</span>
+                                    <span class="ui-text-xs ui-text-slate-100 ui-font-medium">퍼블리싱 PL</span>
                                 </div>
-                                <h3 class="typography-h3 text-xl">SKCC ITS 진단시스템 사이트</h3>
+                                <h3 class="typography-h3 ui-text-xl">SKCC ITS 진단시스템 사이트</h3>
                             </div>
                             <div class="portfolio-card__body">
-                                <p class="text-slate-100 text-sm">진단시스템의 복잡한 데이터와 인터페이스를 웹표준 및 접근성에 맞춰 구현.</p>
+                                <p class="ui-text-slate-100 ui-text-sm">진단시스템의 복잡한 데이터와 인터페이스를 웹표준 및 접근성에 맞춰 구현.</p>
                             </div>
-                            <div class="portfolio-card__footer flex flex-wrap gap-2">
-                                <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-teal-300 text-xs font-medium">HTML</span>
-                                <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-teal-300 text-xs font-medium">SCSS</span>
-                                <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-teal-300 text-xs font-medium">JS</span>
+                            <div class="portfolio-card__footer ui-flex ui-flex-wrap ui-gap-2">
+                                <span class="ui-px-2-5 ui-py-1 ui-rounded-lg ui-bg-slate-800 ui-text-teal-300 ui-text-xs ui-font-medium">HTML</span>
+                                <span class="ui-px-2-5 ui-py-1 ui-rounded-lg ui-bg-slate-800 ui-text-teal-300 ui-text-xs ui-font-medium">SCSS</span>
+                                <span class="ui-px-2-5 ui-py-1 ui-rounded-lg ui-bg-slate-800 ui-text-teal-300 ui-text-xs ui-font-medium">JS</span>
                             </div>
                         </div>
                     </div>
@@ -376,42 +375,42 @@
         </section>
 
         <!-- Archive Section -->
-        <section id="archive" class="min-h-screen py-24 px-6 flex items-center hero-gradient">
-            <div class="max-w-7xl mx-auto w-full space-y-16">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center equal-grid character-layout">
-                    <div class="lg:col-span-4 flex justify-center equal-grid__item char-wrapper items-center archive-character">
-                        <img id="character-support" src="/assets/img/character-support.webp" alt="Support Character" class="character-image character-image--support object-contain" loading="lazy" decoding="async">
+        <section id="archive" class="ui-min-h-screen ui-py-24 ui-px-6 ui-flex ui-items-center hero-gradient">
+            <div class="ui-max-w-7xl ui-mx-auto ui-w-full ui-space-y-16">
+                <div class="ui-grid ui-grid-cols-1 ui-lg-grid-cols-12 ui-gap-12 ui-items-center equal-grid character-layout">
+                    <div class="ui-lg-col-span-4 ui-flex ui-justify-center equal-grid__item char-wrapper ui-items-center archive-character">
+                        <img id="character-support" src="/assets/img/character-support.webp" alt="Support Character" class="character-image character-image--support ui-object-contain" loading="lazy" decoding="async">
                     </div>
-                    <div class="lg:col-span-8 space-y-4 equal-grid__item justify-center section-copy">
-                        <span class="text-teal-300 font-bold text-sm tracking-widest uppercase">Career Archive</span>
+                    <div class="ui-lg-col-span-8 ui-space-y-4 equal-grid__item ui-justify-center section-copy">
+                        <span class="ui-text-teal-300 ui-font-bold ui-text-sm ui-tracking-widest ui-uppercase">Career Archive</span>
                         <h2 class="typography-h2">축적된 경험이 성과를 만듭니다.</h2>
-                        <p class="text-slate-100 text-base sm:text-lg">공공, 금융, 에이전시 전 분야를 아우르는 견고한 웹표준 및 반응형 프로젝트 이력입니다.</p>
+                        <p class="ui-text-slate-100 ui-text-base ui-sm-text-lg">공공, 금융, 에이전시 전 분야를 아우르는 견고한 웹표준 및 반응형 프로젝트 이력입니다.</p>
                     </div>
                 </div>
 
-                <div id="archive-list-bookmark" class="glass-card p-6 sm:p-8 rounded-3xl border border-slate-700 space-y-6">
-                    <div class="hidden md:block overflow-x-auto">
-                        <table class="w-full text-left border-collapse">
+                <div id="archive-list-bookmark" class="glass-card ui-p-6 ui-sm-p-8 ui-rounded-3xl ui-border ui-border-slate-700 ui-space-y-6">
+                    <div class="ui-hidden ui-md-block ui-overflow-x-auto">
+                        <table class="ui-w-full ui-text-left ui-border-collapse">
                             <thead>
-                                <tr class="border-b border-slate-700 text-teal-300 text-sm">
-                                    <th class="pb-4 font-bold">프로젝트 및 업무명</th>
-                                    <th class="pb-4 font-bold">수행 기간</th>
-                                    <th class="pb-4 font-bold">역할</th>
-                                    <th class="pb-4 font-bold">기술 환경</th>
-                                    <th class="pb-4 font-bold text-right">참여도</th>
+                                <tr class="ui-border-b ui-border-slate-700 ui-text-teal-300 ui-text-sm">
+                                    <th class="ui-pb-4 ui-font-bold">프로젝트 및 업무명</th>
+                                    <th class="ui-pb-4 ui-font-bold">수행 기간</th>
+                                    <th class="ui-pb-4 ui-font-bold">역할</th>
+                                    <th class="ui-pb-4 ui-font-bold">기술 환경</th>
+                                    <th class="ui-pb-4 ui-font-bold ui-text-right">참여도</th>
                                 </tr>
                             </thead>
-                            <tbody id="archive-table-body" class="divide-y divide-slate-800 text-sm text-slate-100">
+                            <tbody id="archive-table-body" class="ui-divide-y ui-divide-slate-800 ui-text-sm ui-text-slate-100">
                             </tbody>
                         </table>
                     </div>
 
-                    <div id="archive-mobile-list" class="md:hidden space-y-4">
+                    <div id="archive-mobile-list" class="ui-md-hidden ui-space-y-4">
                     </div>
 
-                    <div class="flex flex-col sm:flex-row items-center justify-between pt-4 border-t border-slate-800 gap-4">
-                        <div id="pagination-info" class="text-xs sm:text-sm text-slate-100" aria-live="polite" aria-atomic="true"></div>
-                        <div class="flex items-center gap-2" id="pagination-buttons">
+                    <div class="ui-flex ui-flex-col ui-sm-flex-row ui-items-center ui-justify-between ui-pt-4 ui-border-t ui-border-slate-800 ui-gap-4">
+                        <div id="pagination-info" class="ui-text-xs ui-sm-text-sm ui-text-slate-100" aria-live="polite" aria-atomic="true"></div>
+                        <div class="ui-flex ui-items-center ui-gap-2" id="pagination-buttons">
                         </div>
                     </div>
                 </div>
@@ -419,46 +418,46 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="min-h-screen py-24 px-6 flex items-center line-gradient">
-            <div class="max-w-7xl mx-auto w-full space-y-16">
-                <div class="text-center max-w-3xl mx-auto space-y-4 section-copy">
-                    <span class="text-teal-300 font-bold text-sm tracking-widest uppercase">Get in Touch</span>
+        <section id="contact" class="ui-min-h-screen ui-py-24 ui-px-6 ui-flex ui-items-center line-gradient">
+            <div class="ui-max-w-7xl ui-mx-auto ui-w-full ui-space-y-16">
+                <div class="ui-text-center ui-max-w-3xl ui-mx-auto ui-space-y-4 section-copy">
+                    <span class="ui-text-teal-300 ui-font-bold ui-text-sm ui-tracking-widest ui-uppercase">Get in Touch</span>
                     <h2 class="typography-h2">더 좋은 경험을 함께 만듭니다.</h2>
-                    <p class="text-slate-100 text-base sm:text-lg">Figma 디자인 시스템과 AI 활용 스터디를 통해 늘 시대를 앞서갑니다.</p>
+                    <p class="ui-text-slate-100 ui-text-base ui-sm-text-lg">Figma 디자인 시스템과 AI 활용 스터디를 통해 늘 시대를 앞서갑니다.</p>
                 </div>
 
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center equal-grid character-layout">
-                    <div class="lg:col-span-7 glass-card h-full p-10 rounded-3xl space-y-6 border border-slate-700 equal-grid__item justify-center">
-                        <h3 class="typography-h3 text-2xl font-bold">연락처 및 협업 제안</h3>
-                        <p class="text-slate-100 leading-relaxed text-sm">
+                <div class="ui-grid ui-grid-cols-1 ui-lg-grid-cols-12 ui-gap-8 ui-items-center equal-grid character-layout">
+                    <div class="ui-lg-col-span-7 glass-card ui-h-full ui-p-10 ui-rounded-3xl ui-space-y-6 ui-border ui-border-slate-700 equal-grid__item ui-justify-center">
+                        <h3 class="typography-h3 ui-text-2xl ui-font-bold">연락처 및 협업 제안</h3>
+                        <p class="ui-text-slate-100 ui-leading-relaxed ui-text-sm">
                             AI가 채우지 못하는 섬세한 디테일부터 팀이 오래 쓰는 재사용 구조까지, 일관성과 완성도를 갖춘 프로젝트의 디자인시스템과 UI 컴포넌트를 만들어 드립니다.
                         </p>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 text-sm">
-                            <div class="p-4 rounded-2xl bg-slate-800/90 border border-slate-700">
-                                <div class="text-teal-300 font-bold mb-1">연락처 및 이메일</div>
-                                <div class="text-white font-semibold">010-8060-5024</div>
-                                <div class="text-slate-100 text-xs mt-0.5">geulrara@kakao.com</div>
+                        <div class="ui-grid ui-grid-cols-1 ui-sm-grid-cols-2 ui-gap-4 ui-pt-4 ui-text-sm">
+                            <div class="ui-p-4 ui-rounded-2xl ui-bg-slate-800-90 ui-border ui-border-slate-700">
+                                <div class="ui-text-teal-300 ui-font-bold ui-mb-1">연락처 및 이메일</div>
+                                <div class="ui-text-white ui-font-semibold">010-8060-5024</div>
+                                <div class="ui-text-slate-100 ui-text-xs ui-mt-0-5">geulrara@kakao.com</div>
                             </div>
-                            <div class="p-4 rounded-2xl bg-slate-800/90 border border-slate-700">
-                                <div class="text-teal-300 font-bold mb-1">희망 조건 &amp; 포지션</div>
-                                <div class="text-white font-semibold">퍼블리셔 고급 / 프리랜서</div>
-                                <div class="text-slate-100 text-xs mt-0.5">단가 / 월 650만원 ~</div>
+                            <div class="ui-p-4 ui-rounded-2xl ui-bg-slate-800-90 ui-border ui-border-slate-700">
+                                <div class="ui-text-teal-300 ui-font-bold ui-mb-1">희망 조건 &amp; 포지션</div>
+                                <div class="ui-text-white ui-font-semibold">퍼블리셔 고급 / 프리랜서</div>
+                                <div class="ui-text-slate-100 ui-text-xs ui-mt-0-5">단가 / 월 650만원 ~</div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="lg:col-span-5 flex justify-center equal-grid__item char-wrapper items-center h-full">
-                        <div class="glass-card h-full p-8 rounded-3xl text-center space-y-6 w-full border border-teal-500/50 relative flex flex-col justify-center contact-character-card">
-                            <div class="relative z-20">
-                                <h3 class="typography-h3 text-white">정인영</h3>
-                                <p class="text-teal-300 mt-1 font-semibold">소중한네시간 대표 & 강사</p>
+                    <div class="ui-lg-col-span-5 ui-flex ui-justify-center equal-grid__item char-wrapper ui-items-center ui-h-full">
+                        <div class="glass-card ui-h-full ui-p-8 ui-rounded-3xl ui-text-center ui-space-y-6 ui-w-full ui-border ui-border-teal-500-50 ui-relative ui-flex ui-flex-col ui-justify-center contact-character-card">
+                            <div class="ui-relative ui-z-20">
+                                <h3 class="typography-h3 ui-text-white">정인영</h3>
+                                <p class="ui-text-teal-300 ui-mt-1 ui-font-semibold">소중한네시간 대표 & 강사</p>
                             </div>
-                            <p class="relative z-20 text-xs text-slate-100">경기도 부천시 원미구 길주로77번길 55-1 굿모닝프라자 803호</br>프로젝트 제안 및 강의 문의는 메일로 회신바랍니다.</p>
-                            <a href="mailto:geulrara@kakao.com" class="relative z-20 block w-full py-3.5 rounded-xl bg-teal-400 text-slate-950 font-bold hover:bg-teal-300 transition shadow-lg shadow-teal-500/20">
+                            <p class="ui-relative ui-z-20 ui-text-xs ui-text-slate-100">경기도 부천시 원미구 길주로77번길 55-1 굿모닝프라자 803호</br>프로젝트 제안 및 강의 문의는 메일로 회신바랍니다.</p>
+                            <a href="mailto:geulrara@kakao.com" class="ui-relative ui-z-20 ui-block ui-w-full ui-py-3-5 ui-rounded-xl ui-bg-teal-400 ui-text-slate-950 ui-font-bold ui-hover-bg-teal-300 ui-transition ui-shadow-lg ui-shadow-teal-500-20">
                                 메일 보내기
                             </a>
                         </div>
-                        <img id="character-success" src="/assets/img/character-success.webp" alt="Success Character" class="character-image character-image--success object-contain" loading="lazy" decoding="async">
+                        <img id="character-success" src="/assets/img/character-success.webp" alt="Success Character" class="character-image character-image--success ui-object-contain" loading="lazy" decoding="async">
                     </div>
                 </div>
             </div>
@@ -466,7 +465,7 @@
 
     </main>
 
-    <footer class="py-12 border-t border-slate-800 text-center text-xs text-slate-100">
+    <footer class="ui-py-12 ui-border-t ui-border-slate-800 ui-text-center ui-text-xs ui-text-slate-100">
         <p>© 2026 Jeong In Young. All rights reserved.</p>
     </footer>
 

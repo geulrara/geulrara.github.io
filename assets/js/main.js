@@ -2,25 +2,19 @@ let archiveData = [];
 let currentPage = 1;
 const itemsPerPage = 8;
 
-const PREFIX_PY = "py-4";
-const TEXT_SLATE_BASE = "text-slate-100";
+const CLS_TABLE_ROW = "archive-table-row";
+const CLS_CELL_BASE = "archive-table-cell";
+const CLS_CELL_TITLE = "archive-table-cell archive-table-cell--title";
+const CLS_CELL_SHARE = "archive-table-cell archive-table-cell--share";
 
-const CLS_TABLE_ROW = "hover:bg-slate-900/50 transition";
-const CLS_CELL_BASE = `${PREFIX_PY} ${TEXT_SLATE_BASE}`;
-const CLS_CELL_TITLE = `${PREFIX_PY} font-semibold text-white`;
-const CLS_CELL_SHARE = `${PREFIX_PY} text-right font-bold text-teal-300`;
+const CLS_MOBILE_CARD = "archive-mobile-card";
+const CLS_MOBILE_BADGE = "archive-mobile-card__badge";
+const CLS_MOBILE_SUB = "archive-mobile-card__details";
 
-const CLS_MOBILE_CARD =
-  "p-4 rounded-2xl bg-slate-900/90 border border-slate-700 space-y-2";
-const CLS_MOBILE_BADGE =
-  "px-2.5 py-0.5 rounded-full bg-teal-500/20 text-teal-300 text-xs font-bold whitespace-nowrap";
-const CLS_MOBILE_SUB = `text-xs ${TEXT_SLATE_BASE}`;
-
-const CLS_BTN_BASE = "px-3 py-1.5 rounded-lg text-xs font-semibold transition";
-const CLS_BTN_ACTIVE = `${CLS_BTN_BASE} bg-teal-400 text-slate-950 font-bold shadow-md shadow-teal-500/20`;
-const CLS_BTN_DEFAULT = `${CLS_BTN_BASE} bg-slate-800 ${TEXT_SLATE_BASE} hover:bg-slate-700`;
-const CLS_BTN_ICON_DISABLED = "rounded-lg text-xs font-semibold transition bg-slate-800 text-slate-500 cursor-not-allowed";
-const CLS_BTN_ICON_ACTIVE = "rounded-lg text-xs font-semibold transition bg-slate-800 text-teal-300 hover:bg-slate-700";
+const CLS_BTN_ACTIVE = "archive-page-button archive-page-button--current";
+const CLS_BTN_DEFAULT = "archive-page-button";
+const CLS_BTN_ICON_DISABLED = "archive-page-button archive-page-button--disabled";
+const CLS_BTN_ICON_ACTIVE = "archive-page-button archive-page-button--icon";
 
 async function loadArchiveData() {
   try {
@@ -70,11 +64,11 @@ function renderArchive() {
     .map(
       (item) => `
         <div class="${CLS_MOBILE_CARD}">
-          <div class="flex justify-between items-start gap-2">
-            <span class="font-bold text-white text-base">${item.title}</span>
+          <div class="archive-mobile-card__header">
+            <span class="archive-mobile-card__title">${item.title}</span>
             <span class="${CLS_MOBILE_BADGE}">${item.share}</span>
           </div>
-          <div class="text-xs text-teal-400 font-semibold">${item.period} | ${item.role}</div>
+          <div class="archive-mobile-card__meta">${item.period} | ${item.role}</div>
           <div class="${CLS_MOBILE_SUB}">기술환경: ${item.tech}</div>
         </div>
     `,
@@ -86,10 +80,10 @@ function renderArchive() {
   let buttonsHTML = `
     <div class="pagination-arrow-group">
     <button onclick="changePage(1)" aria-label="첫 페이지" ${currentPage === 1 ? `disabled class="pagination-page pagination-icon-button ${CLS_BTN_ICON_DISABLED}"` : `class="pagination-page pagination-icon-button ${CLS_BTN_ICON_ACTIVE}"`}>
-      <svg aria-hidden="true" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 18l-6-6 6-6M12 18L6 12l6-6"></path></svg>
+      <svg aria-hidden="true" class="pagination-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 18l-6-6 6-6M12 18L6 12l6-6"></path></svg>
     </button>
     <button onclick="changePage(${currentPage - 1})" aria-label="이전 페이지" ${currentPage === 1 ? `disabled class="pagination-page pagination-icon-button ${CLS_BTN_ICON_DISABLED}"` : `class="pagination-page pagination-icon-button ${CLS_BTN_ICON_ACTIVE}"`}>
-      <svg aria-hidden="true" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 18l-6-6 6-6"></path></svg>
+      <svg aria-hidden="true" class="pagination-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 18l-6-6 6-6"></path></svg>
     </button>
     </div>
     `;
@@ -110,10 +104,10 @@ function renderArchive() {
   buttonsHTML += `
     <div class="pagination-arrow-group">
     <button onclick="changePage(${currentPage + 1})" aria-label="다음 페이지" ${currentPage === totalPages ? `disabled class="pagination-page pagination-icon-button ${CLS_BTN_ICON_DISABLED}"` : `class="pagination-page pagination-icon-button ${CLS_BTN_ICON_ACTIVE}"`}>
-      <svg aria-hidden="true" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 6l6 6-6 6"></path></svg>
+      <svg aria-hidden="true" class="pagination-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 6l6 6-6 6"></path></svg>
     </button>
     <button onclick="changePage(${totalPages})" aria-label="마지막 페이지" ${currentPage === totalPages ? `disabled class="pagination-page pagination-icon-button ${CLS_BTN_ICON_DISABLED}"` : `class="pagination-page pagination-icon-button ${CLS_BTN_ICON_ACTIVE}"`}>
-      <svg aria-hidden="true" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 6l6 6-6 6M12 6l6 6-6 6"></path></svg>
+      <svg aria-hidden="true" class="pagination-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 6l6 6-6 6M12 6l6 6-6 6"></path></svg>
     </button>
     </div>
     `;
