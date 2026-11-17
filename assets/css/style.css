@@ -2,7 +2,7 @@
   Design Tokens & Color System
 ========================================== */
 :root {
-  --color-bg-primary: #030712;
+  --color-bg-primary: var(--color-bg-secondary);
   --color-bg-secondary: #0F172A;
   --color-bg-tertiary: #1E293B;
   --color-text-primary: #FFFFFF;
@@ -25,8 +25,8 @@
   --color-cyan-300: #67E8F9;
   --font-family-body: 'Pretendard GOV', sans-serif;
   --font-family-display: 'JalnanGothic', sans-serif;
-  --font-size-h1: 3.5rem;
-  --font-size-h2: 3rem;
+  --font-size-h1: 3rem;
+  --font-size-h2: 2.8rem;
   --font-size-h3: 1.75rem;
   --font-size-h4: 1.25rem;
   --font-size-h5: 1rem;
@@ -198,18 +198,81 @@ table {
   BEM Components & Common Styles
 ========================================== */
 .glass-card {
-  background: rgba(15, 23, 42, 1);
+  background: var(--color-bg-secondary);
   backdrop-filter: blur(20px);
   border-top: 1px solid var(--color-border-subtle);
   border-bottom: 1px solid var(--color-border-subtle);
 }
 
-.hero-gradient {
-  background: radial-gradient(circle at 50% 50%, rgba(13, 148, 136, 0.25) 0%, transparent 80%);
+.hero-gradient,
+.line-gradient {
+  --gradient-x: 50;
+  --gradient-y: 50;
+  --gradient-opacity: 0.25;
+}
+
+.hero-gradient::before,
+.line-gradient::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  /* Keep the existing color and radius, with a softer falloff at the edge. */
+  background: radial-gradient(
+    circle clamp(24rem, 50vw, 56rem) at calc(var(--gradient-x) * 1%) calc(var(--gradient-y) * 1%),
+    rgba(13, 148, 136, var(--gradient-opacity)) 0%,
+    rgba(13, 148, 136, calc(var(--gradient-opacity) * 0.82)) 15%,
+    rgba(13, 148, 136, calc(var(--gradient-opacity) * 0.5)) 30%,
+    rgba(13, 148, 136, calc(var(--gradient-opacity) * 0.22)) 45%,
+    rgba(13, 148, 136, calc(var(--gradient-opacity) * 0.06)) 57%,
+    rgba(13, 148, 136, 0) 67%
+  );
+  /* Fade the decoration at section seams without masking text or character art. */
+  mask-image: linear-gradient(to bottom, transparent, #000 20%, #000 80%, transparent);
 }
 
 .line-gradient {
-  background: linear-gradient( to bottom, rgba(13, 148, 136, 0.15) 0%, transparent 80% );
+  --gradient-opacity: 0.15;
+}
+
+.contact-action-outline {
+  color: var(--color-teal-400);
+}
+
+.contact-action-outline:hover,
+.contact-action-outline:focus-visible {
+  color: var(--color-text-primary);
+}
+
+.contact-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.contact-actions a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0.875rem 0.5rem;
+  white-space: nowrap;
+}
+
+.contact-actions a:focus-visible {
+  outline: 2px solid var(--color-accent-teal);
+  outline-offset: 3px;
+}
+
+@media (min-width: 75em) {
+  .contact-actions {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .contact-actions a[href^="tel:"] {
+    display: none;
+  }
 }
 
 .mobile-menu-toggle,
@@ -391,6 +454,16 @@ section#contact > .max-w-7xl {
   pointer-events: none;
   scale: 0.995;
   transform-origin: 50% 75%;
+  animation: character-float 4s ease-in-out infinite;
+}
+
+@keyframes character-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .character-image { animation: none; }
 }
 
 .character-image--coding {
@@ -688,7 +761,7 @@ section#contact > .max-w-7xl {
   }
 }
 
-@media (max-width: 42.5em) {
+@media (max-width: 74.999em) {
   #pagination-info,
   #pagination-buttons .pagination-page:not(.pagination-icon-button) {
     display: none;
@@ -723,7 +796,9 @@ section#contact > .max-w-7xl {
     outline: 2px solid var(--color-accent-teal);
     outline-offset: 2px;
   }
+}
 
+@media (max-width: 42.5em) {
   #projects .projects-card-list {
     display: flex;
     grid-template-columns: none;
@@ -928,6 +1003,7 @@ section#contact > .max-w-7xl {
 .ui-hover-text-teal-300:hover { color: var(--color-teal-300); }
 .ui-hover-bg-teal-300:hover { background-color: var(--color-teal-300); }
 .ui-hover-bg-slate-800:hover { background-color: var(--color-slate-800); }
+.ui-hover-bg-slate-950:hover { background-color: var(--color-slate-950); }
 .ui-hover-opacity-90:hover { opacity: 0.9; }
 .ui-antialiased { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 .ui-selection-bg-teal-500 ::selection { background-color: var(--color-teal-500); }
@@ -949,6 +1025,7 @@ section#contact > .max-w-7xl {
 }
 
 @media (min-width: 75em) {
+  .ui-lg-text-lg { font-size: 1.125rem; line-height: 1.75; }
   .ui-lg-grid-cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)); }
   .ui-lg-grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .ui-lg-col-span-4 { grid-column: span 4 / span 4; }

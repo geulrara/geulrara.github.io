@@ -1,6 +1,16 @@
 let archiveData = [];
 let currentPage = 1;
-const itemsPerPage = 8;
+const archiveTableQuery = window.matchMedia("(min-width: 53.75em)");
+let itemsPerPage = archiveTableQuery.matches ? 8 : 4;
+
+archiveTableQuery.addEventListener("change", (event) => {
+  const firstItemIndex = (currentPage - 1) * itemsPerPage;
+  itemsPerPage = event.matches ? 8 : 4;
+  currentPage = Math.floor(firstItemIndex / itemsPerPage) + 1;
+  const bookmark = document.getElementById("archive-list-bookmark");
+  if (bookmark) bookmark.style.minHeight = "";
+  if (archiveData.length) renderArchive();
+});
 
 const CLS_TABLE_ROW = "archive-table-row";
 const CLS_CELL_BASE = "archive-table-cell";
@@ -113,7 +123,6 @@ function renderArchive() {
     `;
 
   paginationButtons.innerHTML = buttonsHTML;
-  window.ScrollTrigger?.refresh();
 }
 
 function changePageFromInput(input) {
@@ -125,30 +134,34 @@ function changePageFromInput(input) {
     return;
   }
 
+  const restoreFocus = document.activeElement === input;
   changePage(page, true);
+  if (restoreFocus) {
+    document.querySelector(".pagination-mobile-position input")?.focus({ preventScroll: true });
+  }
 }
 
-function changePage(page, scrollToMobileList = false) {
+function changePage(page, preserveScrollPosition = false) {
   const totalPages = Math.ceil(archiveData.length / itemsPerPage);
   if (page < 1 || page > totalPages) return;
 
   const scrollPosition = window.scrollY;
+  const scrollLeft = window.scrollX;
+  const bookmark = document.getElementById("archive-list-bookmark");
+  if (bookmark) {
+    // Keep a shorter final page from shrinking the document and shifting the viewport.
+    bookmark.style.minHeight = preserveScrollPosition
+      ? `${bookmark.getBoundingClientRect().height}px`
+      : "";
+  }
   currentPage = page;
   renderArchive();
 
-  if (scrollToMobileList && window.matchMedia("(max-width: 42.5em)").matches) {
-    const mobileList = document.getElementById("archive-mobile-list");
-    const header = document.querySelector("header");
-
-    if (mobileList) {
-      const headerOffset = header ? header.getBoundingClientRect().height : 0;
-      const listTop = mobileList.getBoundingClientRect().top + window.scrollY - headerOffset;
-      window.scrollTo(window.scrollX, listTop);
-      return;
-    }
+  if (preserveScrollPosition) {
+    window.scrollTo({ left: scrollLeft, top: scrollPosition, behavior: "instant" });
+    return;
   }
 
-  const bookmark = document.getElementById("archive-list-bookmark");
   if (bookmark) {
     const header = document.querySelector("header");
     const headerOffset = header ? header.getBoundingClientRect().height : 0;
@@ -279,94 +292,48 @@ function initializeProjectsCarousel() {
   }, { passive: true });
 }
 
-function initializeCharacterMotion() {
-  const { gsap, ScrollTrigger } = window;
-  // Keep every character visible if the animation CDN is unavailable.
-  if (!gsap || !ScrollTrigger) return;
-
-  gsap.registerPlugin(ScrollTrigger);
-
-  const characters = [
-    { id: "character-coding", x: 44, y: 36, rotation: 3, drift: 6 },
-    { id: "character-whiteboard", x: -40, y: 28, rotation: -3, drift: 4 },
-    { id: "character-uikit", x: 0, y: 48, rotation: 2, drift: 5 },
-    { id: "character-multidevice", x: 40, y: 36, rotation: 4, drift: 6 },
-    { id: "character-support", x: -32, y: 32, rotation: -3, drift: 4 },
-    { id: "character-success", x: 0, y: 40, rotation: -4, drift: 3 },
-  ];
+function initializeGradientMotion() {
+  const { gsap } = window;
+  if (!gsap) return;
 
   gsap.matchMedia().add(
-    {
-      compact: "(max-width: 74.999em)",
-      desktop: "(min-width: 75em)",
-      reduceMotion: "(prefers-reduced-motion: reduce)",
-    },
-    (context) => {
-      // matchMedia reverts styles and kills the old triggers on preference/size changes.
-      if (context.conditions.reduceMotion) return;
-      const distance = context.conditions.compact ? 0.45 : 1;
-
-      characters.forEach(({ id, x, y, rotation, drift }) => {
-        const image = document.getElementById(id);
-        if (!image) return;
-
-        gsap.fromTo(
-          image,
-          {
-            autoAlpha: 0,
-            x: x * distance,
-            y: y * distance,
-            rotation: rotation * distance,
-            scale: id === "character-success" ? 0.88 : 0.94,
-          },
-          {
-            autoAlpha: 1,
-            x: 0,
-            y: 0,
-            rotation: 0,
-            scale: 1,
-            duration: 1.15,
-            ease: id === "character-success" ? "back.out(1.25)" : "power3.out",
-            scrollTrigger: {
-              trigger: image,
-              start: "top 94%",
-              once: true,
-            },
-          },
-        );
-
-        // Separate percentage translation from the entrance's pixel translation.
-        // The stationary wrapper keeps scroll bounds stable as the image moves.
-        gsap.fromTo(
-          image,
-          { yPercent: drift * distance },
-          {
-            yPercent: -drift * distance,
-            ease: "none",
-            scrollTrigger: {
-              trigger: image.closest(".char-wrapper"),
-              start: "top bottom",
-              end: "bottom top",
-              scrub: 0.8,
-            },
-          },
-        );
+    "(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)",
+    () => {
+      const cleanups = [];
+      document.querySelectorAll("main > .hero-gradient, main > .line-gradient").forEach((section) => {
+        // Reuse two tweens so pointer events do not create new animations.
+        const xTo = gsap.quickTo(section, "--gradient-x", { duration: 1.8, ease: "power3.out" });
+        const yTo = gsap.quickTo(section, "--gradient-y", { duration: 1.8, ease: "power3.out" });
+        const followPointer = (event) => {
+          if (event.pointerType === "touch") return;
+          const bounds = section.getBoundingClientRect();
+          if (!bounds.width || !bounds.height) return;
+          const x = gsap.utils.clamp(0, 1, (event.clientX - bounds.left) / bounds.width);
+          const y = gsap.utils.clamp(0, 1, (event.clientY - bounds.top) / bounds.height);
+          // Keep the center within the section's middle 40% for a gentle drift.
+          xTo(30 + x * 40);
+          yTo(30 + y * 40);
+        };
+        const returnToCenter = () => {
+          xTo(50);
+          yTo(50);
+        };
+        section.addEventListener("pointermove", followPointer, { passive: true });
+        section.addEventListener("pointerleave", returnToCenter);
+        cleanups.push(() => {
+          section.removeEventListener("pointermove", followPointer);
+          section.removeEventListener("pointerleave", returnToCenter);
+        });
       });
+      // matchMedia also reverts the tweens and inline styles when preferences change.
+      return () => cleanups.forEach((cleanup) => cleanup());
     },
   );
-
-  // Lazy-loaded images and web fonts can change the trigger positions.
-  document.querySelectorAll(".character-image").forEach((image) => {
-    if (!image.complete) {
-      image.addEventListener("load", () => ScrollTrigger.refresh(), { once: true });
-    }
-  });
-  document.fonts?.ready.then(() => ScrollTrigger.refresh());
 }
 
 window.addEventListener("DOMContentLoaded", () => {
   initializeMobileNavigation();
   initializeProjectsCarousel();
   loadArchiveData();
-  initializeCharacterMotion();
+  initializeGradientMotion();
 });
