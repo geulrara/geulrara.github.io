@@ -113,6 +113,7 @@ function renderArchive() {
     `;
 
   paginationButtons.innerHTML = buttonsHTML;
+  window.ScrollTrigger?.refresh();
 }
 
 function changePageFromInput(input) {
@@ -278,8 +279,94 @@ function initializeProjectsCarousel() {
   }, { passive: true });
 }
 
+function initializeCharacterMotion() {
+  const { gsap, ScrollTrigger } = window;
+  // Keep every character visible if the animation CDN is unavailable.
+  if (!gsap || !ScrollTrigger) return;
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const characters = [
+    { id: "character-coding", x: 44, y: 36, rotation: 3, drift: 6 },
+    { id: "character-whiteboard", x: -40, y: 28, rotation: -3, drift: 4 },
+    { id: "character-uikit", x: 0, y: 48, rotation: 2, drift: 5 },
+    { id: "character-multidevice", x: 40, y: 36, rotation: 4, drift: 6 },
+    { id: "character-support", x: -32, y: 32, rotation: -3, drift: 4 },
+    { id: "character-success", x: 0, y: 40, rotation: -4, drift: 3 },
+  ];
+
+  gsap.matchMedia().add(
+    {
+      compact: "(max-width: 74.999em)",
+      desktop: "(min-width: 75em)",
+      reduceMotion: "(prefers-reduced-motion: reduce)",
+    },
+    (context) => {
+      // matchMedia reverts styles and kills the old triggers on preference/size changes.
+      if (context.conditions.reduceMotion) return;
+      const distance = context.conditions.compact ? 0.45 : 1;
+
+      characters.forEach(({ id, x, y, rotation, drift }) => {
+        const image = document.getElementById(id);
+        if (!image) return;
+
+        gsap.fromTo(
+          image,
+          {
+            autoAlpha: 0,
+            x: x * distance,
+            y: y * distance,
+            rotation: rotation * distance,
+            scale: id === "character-success" ? 0.88 : 0.94,
+          },
+          {
+            autoAlpha: 1,
+            x: 0,
+            y: 0,
+            rotation: 0,
+            scale: 1,
+            duration: 1.15,
+            ease: id === "character-success" ? "back.out(1.25)" : "power3.out",
+            scrollTrigger: {
+              trigger: image,
+              start: "top 94%",
+              once: true,
+            },
+          },
+        );
+
+        // Separate percentage translation from the entrance's pixel translation.
+        // The stationary wrapper keeps scroll bounds stable as the image moves.
+        gsap.fromTo(
+          image,
+          { yPercent: drift * distance },
+          {
+            yPercent: -drift * distance,
+            ease: "none",
+            scrollTrigger: {
+              trigger: image.closest(".char-wrapper"),
+              start: "top bottom",
+              end: "bottom top",
+              scrub: 0.8,
+            },
+          },
+        );
+      });
+    },
+  );
+
+  // Lazy-loaded images and web fonts can change the trigger positions.
+  document.querySelectorAll(".character-image").forEach((image) => {
+    if (!image.complete) {
+      image.addEventListener("load", () => ScrollTrigger.refresh(), { once: true });
+    }
+  });
+  document.fonts?.ready.then(() => ScrollTrigger.refresh());
+}
+
 window.addEventListener("DOMContentLoaded", () => {
   initializeMobileNavigation();
   initializeProjectsCarousel();
   loadArchiveData();
+  initializeCharacterMotion();
 });

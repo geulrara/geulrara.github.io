@@ -390,6 +390,7 @@ section#contact > .max-w-7xl {
   object-fit: contain;
   pointer-events: none;
   scale: 0.995;
+  transform-origin: 50% 75%;
 }
 
 .character-image--coding {
@@ -660,27 +661,6 @@ section#contact > .max-w-7xl {
   }
 }
 
-@keyframes character-float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-12px);
-  }
-}
-
-section img[id^="character-"] {
-  animation: character-float 4s ease-in-out infinite;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  section img[id^="character-"] {
-    animation: none;
-  }
-}
-
 .ui-max-w-3xl {
   max-width: 60rem;
 }
@@ -790,6 +770,9 @@ section img[id^="character-"] {
 
 /* Project-owned layout, spacing, and color utilities */
 .ui-scroll-smooth { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  .ui-scroll-smooth { scroll-behavior: auto; }
+}
 .ui-fixed { position: fixed; }
 .ui-relative { position: relative; }
 .ui-top-0 { top: 0; }
